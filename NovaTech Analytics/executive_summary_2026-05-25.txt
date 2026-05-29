@@ -1,0 +1,15 @@
+NOVATECH ANALYTICS — AI Executive Summary
+Generated: May 25, 2026
+============================================================
+
+**1. BUSINESS HEALTH OVERVIEW**
+NovaTech's current business health is a mixed bag, with a promising Monthly Recurring Revenue (MRR) of $6,299.75 and 25 active customers. However, the company is struggling with a high churn rate of 16.7%, which is significantly above the industry benchmark. This indicates a need for urgent attention to customer retention strategies.
+
+**2. WHAT IS WORKING**
+Our Enterprise plan is a clear strength, accounting for 71.4% of MRR with 9 customers. Additionally, our add-on sales are thriving, with a total revenue of $10,729.40 across 60 transactions, highlighting the value customers see in our complementary offerings. The White Label License and Team Seats x5 add-ons are particularly popular, with 4 and 8 units sold, respectively.
+
+**3. IMMEDIATE CONCERNS**
+The high churn rate of 16.7% is a major concern, indicating that we are losing customers at an alarming rate. Furthermore, our support team is struggling to resolve issues efficiently, with an average resolution time of 36.3 hours, which is above the benchmark. This is likely contributing to the relatively low average satisfaction score of 3.9/5.0, which also requires attention to improve customer experience.
+
+**4. STRATEGIC RECOMMENDATION**
+This week, the leadership team should prioritize a thorough review of our customer onboarding and success processes to identify areas for improvement and develop a plan to reduce churn. Specifically, I recommend allocating dedicated resources to enhance our support team's efficiency, aiming to reduce the average resolution time to under 24 hours, and implementing a proactive customer outreach program to engage with at-risk customers and address their concerns before they churn.
