@@ -23,7 +23,7 @@ from datetime import date
 SMTP_HOST     = "smtp.gmail.com"
 SMTP_PORT     = 587
 SMTP_USERNAME = "1490dre@gmail.com"
-SMTP_PASSWORD = "ksxq sqqo egth xnha"
+SMTP_PASSWORD = "YOUR_GMAIL_APP_PASSWORD_HERE"
 EMAIL_FROM    = "1490dre@gmail.com"
 EMAIL_TO      = "1490dre@gmail.com"
 

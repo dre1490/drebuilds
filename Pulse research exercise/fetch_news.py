@@ -16,7 +16,7 @@ from datetime import date
 # YOUR API KEY
 # Replace the text below with your actual key
 # -----------------------------------------
-API_KEY = "06a13e8b6988472688d82663439fc03f"
+API_KEY = "YOUR_NEWSAPI_KEY_HERE"
 
 # -----------------------------------------
 # SETTINGS

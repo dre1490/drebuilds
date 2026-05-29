@@ -23,7 +23,7 @@ from reportlab.lib.enums import TA_CENTER, TA_LEFT, TA_RIGHT
 # -----------------------------------------
 # SETTINGS
 # -----------------------------------------
-API_KEY     = "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"
+API_KEY     = "YOUR_GROQ_API_KEY_HERE"
 DB_FILE     = "grocery_tracker.db"
 REPORT_FILE = f"grocery_report_{date.today().strftime('%Y-%m-%d')}.pdf"
 STORES      = ["Market Basket", "Hannaford"]

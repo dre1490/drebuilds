@@ -15,7 +15,7 @@ from datetime import date
 # -----------------------------------------
 # YOUR GROQ API KEY
 # -----------------------------------------
-API_KEY = "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"
+API_KEY = "YOUR_GROQ_API_KEY_HERE"
 
 # -----------------------------------------
 # STEP 1 — Pull all metrics from database

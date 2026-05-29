@@ -21,8 +21,8 @@ from datetime import date
 # -----------------------------------------
 SMTP_HOST     = "sandbox.smtp.mailtrap.io"
 SMTP_PORT     = 2525
-SMTP_USERNAME = "6cba633f05a265"
-SMTP_PASSWORD = "55ffb250f367b5"
+SMTP_USERNAME = "YOUR_MAILTRAP_USERNAME_HERE"
+SMTP_PASSWORD = "YOUR_MAILTRAP_PASSWORD_HERE"
 EMAIL_FROM    = "reports@vertexsolutions.com"
 EMAIL_TO      = "manager@vertexsolutions.com"
 
