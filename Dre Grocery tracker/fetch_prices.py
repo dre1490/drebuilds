@@ -9,6 +9,10 @@ HOW TO RUN:
 4. Run: python fetch_prices.py
 """
 
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
 import sqlite3
 import json
 from groq import Groq
@@ -17,7 +21,7 @@ from datetime import date
 # -----------------------------------------
 # YOUR GROQ API KEY
 # -----------------------------------------
-API_KEY = "YOUR_GROQ_API_KEY_HERE"
+API_KEY = os.getenv('GROQ_API_KEY')
 
 STORES = ["Market Basket", "Hannaford"]
 

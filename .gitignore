@@ -1,0 +1,4 @@
+.env
+MY_CREDENTIALS.txt
+__pycache__
+*.pyc

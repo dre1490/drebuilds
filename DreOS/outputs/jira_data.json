@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-06-03 00:15",
+  "project": "DreOS \u2014 Personal Intelligence Hub",
+  "tickets": [],
+  "summary": {},
+  "status": "error: HTTPSConnectionPool(host='1490dre.atlassian.net', port=443): Max retries exceeded with url: /rest/api/3/search/jql?jql=project+%3D+KAN+ORDER+BY+created+ASC&maxResults=50&fields=summary%2Cstatus%2Cpriority%2Ccreated%2Cupdated (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+}

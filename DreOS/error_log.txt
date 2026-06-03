@@ -1,0 +1,39 @@
+
+[2026-05-31 13:14:28.108706] Market Pulse errors:
+  - MATIC: error
+
+[2026-05-31 13:40:08.618436] Jira error: Jira API returned 410: {"errorMessages":["The requested API has been removed. Please migrate to the /rest/api/3/search/jql API. A full migration guideline is available at https://developer.atlassian.com/changelog/#CHANGE-20
+
+[2026-06-01 20:40:23.795248] Email error: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-915325fae79sm1146848485a.26 - gsmtp')
+
+[2026-06-01 20:41:00.227079] Email error: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ccea04497bsm105785566d6.7 - gsmtp')
+
+[2026-06-01 20:45:38.130522] Email error: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9153244de53sm1187042785a.8 - gsmtp')
+
+[2026-06-01 20:50:40.514543] Email error: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 6a1803df08f44-8ccea1ca721sm108059416d6.32 - gsmtp')
+
+[2026-06-01 20:51:16.479452] Email error: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials af79cd13be357-9156457dcdesm327072085a.38 - gsmtp')
+
+[2026-06-03 00:15:50.256083] Market Pulse errors:
+  - AAPL: error: Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+  - MSFT: error: Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+  - GOOGL: error: 'exchangeTimezoneName'
+  - AMZN: error: 'exchangeTimezoneName'
+  - NVDA: error: 'exchangeTimezoneName'
+  - PLTR: error: 'exchangeTimezoneName'
+  - AMD: error: 'exchangeTimezoneName'
+  - META: error: 'exchangeTimezoneName'
+  - RIVN: error: 'exchangeTimezoneName'
+  - TSLA: error: 'exchangeTimezoneName'
+  - VFIAX: error: 'exchangeTimezoneName'
+  - FCNTX: error: 'exchangeTimezoneName'
+  - TRBCX: error: 'exchangeTimezoneName'
+  - AGTHX: error: 'exchangeTimezoneName'
+  - SWTSX: error: 'exchangeTimezoneName'
+
+[2026-06-03 00:15:56.794837] Weather/News errors:
+  - Weather: error: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=42.9454&longitude=-71.5159&current=temperature_2m%2Cweathercode%2Cwindspeed_10m%2Cprecipitation&daily=temperature_2m_max%2Ctemperature_2m_min%2Cweathercode%2Cprecipitation_sum&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FNew_York&forecast_days=3 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+
+[2026-06-03 00:15:56.950590] Jira error: HTTPSConnectionPool(host='1490dre.atlassian.net', port=443): Max retries exceeded with url: /rest/api/3/search/jql?jql=project+%3D+KAN+ORDER+BY+created+ASC&maxResults=50&fields=summary%2Cstatus%2Cpriority%2Ccreated%2Cupdated (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+
+[2026-06-03 00:15:57.105305] Figma error: HTTPSConnectionPool(host='api.figma.com', port=443): Max retries exceeded with url: /v1/files/bZbfXpqt2KdzmlVmH6qXBe (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))

@@ -8,6 +8,10 @@ HOW TO RUN:
 3. Run: python email_report.py
 """
 
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
 import smtplib
 import os
 import glob
@@ -22,8 +26,8 @@ from datetime import date
 # -----------------------------------------
 SMTP_HOST     = "smtp.gmail.com"
 SMTP_PORT     = 587
-SMTP_USERNAME = "1490dre@gmail.com"
-SMTP_PASSWORD = "YOUR_GMAIL_APP_PASSWORD_HERE"
+SMTP_USERNAME = os.getenv('GMAIL_USERNAME')
+SMTP_PASSWORD = os.getenv('GMAIL_APP_PASSWORD')
 EMAIL_FROM    = "1490dre@gmail.com"
 EMAIL_TO      = "1490dre@gmail.com"
 

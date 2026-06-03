@@ -8,6 +8,10 @@ HOW TO RUN:
 3. Run: python ai_executive_summary.py
 """
 
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
 import sqlite3
 from groq import Groq
 from datetime import date
@@ -15,7 +19,7 @@ from datetime import date
 # -----------------------------------------
 # YOUR GROQ API KEY
 # -----------------------------------------
-API_KEY = "YOUR_GROQ_API_KEY_HERE"
+API_KEY = os.getenv('GROQ_API_KEY')
 
 # -----------------------------------------
 # STEP 1 — Pull all metrics from database

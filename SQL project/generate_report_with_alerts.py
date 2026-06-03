@@ -8,6 +8,10 @@ HOW TO RUN:
 3. Run: python generate_report_with_alerts.py
 """
 
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
 import sqlite3
 import smtplib
 from email.mime.text import MIMEText
@@ -21,8 +25,8 @@ from datetime import date
 # -----------------------------------------
 SMTP_HOST     = "sandbox.smtp.mailtrap.io"
 SMTP_PORT     = 2525
-SMTP_USERNAME = "YOUR_MAILTRAP_USERNAME_HERE"
-SMTP_PASSWORD = "YOUR_MAILTRAP_PASSWORD_HERE"
+SMTP_USERNAME = os.getenv('MAILTRAP_USERNAME')
+SMTP_PASSWORD = os.getenv('MAILTRAP_PASSWORD')
 EMAIL_FROM    = "reports@vertexsolutions.com"
 EMAIL_TO      = "manager@vertexsolutions.com"
 

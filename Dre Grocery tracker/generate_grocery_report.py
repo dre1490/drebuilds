@@ -9,6 +9,10 @@ HOW TO RUN:
 4. Run: python generate_grocery_report.py
 """
 
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
 import sqlite3
 import json
 from groq import Groq
@@ -23,7 +27,7 @@ from reportlab.lib.enums import TA_CENTER, TA_LEFT, TA_RIGHT
 # -----------------------------------------
 # SETTINGS
 # -----------------------------------------
-API_KEY     = "YOUR_GROQ_API_KEY_HERE"
+API_KEY     = os.getenv('GROQ_API_KEY')
 DB_FILE     = "grocery_tracker.db"
 REPORT_FILE = f"grocery_report_{date.today().strftime('%Y-%m-%d')}.pdf"
 STORES      = ["Market Basket", "Hannaford"]

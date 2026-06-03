@@ -1,0 +1,123 @@
+{
+  "timestamp": "2026-06-03 00:15",
+  "big_5_stocks": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "price": null,
+      "change_pct": 0,
+      "status": "error: Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details."
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "price": null,
+      "change_pct": 0,
+      "status": "error: Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details."
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Google",
+      "price": null,
+      "change_pct": 0,
+      "status": "error: 'exchangeTimezoneName'"
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "price": null,
+      "change_pct": 0,
+      "status": "error: 'exchangeTimezoneName'"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "Nvidia",
+      "price": null,
+      "change_pct": 0,
+      "status": "error: 'exchangeTimezoneName'"
+    }
+  ],
+  "potential_stocks": [
+    {
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "price": null,
+      "change_pct": 0,
+      "status": "error: 'exchangeTimezoneName'"
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "price": null,
+      "change_pct": 0,
+      "status": "error: 'exchangeTimezoneName'"
+    },
+    {
+      "ticker": "META",
+      "name": "Meta",
+      "price": null,
+      "change_pct": 0,
+      "status": "error: 'exchangeTimezoneName'"
+    },
+    {
+      "ticker": "RIVN",
+      "name": "Rivian",
+      "price": null,
+      "change_pct": 0,
+      "status": "error: 'exchangeTimezoneName'"
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "price": null,
+      "change_pct": 0,
+      "status": "error: 'exchangeTimezoneName'"
+    }
+  ],
+  "mutual_funds": [
+    {
+      "ticker": "VFIAX",
+      "name": "Vanguard 500 Index",
+      "price": null,
+      "change_pct": 0,
+      "status": "error: 'exchangeTimezoneName'"
+    },
+    {
+      "ticker": "FCNTX",
+      "name": "Fidelity Contrafund",
+      "price": null,
+      "change_pct": 0,
+      "status": "error: 'exchangeTimezoneName'"
+    },
+    {
+      "ticker": "TRBCX",
+      "name": "T. Rowe Price Blue Chip",
+      "price": null,
+      "change_pct": 0,
+      "status": "error: 'exchangeTimezoneName'"
+    },
+    {
+      "ticker": "AGTHX",
+      "name": "American Funds Growth",
+      "price": null,
+      "change_pct": 0,
+      "status": "error: 'exchangeTimezoneName'"
+    },
+    {
+      "ticker": "SWTSX",
+      "name": "Schwab Total Market",
+      "price": null,
+      "change_pct": 0,
+      "status": "error: 'exchangeTimezoneName'"
+    }
+  ],
+  "major_cryptos": [],
+  "potential_tokens": [],
+  "summary": {
+    "total_assets": 25,
+    "gainers": 0,
+    "losers": 0,
+    "top_gainer": "AAPL +0%",
+    "top_loser": "AAPL 0%"
+  }
+}

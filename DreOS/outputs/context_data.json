@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-06-03 00:15",
+  "weather": {
+    "status": "error: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=42.9454&longitude=-71.5159&current=temperature_2m%2Cweathercode%2Cwindspeed_10m%2Cprecipitation&daily=temperature_2m_max%2Ctemperature_2m_min%2Cweathercode%2Cprecipitation_sum&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FNew_York&forecast_days=3 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+  },
+  "news": {
+    "ai_headlines": [],
+    "finance_headlines": [],
+    "status": "ok"
+  }
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DreOS Morning Dashboard</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', sans-serif; background: #0f1923; color: #e0e0e0; }
+
+  .header { background: #1F3864; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #2E75B6; }
+  .header h1 { color: white; font-size: 24px; letter-spacing: 2px; }
+  .header .date { color: #aac4e0; font-size: 14px; }
+
+  .kpi-bar { background: #1a2535; padding: 12px 30px; display: flex; gap: 20px; border-bottom: 1px solid #2a3a4a; flex-wrap: wrap; }
+  .kpi { background: #1F3864; padding: 8px 16px; border-radius: 6px; text-align: center; min-width: 140px; }
+  .kpi-label { font-size: 10px; color: #aac4e0; text-transform: uppercase; letter-spacing: 1px; }
+  .kpi-value { font-size: 16px; font-weight: bold; color: white; margin-top: 2px; }
+  .kpi-value.green { color: #70AD47; }
+  .kpi-value.red { color: #C00000; }
+  .kpi-value.orange { color: #ED7D31; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; padding: 20px 30px; }
+  .grid-wide { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 0 30px 20px; }
+  .card { background: #1a2535; border-radius: 10px; padding: 16px; border: 1px solid #2a3a4a; }
+  .card-title { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #2E75B6; margin-bottom: 12px; font-weight: bold; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; padding: 6px 8px; color: #aac4e0; font-size: 11px; border-bottom: 1px solid #2a3a4a; }
+  td { padding: 5px 8px; border-bottom: 1px solid #1f2f3f; }
+  tr:hover { background: #1f2f3f; }
+
+  .news-item { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #2a3a4a; }
+  .news-source { font-size: 10px; color: #aac4e0; display: block; margin-bottom: 3px; }
+  .news-title { font-size: 12px; color: #cce0ff; text-decoration: none; line-height: 1.4; }
+  .news-title:hover { color: white; }
+
+  .weather-current { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .weather-temp { font-size: 36px; font-weight: bold; color: white; }
+  .weather-desc { font-size: 14px; color: #aac4e0; }
+  .forecast-row { display: flex; gap: 8px; }
+  .forecast-day { flex: 1; background: #0f1923; border-radius: 6px; padding: 8px; text-align: center; }
+  .forecast-date { font-size: 10px; color: #aac4e0; }
+  .forecast-desc { font-size: 11px; color: white; margin: 4px 0; }
+  .forecast-temps { font-size: 12px; color: #FFC000; }
+
+  .progress-bar-bg { background: #0f1923; border-radius: 10px; height: 12px; margin: 8px 0; }
+  .progress-bar-fill { background: linear-gradient(90deg, #2E75B6, #70AD47); border-radius: 10px; height: 12px; width: 66.7%; }
+  .progress-label { display: flex; justify-content: space-between; font-size: 11px; color: #aac4e0; }
+
+  .brief-text { font-size: 13px; line-height: 1.8; color: #cce0ff; white-space: pre-wrap; }
+
+  .figma-status { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
+  .status-dot { width: 10px; height: 10px; border-radius: 50%; background: #70AD47; }
+  .status-dot.inactive { background: #C00000; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>⚡ DreOS MORNING DASHBOARD</h1>
+    <div class="date">Personal Intelligence Hub — Tuesday, June 02, 2026</div>
+  </div>
+  <div style="text-align:right; color:#aac4e0; font-size:13px;">
+    🌡️ 69.1°F &nbsp;|&nbsp;
+    Overcast &nbsp;|&nbsp;
+    💨 10.7 mph
+  </div>
+</div>
+
+<div class="kpi-bar">
+  <div class="kpi">
+    <div class="kpi-label">Top Gainer</div>
+    <div class="kpi-value green">AAPL +3.21%</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Top Loser</div>
+    <div class="kpi-value red">PLTR -3.78%</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Gainers / Losers</div>
+    <div class="kpi-value orange">4 ▲ / 6 ▼</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">DreOS Progress</div>
+    <div class="kpi-value orange">66.7% Complete</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Figma Status</div>
+    <div class="kpi-value green">Active — updated 3 d</div>
+  </div>
+</div>
+
+<div class="grid">
+  <!-- Big 5 Stocks -->
+  <div class="card">
+    <div class="card-title">📊 Big 5 Stocks</div>
+    <table>
+      <tr><th>Ticker</th><th>Name</th><th>Price</th><th>Change</th></tr>
+      
+        <tr>
+            <td><strong>AAPL</strong></td>
+            <td>Apple</td>
+            <td>$315.20</td>
+            <td style="color:#70AD47">▲ 3.21%</td>
+        </tr>
+        <tr>
+            <td><strong>MSFT</strong></td>
+            <td>Microsoft</td>
+            <td>$441.31</td>
+            <td style="color:#C00000">▼ 2.45%</td>
+        </tr>
+        <tr>
+            <td><strong>GOOGL</strong></td>
+            <td>Google</td>
+            <td>$361.85</td>
+            <td style="color:#C00000">▼ 3.12%</td>
+        </tr>
+        <tr>
+            <td><strong>AMZN</strong></td>
+            <td>Amazon</td>
+            <td>$256.52</td>
+            <td style="color:#C00000">▼ 1.20%</td>
+        </tr>
+        <tr>
+            <td><strong>NVDA</strong></td>
+            <td>Nvidia</td>
+            <td>$222.82</td>
+            <td style="color:#C00000">▼ 0.49%</td>
+        </tr>
+    </table>
+  </div>
+
+  <!-- Potential Stocks -->
+  <div class="card">
+    <div class="card-title">🚀 Potential Stocks</div>
+    <table>
+      <tr><th>Ticker</th><th>Name</th><th>Price</th><th>Change</th></tr>
+      
+        <tr>
+            <td><strong>PLTR</strong></td>
+            <td>Palantir</td>
+            <td>$152.17</td>
+            <td style="color:#C00000">▼ 3.78%</td>
+        </tr>
+        <tr>
+            <td><strong>AMD</strong></td>
+            <td>AMD</td>
+            <td>$521.54</td>
+            <td style="color:#70AD47">▲ 2.88%</td>
+        </tr>
+        <tr>
+            <td><strong>META</strong></td>
+            <td>Meta</td>
+            <td>$597.63</td>
+            <td style="color:#C00000">▼ 0.50%</td>
+        </tr>
+        <tr>
+            <td><strong>RIVN</strong></td>
+            <td>Rivian</td>
+            <td>$17.29</td>
+            <td style="color:#70AD47">▲ 2.73%</td>
+        </tr>
+        <tr>
+            <td><strong>TSLA</strong></td>
+            <td>Tesla</td>
+            <td>$423.74</td>
+            <td style="color:#70AD47">▲ 2.46%</td>
+        </tr>
+    </table>
+  </div>
+
+  <!-- Crypto -->
+  <div class="card">
+    <div class="card-title">🪙 Major Cryptos</div>
+    <table>
+      <tr><th>Token</th><th>Name</th><th>Price</th><th>24h</th></tr>
+      
+        <tr>
+            <td><strong>BTC</strong></td>
+            <td>Bitcoin</td>
+            <td>$66,735.00</td>
+            <td style="color:#C00000">▼ 6.43%</td>
+        </tr>
+        <tr>
+            <td><strong>ETH</strong></td>
+            <td>Ethereum</td>
+            <td>$1,858.67</td>
+            <td style="color:#C00000">▼ 7.22%</td>
+        </tr>
+        <tr>
+            <td><strong>BNB</strong></td>
+            <td>Binancecoin</td>
+            <td>$650.72</td>
+            <td style="color:#C00000">▼ 6.03%</td>
+        </tr>
+        <tr>
+            <td><strong>SOL</strong></td>
+            <td>Solana</td>
+            <td>$74.08</td>
+            <td style="color:#C00000">▼ 8.70%</td>
+        </tr>
+        <tr>
+            <td><strong>XRP</strong></td>
+            <td>Ripple</td>
+            <td>$1.21</td>
+            <td style="color:#C00000">▼ 6.58%</td>
+        </tr>
+    </table>
+  </div>
+
+  <!-- Potential Tokens -->
+  <div class="card">
+    <div class="card-title">⚡ Potential Tokens</div>
+    <table>
+      <tr><th>Token</th><th>Name</th><th>Price</th><th>24h</th></tr>
+      
+        <tr>
+            <td><strong>POL</strong></td>
+            <td>Polygon-Ecosystem-Token</td>
+            <td>$0.09</td>
+            <td style="color:#C00000">▼ 4.22%</td>
+        </tr>
+        <tr>
+            <td><strong>ARB</strong></td>
+            <td>Arbitrum</td>
+            <td>$0.09</td>
+            <td style="color:#C00000">▼ 9.17%</td>
+        </tr>
+        <tr>
+            <td><strong>LINK</strong></td>
+            <td>Chainlink</td>
+            <td>$8.36</td>
+            <td style="color:#C00000">▼ 7.53%</td>
+        </tr>
+        <tr>
+            <td><strong>UNI</strong></td>
+            <td>Uniswap</td>
+            <td>$2.79</td>
+            <td style="color:#C00000">▼ 6.17%</td>
+        </tr>
+        <tr>
+            <td><strong>AAVE</strong></td>
+            <td>Aave</td>
+            <td>$73.47</td>
+            <td style="color:#C00000">▼ 8.33%</td>
+        </tr>
+    </table>
+  </div>
+
+  <!-- Mutual Funds -->
+  <div class="card">
+    <div class="card-title">📈 Mutual Funds</div>
+    <table>
+      <tr><th>Ticker</th><th>Fund</th><th>NAV</th></tr>
+      
+        <tr>
+            <td><strong>VFIAX</strong></td>
+            <td>Vanguard 500 Index</td>
+            <td>$703.50</td>
+            <td style="color:#70AD47">▲ 0.40%</td>
+        </tr>
+        <tr>
+            <td><strong>FCNTX</strong></td>
+            <td>Fidelity Contrafund</td>
+            <td>$26.14</td>
+            <td style="color:#C00000">▼ 0.31%</td>
+        </tr>
+        <tr>
+            <td><strong>TRBCX</strong></td>
+            <td>T. Rowe Price Blue Chip</td>
+            <td>$221.85</td>
+            <td style="color:#C00000">▼ 0.19%</td>
+        </tr>
+        <tr>
+            <td><strong>AGTHX</strong></td>
+            <td>American Funds Growth</td>
+            <td>$88.58</td>
+            <td style="color:#70AD47">▲ 0.05%</td>
+        </tr>
+        <tr>
+            <td><strong>SWTSX</strong></td>
+            <td>Schwab Total Market</td>
+            <td>$18.36</td>
+            <td style="color:#70AD47">▲ 0.49%</td>
+        </tr>
+    </table>
+  </div>
+
+  <!-- Weather -->
+  <div class="card">
+    <div class="card-title">🌤️ Weather — Bedford NH</div>
+    <div class="weather-current">
+      <div>
+        <div class="weather-temp">69.1°F</div>
+        <div class="weather-desc">Overcast</div>
+      </div>
+      <div style="text-align:right; font-size:12px; color:#aac4e0;">
+        💨 10.7 mph<br>
+        🌧️ 0.0 in
+      </div>
+    </div>
+    <div class="forecast-row">
+      
+    <div class="forecast-day">
+        <div class="forecast-date">2026-06-02</div>
+        <div class="forecast-desc">Overcast</div>
+        <div class="forecast-temps">42.7° — 76.8°F</div>
+    </div>
+    <div class="forecast-day">
+        <div class="forecast-date">2026-06-03</div>
+        <div class="forecast-desc">Clear sky</div>
+        <div class="forecast-temps">52.0° — 78.1°F</div>
+    </div>
+    <div class="forecast-day">
+        <div class="forecast-date">2026-06-04</div>
+        <div class="forecast-desc">Overcast</div>
+        <div class="forecast-temps">54.4° — 86.0°F</div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid-wide">
+  <!-- News -->
+  <div class="card">
+    <div class="card-title">📰 AI & Finance Headlines</div>
+    <div style="margin-bottom:12px;">
+      <div style="font-size:11px; color:#2E75B6; margin-bottom:6px;">🤖 AI NEWS</div>
+      
+        <div class="news-item">
+            <span class="news-source">🤖 pymnts.com</span>
+            <a href="https://www.pymnts.com/news/artificial-intelligence/2026/can-ai-prevent-the-next-subway-delay/" target="_blank" class="news-title">Can AI Prevent the Next Subway Delay?</a>
+        </div>
+        <div class="news-item">
+            <span class="news-source">🤖 Livemint</span>
+            <a href="https://www.livemint.com/companies/news/alphabets-ai-push-google-parent-to-raise-80-billion-from-stock-sale-berkshire-hathaway-invest-10-billion-more-11780357114598.html" target="_blank" class="news-title">Alphabet's AI Push: Google parent to raise $80 billion from stock sale; Berkshire Hathaway invest $10 billion more</a>
+        </div>
+        <div class="news-item">
+            <span class="news-source">🤖 4sysops.com</span>
+            <a href="https://4sysops.com/archives/perplexity-ceo-on-ai-spending/" target="_blank" class="news-title">Perplexity CEO on AI spending</a>
+        </div>
+        <div class="news-item">
+            <span class="news-source">🤖 4sysops.com</span>
+            <a href="https://4sysops.com/archives/moving-toward-a-hybrid-orchestration-of-server-and-local-ai-compute/" target="_blank" class="news-title">Moving toward a hybrid orchestration of server and local AI compute</a>
+        </div>
+        <div class="news-item">
+            <span class="news-source">🤖 4sysops.com</span>
+            <a href="https://4sysops.com/archives/sam-altman-addresses-ai-anxiety-and-the-importance-of-human-centric-development/" target="_blank" class="news-title">Sam Altman addresses AI anxiety and the importance of human-centric development</a>
+        </div>
+    </div>
+    <div>
+      <div style="font-size:11px; color:#2E75B6; margin-bottom:6px;">💰 FINANCE NEWS</div>
+      
+        <div class="news-item">
+            <span class="news-source">💰 GlobeNewswire</span>
+            <a href="https://www.globenewswire.com/news-release/2026/06/01/3304759/0/en/Stocktwits-Deepens-Its-Social-Finance-Leadership-With-All-New-Symbol-Pages-Centered-on-Community-Intelligence.html" target="_blank" class="news-title">Stocktwits Deepens Its Social Finance Leadership With All-New Symbol Pages Centered on Community Intelligence</a>
+        </div>
+        <div class="news-item">
+            <span class="news-source">💰 GlobeNewswire</span>
+            <a href="https://www.globenewswire.com/news-release/2026/06/01/3304672/0/en/Dow-Live-Index-Today-vs-Historical-Trends-How-the-Industrial-Average-Moves-Over-Time.html" target="_blank" class="news-title">Dow Live Index Today vs Historical Trends: How the Industrial Average Moves Over Time</a>
+        </div>
+        <div class="news-item">
+            <span class="news-source">💰 Yale.edu</span>
+            <a href="https://insights.som.yale.edu/insights/over-the-very-long-run-stock-bubbles-are-rare" target="_blank" class="news-title">Over the (Very) Long Run, Stock Bubbles Are Rare</a>
+        </div>
+        <div class="news-item">
+            <span class="news-source">💰 Ibtimes.com.au</span>
+            <a href="https://www.ibtimes.com.au/servicenow-shares-surge-ai-workflow-automation-growth-1869928" target="_blank" class="news-title">ServiceNow Shares Surge 9% to $135.60 on Strong AI Platform Demand and Enterprise Momentum</a>
+        </div>
+        <div class="news-item">
+            <span class="news-source">💰 Ibtimes.com.au</span>
+            <a href="https://www.ibtimes.com.au/ibm-shares-surge-ai-hybrid-cloud-optimism-1869923" target="_blank" class="news-title">IBM Shares Surge 9.77% to $326.90 as AI Cloud and Enterprise Software Momentum Accelerates</a>
+        </div>
+    </div>
+  </div>
+
+  <!-- Project Status + Brief -->
+  <div class="card">
+    <div class="card-title">🎯 DreOS Project Status</div>
+    <div class="progress-label">
+      <span>Phase Progress</span>
+      <span>8/12 phases complete</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill"></div>
+    </div>
+    <div style="font-size:12px; margin-top:8px;">
+      <div style="color:#aac4e0;">🔄 Current: <span style="color:white;">Phase 8 — Email + Launcher</span></div>
+      <div style="color:#aac4e0; margin-top:4px;">⏭️ Next: <span style="color:white;">Phase 9 — The Agent</span></div>
+    </div>
+    <div style="margin-top:12px; padding-top:12px; border-top:1px solid #2a3a4a;">
+      <div class="card-title">🎨 Figma Design File</div>
+      <div class="figma-status">
+        <div class="status-dot "></div>
+        <span style="font-size:12px;">Active — updated 3 day(s) ago</span>
+      </div>
+    </div>
+    <div style="margin-top:12px; padding-top:12px; border-top:1px solid #2a3a4a;">
+      <div class="card-title">🤖 AI Morning Brief</div>
+      <div class="brief-text">Good morning, Dre, it's Tuesday, June 02, 2026, and it's an overcast day in Bedford, NH, with a temperature of 69.1°F, so you might want to grab a jacket if you're heading out. 
+
+The market is seeing some interesting movements, with AAPL leading the pack, up 3.21%, while on the other side, PLTR is down 3.78%, making it the top loser. Crypto is also taking a hit, with BTC down 6.43% and ETH down 7.22%, which could be worth watching as the day unfolds. Meanwhile, AMD is up 2.88%, and TSLA is up 2....</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

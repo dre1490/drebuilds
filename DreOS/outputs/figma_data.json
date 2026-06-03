@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-06-03 00:15",
+  "file": {},
+  "pages": [],
+  "summary": {},
+  "status": "error: HTTPSConnectionPool(host='api.figma.com', port=443): Max retries exceeded with url: /v1/files/bZbfXpqt2KdzmlVmH6qXBe (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+}

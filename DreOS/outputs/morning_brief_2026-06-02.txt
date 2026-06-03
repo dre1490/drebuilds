@@ -1,0 +1,10 @@
+DreOS Morning Brief — Tuesday, June 02, 2026
+============================================================
+
+Good morning, Dre, it's Tuesday, June 02, 2026, and it's an overcast day in Bedford, NH, with a temperature of 69.1°F, so you might want to grab a jacket if you're heading out. 
+
+The market is seeing some interesting movements, with AAPL leading the pack, up 3.21%, while on the other side, PLTR is down 3.78%, making it the top loser. Crypto is also taking a hit, with BTC down 6.43% and ETH down 7.22%, which could be worth watching as the day unfolds. Meanwhile, AMD is up 2.88%, and TSLA is up 2.46%, showing some resilience in the face of overall market sluggishness.
+
+In the news, Alphabet's plans to raise $80 billion from a stock sale, with Berkshire Hathaway investing an additional $10 billion, is making waves, and it's likely to have an impact on the market. The news about ServiceNow's shares surging 9% due to strong AI platform demand is also relevant, given our own project's focus on AI. These developments highlight the growing importance of AI in the tech industry.
+
+On the DreOS project front, we're making good progress, currently at 66.7% complete, with Phase 8, which covers email and launcher, underway. The Figma design file, DreOS Portfolio Design Assets, is active and was last updated three days ago. As we head into the day, I'm looking forward to tackling new challenges and making further progress on the project, and I'm confident that with our combined efforts, we'll make today a productive one.

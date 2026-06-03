@@ -1,0 +1,12 @@
+DreOS Morning Brief — Monday, June 01, 2026
+============================================================
+
+Good morning, Dre, it's Monday, June 01, 2026, and we're starting the week off with a crisp 56.5°F morning in Bedford, NH, under a clear sky. 
+
+The market is looking interesting, with NVDA taking the top spot as the biggest gainer, up 5.59%, while META is the largest loser, down 5.01%. Overall, we're seeing 4 gainers and 6 losers, with stocks like MSFT and PLTR showing some promise, up 2.34% and 2.76% respectively. In crypto, BTC and ETH are down, but not drastically, at -3.55% and -0.82% respectively. 
+
+In the news, there are some fascinating stories - like the US taking steps to halt Nvidia AI chip shipments to Chinese firms, which could have implications for the market. Also, Google is seeking approval to release AI-bred mosquitoes in California and Florida, which raises some interesting questions about AI applications. These developments are likely contributing to the rally in chip stocks, as seen in NVDA's significant gain.
+
+Our DreOS project is progressing well, at 66.7% complete, with the current focus on Phase 8 - Email + Launcher, and Phase 9 - The Agent, coming up next. The Figma file is active and was updated just 2 days ago, so everything is on track. 
+
+You've got a solid foundation to tackle the day ahead, so let's dive in and make the most of it.
