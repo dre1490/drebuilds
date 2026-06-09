@@ -1,11 +1,103 @@
 {
-  "timestamp": "2026-06-03 00:15",
+  "timestamp": "2026-06-08 20:47",
   "weather": {
-    "status": "error: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=42.9454&longitude=-71.5159&current=temperature_2m%2Cweathercode%2Cwindspeed_10m%2Cprecipitation&daily=temperature_2m_max%2Ctemperature_2m_min%2Cweathercode%2Cprecipitation_sum&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FNew_York&forecast_days=3 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+    "location": "Bedford, NH",
+    "current": {
+      "temperature": 71.0,
+      "description": "Clear sky",
+      "wind_mph": 5.6,
+      "precip_in": 0.0
+    },
+    "forecast": [
+      {
+        "date": "2026-06-08",
+        "high": 80.8,
+        "low": 51.1,
+        "description": "Overcast",
+        "precip_in": 0.0
+      },
+      {
+        "date": "2026-06-09",
+        "high": 84.0,
+        "low": 55.1,
+        "description": "Overcast",
+        "precip_in": 0.0
+      },
+      {
+        "date": "2026-06-10",
+        "high": 87.8,
+        "low": 64.5,
+        "description": "Light drizzle",
+        "precip_in": 0.008
+      }
+    ],
+    "status": "ok"
   },
   "news": {
-    "ai_headlines": [],
-    "finance_headlines": [],
+    "ai_headlines": [
+      {
+        "title": "France attracted over EUR110 billion in AI and data center pledges but delivery faces power and approval hurdles",
+        "source": "Digitimes",
+        "url": "https://www.digitimes.com/news/a20260608PD202/france-data-center-investment-capacity-data.html",
+        "date": "2026-06-08"
+      },
+      {
+        "title": "Legal & General Says Energy Transition is \u2018Alive and Well\u2019",
+        "source": "Financial Post",
+        "url": "https://financialpost.com/pmn/business-pmn/legal-general-says-energy-transition-is-alive-and-well",
+        "date": "2026-06-08"
+      },
+      {
+        "title": "Hong Kong's IPO boom is developing a performance problem",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/06/08/hong-kongs-ipo-boom-is-developing-a-performance-problem.html",
+        "date": "2026-06-08"
+      },
+      {
+        "title": "Korean Stocks Tumble as Investors Rush to Offload Tech Shares",
+        "source": "Financial Post",
+        "url": "https://financialpost.com/pmn/business-pmn/korean-stocks-tumble-as-investors-rush-to-offload-tech-shares",
+        "date": "2026-06-08"
+      },
+      {
+        "title": "Traditional insurers risk corporate extinction, warns CBI boss",
+        "source": "The Punch",
+        "url": "https://punchng.com/traditional-insurers-risk-corporate-extinction-warns-cbi-boss/",
+        "date": "2026-06-08"
+      }
+    ],
+    "finance_headlines": [
+      {
+        "title": "Jim Chanos Stunned As Donald Trump And Bernie Sanders Find Common Ground on Government-Owned Stocks: 'What Do You Call It...?'",
+        "source": "Yahoo Entertainment",
+        "url": "https://finance.yahoo.com/economy/policy/articles/jim-chanos-stunned-donald-trump-220114172.html",
+        "date": "2026-06-07"
+      },
+      {
+        "title": "Scott Bessent Says Bitcoin Reserve Moving At Deliberate Speed As 'Big Announcement' Remains Elusive",
+        "source": "Yahoo Entertainment",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/scott-bessent-says-bitcoin-moving-150132601.html",
+        "date": "2026-06-07"
+      },
+      {
+        "title": "Is Zoom Communications, Inc. (ZM) A Good Stock To Buy Now?",
+        "source": "Yahoo Entertainment",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/zoom-communications-inc-zm-good-145319929.html",
+        "date": "2026-06-07"
+      },
+      {
+        "title": "Ray Dalio Says US Is 'Past The Point Of No Return' On Debt, Sees 1930s-Style 'Financial Repression' Coming",
+        "source": "Yahoo Entertainment",
+        "url": "https://finance.yahoo.com/economy/policy/articles/ray-dalio-says-us-past-143205353.html",
+        "date": "2026-06-07"
+      },
+      {
+        "title": "Joe Rogan stunned after Caleb Hammer says US boomers should have $2M-$5M savings \u2014 no \u2018sympathy\u2019 otherwise. Is he right?",
+        "source": "Yahoo Entertainment",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/joe-rogan-stunned-caleb-hammer-124500206.html",
+        "date": "2026-06-07"
+      }
+    ],
     "status": "ok"
   }
 }

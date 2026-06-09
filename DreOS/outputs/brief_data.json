@@ -1,43 +1,43 @@
 {
-  "timestamp": "2026-06-02 19:59",
-  "date": "Tuesday, June 02, 2026",
-  "brief": "Good morning, Dre, it's Tuesday, June 02, 2026, and it's an overcast day in Bedford, NH, with a temperature of 69.1\u00b0F, so you might want to grab a jacket if you're heading out. \n\nThe market is seeing some interesting movements, with AAPL leading the pack, up 3.21%, while on the other side, PLTR is down 3.78%, making it the top loser. Crypto is also taking a hit, with BTC down 6.43% and ETH down 7.22%, which could be worth watching as the day unfolds. Meanwhile, AMD is up 2.88%, and TSLA is up 2.46%, showing some resilience in the face of overall market sluggishness.\n\nIn the news, Alphabet's plans to raise $80 billion from a stock sale, with Berkshire Hathaway investing an additional $10 billion, is making waves, and it's likely to have an impact on the market. The news about ServiceNow's shares surging 9% due to strong AI platform demand is also relevant, given our own project's focus on AI. These developments highlight the growing importance of AI in the tech industry.\n\nOn the DreOS project front, we're making good progress, currently at 66.7% complete, with Phase 8, which covers email and launcher, underway. The Figma design file, DreOS Portfolio Design Assets, is active and was last updated three days ago. As we head into the day, I'm looking forward to tackling new challenges and making further progress on the project, and I'm confident that with our combined efforts, we'll make today a productive one.",
+  "timestamp": "2026-06-07 20:11",
+  "date": "Sunday, June 07, 2026",
+  "brief": "Good morning, it's Sunday, June 07, 2026, and it's a bit overcast in Bedford, NH, with a gentle breeze, so you might want to grab a cup of coffee and stay indoors today. \n\nThe market is seeing some interesting moves, with the Big 5 stocks mostly in the red, led by NVDA's 5.18% drop, while GOOGL is the top \"gainer\" with a relatively minor loss of 0.59%. On the crypto side, we're seeing some notable gains, with ETH up 7.60% and BTC rising 3.89%. Notably, RIVN is the top loser today, down 9.62%, while LINK is a standout gainer in the token space, up 6.96%. \n\nIn the news, there are some interesting headlines that might be relevant to our market watch, such as the former Crypto Security Chief sounding the alarm on DeFi safety, which could impact investor confidence in the crypto space. Additionally, Dave Ramsey's comments on wealth-building rules might resonate with some investors, and the article on the next NVIDIA could be worth a closer look, as it highlights three stocks poised to win in the AI boom. \n\nAs for the DreOS project, we've reached 100% completion, so we're all done with the current phases, and our Figma design file, DreOS Portfolio Design Assets, is inactive for now, last updated 8 days ago. \n\nYou've got a solid foundation to tackle the day ahead, so grab that coffee, dive into the markets, and let's make the most of this Sunday.",
   "market": {
-    "timestamp": "2026-06-02 19:59",
+    "timestamp": "2026-06-07 20:11",
     "big_5_stocks": [
       {
         "ticker": "AAPL",
         "name": "Apple",
-        "price": 315.2,
-        "change_pct": 3.21,
+        "price": 307.34,
+        "change_pct": -1.05,
         "status": "ok"
       },
       {
         "ticker": "MSFT",
         "name": "Microsoft",
-        "price": 441.31,
-        "change_pct": -2.45,
+        "price": 416.67,
+        "change_pct": -2.59,
         "status": "ok"
       },
       {
         "ticker": "GOOGL",
         "name": "Google",
-        "price": 361.85,
-        "change_pct": -3.12,
+        "price": 368.53,
+        "change_pct": -0.59,
         "status": "ok"
       },
       {
         "ticker": "AMZN",
         "name": "Amazon",
-        "price": 256.52,
-        "change_pct": -1.2,
+        "price": 246.03,
+        "change_pct": -2.84,
         "status": "ok"
       },
       {
         "ticker": "NVDA",
         "name": "Nvidia",
-        "price": 222.82,
-        "change_pct": -0.49,
+        "price": 205.1,
+        "change_pct": -5.18,
         "status": "ok"
       }
     ],
@@ -45,36 +45,36 @@
       {
         "ticker": "PLTR",
         "name": "Palantir",
-        "price": 152.17,
-        "change_pct": -3.78,
+        "price": 135.53,
+        "change_pct": -3.82,
         "status": "ok"
       },
       {
         "ticker": "AMD",
         "name": "AMD",
-        "price": 521.54,
-        "change_pct": 2.88,
+        "price": 466.38,
+        "change_pct": -9.29,
         "status": "ok"
       },
       {
         "ticker": "META",
         "name": "Meta",
-        "price": 597.63,
-        "change_pct": -0.5,
+        "price": 593.0,
+        "change_pct": -4.99,
         "status": "ok"
       },
       {
         "ticker": "RIVN",
         "name": "Rivian",
-        "price": 17.29,
-        "change_pct": 2.73,
+        "price": 16.35,
+        "change_pct": -9.62,
         "status": "ok"
       },
       {
         "ticker": "TSLA",
         "name": "Tesla",
-        "price": 423.74,
-        "change_pct": 2.46,
+        "price": 391.0,
+        "change_pct": -6.05,
         "status": "ok"
       }
     ],
@@ -82,36 +82,36 @@
       {
         "ticker": "VFIAX",
         "name": "Vanguard 500 Index",
-        "price": 703.5,
-        "change_pct": 0.4,
+        "price": 682.84,
+        "change_pct": -2.63,
         "status": "ok"
       },
       {
         "ticker": "FCNTX",
         "name": "Fidelity Contrafund",
-        "price": 26.14,
-        "change_pct": -0.31,
+        "price": 25.72,
+        "change_pct": -2.98,
         "status": "ok"
       },
       {
         "ticker": "TRBCX",
         "name": "T. Rowe Price Blue Chip",
-        "price": 221.85,
-        "change_pct": -0.19,
+        "price": 212.2,
+        "change_pct": -3.33,
         "status": "ok"
       },
       {
         "ticker": "AGTHX",
         "name": "American Funds Growth",
-        "price": 88.58,
-        "change_pct": 0.05,
+        "price": 84.66,
+        "change_pct": -3.82,
         "status": "ok"
       },
       {
         "ticker": "SWTSX",
         "name": "Schwab Total Market",
-        "price": 18.36,
-        "change_pct": 0.49,
+        "price": 17.82,
+        "change_pct": -2.68,
         "status": "ok"
       }
     ],
@@ -119,36 +119,36 @@
       {
         "ticker": "BTC",
         "name": "Bitcoin",
-        "price": 66735,
-        "change_pct": -6.43,
+        "price": 63166,
+        "change_pct": 3.89,
         "status": "ok"
       },
       {
         "ticker": "ETH",
         "name": "Ethereum",
-        "price": 1858.67,
-        "change_pct": -7.22,
+        "price": 1684.81,
+        "change_pct": 7.6,
         "status": "ok"
       },
       {
         "ticker": "BNB",
         "name": "Binancecoin",
-        "price": 650.72,
-        "change_pct": -6.03,
+        "price": 603.31,
+        "change_pct": 5.07,
         "status": "ok"
       },
       {
         "ticker": "SOL",
         "name": "Solana",
-        "price": 74.08,
-        "change_pct": -8.7,
+        "price": 66.2,
+        "change_pct": 6.63,
         "status": "ok"
       },
       {
         "ticker": "XRP",
         "name": "Ripple",
-        "price": 1.21,
-        "change_pct": -6.58,
+        "price": 1.15,
+        "change_pct": 5.59,
         "status": "ok"
       }
     ],
@@ -156,74 +156,74 @@
       {
         "ticker": "POL",
         "name": "Polygon-Ecosystem-Token",
-        "price": 0.09,
-        "change_pct": -4.22,
+        "price": 0.08,
+        "change_pct": 2.32,
         "status": "ok"
       },
       {
         "ticker": "ARB",
         "name": "Arbitrum",
-        "price": 0.09,
-        "change_pct": -9.17,
+        "price": 0.08,
+        "change_pct": 3.68,
         "status": "ok"
       },
       {
         "ticker": "LINK",
         "name": "Chainlink",
-        "price": 8.36,
-        "change_pct": -7.53,
+        "price": 7.89,
+        "change_pct": 6.96,
         "status": "ok"
       },
       {
         "ticker": "UNI",
         "name": "Uniswap",
-        "price": 2.79,
-        "change_pct": -6.17,
+        "price": 2.56,
+        "change_pct": 3.8,
         "status": "ok"
       },
       {
         "ticker": "AAVE",
         "name": "Aave",
-        "price": 73.47,
-        "change_pct": -8.33,
+        "price": 63.5,
+        "change_pct": 4.62,
         "status": "ok"
       }
     ],
     "summary": {
       "total_assets": 25,
-      "gainers": 4,
-      "losers": 6,
-      "top_gainer": "AAPL +3.21%",
-      "top_loser": "PLTR -3.78%"
+      "gainers": 0,
+      "losers": 10,
+      "top_gainer": "GOOGL +-0.59%",
+      "top_loser": "RIVN -9.62%"
     }
   },
   "weather": {
     "location": "Bedford, NH",
     "current": {
-      "temperature": 69.1,
+      "temperature": 66.8,
       "description": "Overcast",
-      "wind_mph": 10.7,
+      "wind_mph": 14.3,
       "precip_in": 0.0
     },
     "forecast": [
       {
-        "date": "2026-06-02",
-        "high": 76.8,
-        "low": 42.7,
+        "date": "2026-06-07",
+        "high": 77.2,
+        "low": 60.4,
+        "description": "Light drizzle",
+        "precip_in": 0.008
+      },
+      {
+        "date": "2026-06-08",
+        "high": 75.4,
+        "low": 53.3,
         "description": "Overcast",
         "precip_in": 0.0
       },
       {
-        "date": "2026-06-03",
-        "high": 78.1,
-        "low": 52.0,
-        "description": "Clear sky",
-        "precip_in": 0.0
-      },
-      {
-        "date": "2026-06-04",
-        "high": 86.0,
-        "low": 54.4,
+        "date": "2026-06-09",
+        "high": 87.9,
+        "low": 54.7,
         "description": "Overcast",
         "precip_in": 0.0
       }
@@ -233,83 +233,83 @@
   "news": {
     "ai_headlines": [
       {
-        "title": "Can AI Prevent the Next Subway Delay?",
-        "source": "pymnts.com",
-        "url": "https://www.pymnts.com/news/artificial-intelligence/2026/can-ai-prevent-the-next-subway-delay/",
-        "date": "2026-06-01"
+        "title": " Endrick saves Brazil in final pre-World Cup friendly",
+        "source": "Onefootball.com",
+        "url": "https://onefootball.com/en/news/endrick-saves-brazil-again-in-final-pre-world-cup-friendly-42975629",
+        "date": "2026-06-07"
       },
       {
-        "title": "Alphabet's AI Push: Google parent to raise $80 billion from stock sale; Berkshire Hathaway invest $10 billion more",
+        "title": "Massive Catholic Crowd Professes \u2018One Nation Under God\u2019 With Annual Eucharistic Procession By White House",
+        "source": "The Daily Caller",
+        "url": "https://dailycaller.com/2026/06/06/catholic-information-center-charles-trullols-leads-washington-eucharistic-procession-white-house-perpetual-pilgrims/",
+        "date": "2026-06-07"
+      },
+      {
+        "title": "Leveraging Artificial Intelligence to Ensure Secure Army Communications",
+        "source": "Soldiersystems.net",
+        "url": "https://soldiersystems.net/2026/06/07/leveraging-artificial-intelligence-to-ensure-secure-army-communications/",
+        "date": "2026-06-07"
+      },
+      {
+        "title": "Visual Marketing for Specialty Retailers: A Practical Guide to Adobe Firefly",
+        "source": "Vinelandchamber.org",
+        "url": "https://www.vinelandchamber.org/news/details/visual-marketing-for-specialty-retailers-a-practical-guide-to-adobe-firefly-06-05-2026",
+        "date": "2026-06-06"
+      },
+      {
+        "title": "Indian tech firms Sahasra and Zoho showcase Asian ambitions at COMPUTEX 2026 in Taiwan",
         "source": "Livemint",
-        "url": "https://www.livemint.com/companies/news/alphabets-ai-push-google-parent-to-raise-80-billion-from-stock-sale-berkshire-hathaway-invest-10-billion-more-11780357114598.html",
-        "date": "2026-06-01"
-      },
-      {
-        "title": "Perplexity CEO on AI spending",
-        "source": "4sysops.com",
-        "url": "https://4sysops.com/archives/perplexity-ceo-on-ai-spending/",
-        "date": "2026-06-01"
-      },
-      {
-        "title": "Moving toward a hybrid orchestration of server and local AI compute",
-        "source": "4sysops.com",
-        "url": "https://4sysops.com/archives/moving-toward-a-hybrid-orchestration-of-server-and-local-ai-compute/",
-        "date": "2026-06-01"
-      },
-      {
-        "title": "Sam Altman addresses AI anxiety and the importance of human-centric development",
-        "source": "4sysops.com",
-        "url": "https://4sysops.com/archives/sam-altman-addresses-ai-anxiety-and-the-importance-of-human-centric-development/",
-        "date": "2026-06-01"
+        "url": "https://www.livemint.com/companies/news/indian-tech-firms-sahasra-and-zoho-showcase-asian-ambitions-at-computex-2026-in-taiwan-11780789024213.html",
+        "date": "2026-06-06"
       }
     ],
     "finance_headlines": [
       {
-        "title": "Stocktwits Deepens Its Social Finance Leadership With All-New Symbol Pages Centered on Community Intelligence",
-        "source": "GlobeNewswire",
-        "url": "https://www.globenewswire.com/news-release/2026/06/01/3304759/0/en/Stocktwits-Deepens-Its-Social-Finance-Leadership-With-All-New-Symbol-Pages-Centered-on-Community-Intelligence.html",
-        "date": "2026-06-01"
+        "title": "'The fastest way to get rich quick is don't': Dave Ramsey's truth bomb for investors. His 3 wealth-building rules",
+        "source": "Yahoo Entertainment",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/fastest-way-rich-quick-dont-142500389.html",
+        "date": "2026-06-06"
       },
       {
-        "title": "Dow Live Index Today vs Historical Trends: How the Industrial Average Moves Over Time",
-        "source": "GlobeNewswire",
-        "url": "https://www.globenewswire.com/news-release/2026/06/01/3304672/0/en/Dow-Live-Index-Today-vs-Historical-Trends-How-the-Industrial-Average-Moves-Over-Time.html",
-        "date": "2026-06-01"
+        "title": "'I Now Consider All Of DeFi Unsafe': Former Crypto Security Chief Sounds Alarm As AI Agents Become More Powerful",
+        "source": "Yahoo Entertainment",
+        "url": "https://finance.yahoo.com/markets/crypto/articles/now-consider-defi-unsafe-former-130148655.html",
+        "date": "2026-06-06"
       },
       {
-        "title": "Over the (Very) Long Run, Stock Bubbles Are Rare",
-        "source": "Yale.edu",
-        "url": "https://insights.som.yale.edu/insights/over-the-very-long-run-stock-bubbles-are-rare",
-        "date": "2026-06-01"
+        "title": "The next NVIDIA? These 3 stocks below $50 are poised to win the next AI boom (and they\u2019re still flying under the radar)",
+        "source": "Yahoo Entertainment",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/next-nvidia-3-stocks-below-120500020.html",
+        "date": "2026-06-06"
       },
       {
-        "title": "ServiceNow Shares Surge 9% to $135.60 on Strong AI Platform Demand and Enterprise Momentum",
-        "source": "Ibtimes.com.au",
-        "url": "https://www.ibtimes.com.au/servicenow-shares-surge-ai-workflow-automation-growth-1869928",
-        "date": "2026-06-01"
-      },
-      {
-        "title": "IBM Shares Surge 9.77% to $326.90 as AI Cloud and Enterprise Software Momentum Accelerates",
-        "source": "Ibtimes.com.au",
-        "url": "https://www.ibtimes.com.au/ibm-shares-surge-ai-hybrid-cloud-optimism-1869923",
-        "date": "2026-06-01"
+        "title": "'Too big to stop': Young American men are flocking to prediction markets to take big risks on even bigger rewards",
+        "source": "Yahoo Entertainment",
+        "url": "https://finance.yahoo.com/markets/options/articles/too-big-stop-young-american-111500724.html",
+        "date": "2026-06-06"
       }
     ],
     "status": "ok"
   },
   "jira": {
     "total_tickets": 12,
-    "done": 8,
-    "in_progress": 1,
-    "todo": 3,
-    "pct_complete": 66.7,
-    "current_phase": "Phase 8 \u2014 Email + Launcher",
-    "next_phase": "Phase 9 \u2014 The Agent"
+    "done": 12,
+    "in_progress": 0,
+    "todo": 0,
+    "pct_complete": 100.0,
+    "current_phase": "None in progress",
+    "next_phase": "All done!"
   },
   "figma": {
     "total_pages": 1,
-    "recently_updated": true,
-    "activity_status": "Active \u2014 updated 3 day(s) ago",
-    "days_since": 3
+    "recently_updated": false,
+    "activity_status": "Inactive \u2014 last updated 8 days ago",
+    "days_since": 8
+  },
+  "history": {
+    "total_assets": 25,
+    "days_of_history": 1,
+    "best_7d": "N/A",
+    "worst_7d": "N/A"
   }
 }

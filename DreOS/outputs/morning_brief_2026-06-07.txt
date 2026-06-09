@@ -1,0 +1,12 @@
+DreOS Morning Brief — Sunday, June 07, 2026
+============================================================
+
+Good morning, it's Sunday, June 07, 2026, and it's a bit overcast in Bedford, NH, with a gentle breeze, so you might want to grab a cup of coffee and stay indoors today. 
+
+The market is seeing some interesting moves, with the Big 5 stocks mostly in the red, led by NVDA's 5.18% drop, while GOOGL is the top "gainer" with a relatively minor loss of 0.59%. On the crypto side, we're seeing some notable gains, with ETH up 7.60% and BTC rising 3.89%. Notably, RIVN is the top loser today, down 9.62%, while LINK is a standout gainer in the token space, up 6.96%. 
+
+In the news, there are some interesting headlines that might be relevant to our market watch, such as the former Crypto Security Chief sounding the alarm on DeFi safety, which could impact investor confidence in the crypto space. Additionally, Dave Ramsey's comments on wealth-building rules might resonate with some investors, and the article on the next NVIDIA could be worth a closer look, as it highlights three stocks poised to win in the AI boom. 
+
+As for the DreOS project, we've reached 100% completion, so we're all done with the current phases, and our Figma design file, DreOS Portfolio Design Assets, is inactive for now, last updated 8 days ago. 
+
+You've got a solid foundation to tackle the day ahead, so grab that coffee, dive into the markets, and let's make the most of this Sunday.

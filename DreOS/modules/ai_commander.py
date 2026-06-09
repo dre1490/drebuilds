@@ -49,16 +49,18 @@ def load_json(filepath):
         print(f"    ❌ Error loading {filepath}: {str(e)}")
         return {}
 
-market_data = load_json("outputs/market_data.json")
+market_data  = load_json("outputs/market_data.json")
 context_data = load_json("outputs/context_data.json")
-jira_data   = load_json("outputs/jira_data.json")
-figma_data  = load_json("outputs/figma_data.json")
+jira_data    = load_json("outputs/jira_data.json")
+figma_data   = load_json("outputs/figma_data.json")
+history_data = load_json("outputs/history_data.json")
 
 print(f"    ✅ Market data: {len(market_data.get('big_5_stocks', []))} stocks loaded")
 print(f"    ✅ Weather: {context_data.get('weather', {}).get('current', {}).get('temperature', 'N/A')}°F")
 print(f"    ✅ News: {len(context_data.get('news', {}).get('ai_headlines', []))} AI + {len(context_data.get('news', {}).get('finance_headlines', []))} finance headlines")
 print(f"    ✅ Jira: {jira_data.get('summary', {}).get('pct_complete', 0)}% complete")
 print(f"    ✅ Figma: {figma_data.get('summary', {}).get('activity_status', 'Unknown')}")
+print(f"    ✅ History: {history_data.get('days_of_history', 0)} days tracked")
 
 # -----------------------------------------
 # STEP 2 — Build the data brief
@@ -100,28 +102,58 @@ todo         = [t for t in jira_data.get("tickets", []) if t["status"].lower() =
 # Figma summary
 figma_summary = figma_data.get("summary", {})
 
+# Historical trend context
+days_of_history = history_data.get("days_of_history", 0)
+top_gainers_7d  = history_data.get("top_gainers_7d", [])
+top_losers_7d   = history_data.get("top_losers_7d", [])
+hist_summary    = history_data.get("summary", {})
+
+# Build trend strings for assets that have history
+trends          = history_data.get("trends", [])
+trend_map       = {t["ticker"]: t for t in trends}
+
+def trend_str(ticker):
+    t = trend_map.get(ticker, {})
+    parts = []
+    if t.get("change_7d") is not None:
+        parts.append(f"7d: {t['change_7d']:+.1f}%")
+    if t.get("change_30d") is not None:
+        parts.append(f"30d: {t['change_30d']:+.1f}%")
+    if t.get("change_90d") is not None:
+        parts.append(f"90d: {t['change_90d']:+.1f}%")
+    return f"({', '.join(parts)})" if parts else "(building history...)"
+
+gainers_7d_str = "\n".join([f"  {g['ticker']}: {g['change_7d']:+.2f}%" for g in top_gainers_7d]) if top_gainers_7d else "  Not enough history yet"
+losers_7d_str  = "\n".join([f"  {l['ticker']}: {l['change_7d']:+.2f}%" for l in top_losers_7d]) if top_losers_7d else "  Not enough history yet"
+
 data_brief = f"""
 Date: {today}
 
-MARKET DATA:
+MARKET DATA (with {days_of_history} days of historical context):
 Big 5 Stocks:
-{big_5_str}
+{chr(10).join([f"  {s['ticker']}: ${s.get('price',0):,.2f} ({s.get('change_pct',0):+.2f}% today) {trend_str(s['ticker'])}" for s in big_5 if s.get('price')])}
 
 Potential Stocks:
-{potential_str}
+{chr(10).join([f"  {s['ticker']}: ${s.get('price',0):,.2f} ({s.get('change_pct',0):+.2f}% today) {trend_str(s['ticker'])}" for s in potential if s.get('price')])}
 
 Major Cryptos:
-{crypto_str}
+{chr(10).join([f"  {s['ticker']}: ${s.get('price',0):,.2f} ({s.get('change_pct',0):+.2f}% today) {trend_str(s['ticker'])}" for s in cryptos if s.get('price')])}
 
 Potential Tokens:
-{token_str}
+{chr(10).join([f"  {s['ticker']}: ${s.get('price',0):,.2f} ({s.get('change_pct',0):+.2f}% today) {trend_str(s['ticker'])}" for s in tokens if s.get('price')])}
 
 Mutual Funds:
 {funds_str}
 
-Market Summary: {market_summary.get('gainers', 0)} gainers, {market_summary.get('losers', 0)} losers
-Top Gainer: {market_summary.get('top_gainer', 'N/A')}
-Top Loser: {market_summary.get('top_loser', 'N/A')}
+Market Summary: {market_summary.get('gainers', 0)} gainers, {market_summary.get('losers', 0)} losers today
+Top Gainer Today: {market_summary.get('top_gainer', 'N/A')}
+Top Loser Today: {market_summary.get('top_loser', 'N/A')}
+
+7-Day Top Performers:
+{gainers_7d_str}
+
+7-Day Underperformers:
+{losers_7d_str}
 
 WEATHER — Bedford NH:
 Current: {weather.get('temperature')}°F — {weather.get('description')}
@@ -159,6 +191,9 @@ Your job is to give Dre his morning briefing in a conversational,
 collegial tone — like a smart colleague who has already done the
 research and is giving you the highlights over coffee.
 
+You now have {days_of_history} days of historical price data.
+{"Use the trend data (7d, 30d, 90d) to add context beyond just today's moves." if days_of_history > 1 else "Historical data is just starting to build — focus on today's moves for now."}
+
 Write a morning brief covering these four sections:
 
 1. GOOD MORNING
@@ -167,7 +202,7 @@ Write a morning brief covering these four sections:
 
 2. MARKET PULSE
    Talk through the market like a colleague would — don't just list numbers.
-   Highlight the biggest movers, any interesting patterns, and one thing worth watching.
+   Highlight the biggest movers today and {"connect them to recent trends where relevant. If something is up today AND up over 7 days that's a stronger signal — say so." if days_of_history > 6 else "note any standout moves."}
    Mention both stocks and crypto. Keep it to 4-5 sentences.
 
 3. WHAT'S IN THE NEWS
@@ -184,7 +219,7 @@ Tone rules:
 - Talk like a smart colleague, not a robot or a formal report
 - Use "you" not "the user"
 - Be specific with numbers but don't just list them — weave them into sentences
-- Keep the whole brief under 300 words
+- Keep the whole brief under 350 words
 - End with one sentence of encouragement about the day ahead
 
 Here is all the data:
@@ -224,7 +259,8 @@ brief_data = {
     "weather":      context_data.get("weather", {}),
     "news":         context_data.get("news", {}),
     "jira":         jira_data.get("summary", {}),
-    "figma":        figma_data.get("summary", {})
+    "figma":        figma_data.get("summary", {}),
+    "history":      history_data.get("summary", {})
 }
 
 with open("outputs/brief_data.json", "w") as f:

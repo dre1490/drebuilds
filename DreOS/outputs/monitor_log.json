@@ -1,0 +1,65 @@
+[
+  {
+    "timestamp": "2026-06-08T20:37:07.405474",
+    "checks_run": 3,
+    "alerts_sent": 0,
+    "checks": [
+      {
+        "check": "price_spikes",
+        "status": "clear",
+        "spike_count": 0
+      },
+      {
+        "check": "news_crossref",
+        "status": "clear",
+        "hit_count": 0
+      },
+      {
+        "check": "jira_overdue",
+        "status": "clear"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-08T20:40:57.941077",
+    "checks_run": 3,
+    "alerts_sent": 0,
+    "checks": [
+      {
+        "check": "price_spikes",
+        "status": "clear",
+        "spike_count": 0
+      },
+      {
+        "check": "news_crossref",
+        "status": "clear",
+        "hit_count": 0
+      },
+      {
+        "check": "jira_overdue",
+        "status": "clear"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-08T20:47:35.409401",
+    "checks_run": 3,
+    "alerts_sent": 0,
+    "checks": [
+      {
+        "check": "price_spikes",
+        "status": "clear",
+        "spike_count": 0
+      },
+      {
+        "check": "news_crossref",
+        "status": "clear",
+        "hit_count": 0
+      },
+      {
+        "check": "jira_overdue",
+        "status": "clear"
+      }
+    ]
+  }
+]

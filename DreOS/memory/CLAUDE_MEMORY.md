@@ -1,5 +1,5 @@
 # DreOS — Claude Memory File
-# Last updated: May 2026
+# Last updated: June 2026
 # Read this file at the start of every Cowork session
 
 ---
@@ -7,177 +7,243 @@
 ## Who I Am
 
 Name: Dre
-Primary computer: HP Windows laptop
-Username on machine: eliza
-GitHub: github.com/dre1490
-Portfolio URL (in progress): drebuilds.io
-Primary email: 1490dre@gmail.com
-Location: East Providence, Rhode Island / Bedford NH area
-
----
-
-## My Skill Level
-
-- Python: Beginner-intermediate — learning through building
-- SQL: Some background, actively improving
-- AI/Automation: Building rapidly through project based learning
-- Terminal: Comfortable with cd, dir, pip, python commands
-- GitHub: Recently set up, learning version control
+Computer: HP Windows laptop, username: eliza
+GitHub: github.com/dre1490 — repo: drebuilds
+Portfolio: dre1490.github.io/drebuilds
+Email: 1490dre@gmail.com
+Location: Goffstown, NH 03045
+LinkedIn: linkedin.com/in/andres-onoa-49a73794
+Target roles: AI Engineer / AI Project Manager (entry level, breaking in)
 
 ---
 
 ## How I Like to Work
 
-- Step by step explanations at every phase
-- Simple language — avoid jargon unless explained
-- Learn by doing — build real things, not just tutorials
-- Files first at the top of every response
+- Step by step, simple language, no jargon unless explained
+- Files at the top of every response
+- Learn by doing — build real things
 - Remind me of credential protocol every time a new key is created
-- Conversational tone — like a colleague, not a textbook
+- Conversational tone — like a colleague
 
 ---
 
-## Credential Protocol — ALWAYS FOLLOW THIS
+## Credential Protocol — ALWAYS FOLLOW
 
-Every new API key or credential must:
-1. Be added to MY_CREDENTIALS.txt immediately
-2. Be added to the project .env file
-3. Be referenced in scripts with os.getenv() — never hardcoded
-4. Be protected by .gitignore — never pushed to GitHub
+Every new API key or credential:
+1. Add to MY_CREDENTIALS.txt
+2. Add to project .env file
+3. Reference with os.getenv() — never hardcode
+4. Protected by .gitignore — never on GitHub
 
-Credential vault location:
-C:\Users\eliza\OneDrive\Desktop\OneDrive\Documents\Dre AI practice file\MY_CREDENTIALS.txt
+Vault: C:\Users\eliza\OneDrive\Desktop\OneDrive\Documents\Dre AI practice file\MY_CREDENTIALS.txt
 
 ---
 
 ## Folder Structure
 
-Base folder:
-C:\Users\eliza\OneDrive\Desktop\OneDrive\Documents\Dre AI practice file\
+Base: C:\Users\eliza\OneDrive\Desktop\OneDrive\Documents\Dre AI practice file\
+GitHub repo: ...Dre AI practice file\drebuilds\
 
-GitHub repository (drebuilds):
-C:\Users\eliza\OneDrive\Desktop\OneDrive\Documents\Dre AI practice file\drebuilds\
+Projects in drebuilds:
+- Horizon Capital Fund Tracker\
+- Pulse research exercise\
+- SQL project\
+- NovaTech Analytics\
+- Dre Grocery tracker\
+- analytics-automation-skill\
+- credential-cleanup\
+- DreOS\
 
-Projects inside drebuilds:
-- Horizon Capital Fund Tracker\     — fund price automation
-- Pulse research exercise\          — news headline logger
-- SQL project\                      — Vertex Solutions customer DB
-- NovaTech Analytics\               — full BI platform
-- Dre Grocery tracker\              — weekly grocery PDF report
-- analytics-automation-skill\       — reusable skill for analytics projects
-- credential-cleanup\               — skill for cleaning credentials before GitHub push
-- DreOS\                            — capstone project (currently building)
-
-DreOS folder structure (being built):
+DreOS structure:
 DreOS\
-├── modules\        — individual data fetching scripts
-├── agent\          — the orchestration brain
-├── skills\         — Cowork slash command files
-├── memory\         — this file and other context files
-├── outputs\        — generated reports, PDFs, dashboards
-├── portfolio\      — drebuilds.io website files
-└── .env            — credentials (never pushed to GitHub)
+├── modules\          — market_pulse, weather_news, jira_tracker, figma_status
+│                       ai_commander, dashboard, pdf_report, email_delivery
+├── agent\            — dreos_agent.py, history_keeper.py
+│                       tool_registry.py, autonomous_agent.py, monitor.py
+├── skills\           — dreos_skill.md
+├── memory\           — CLAUDE_MEMORY.md (this file)
+├── outputs\          — all JSON files, reports, agent_log.json, monitor_log.json
+├── data\             — price_history.db (growing daily)
+├── portfolio\        — index.html (also at drebuilds root)
+├── app.py            — Flask web application
+├── run_dreos.bat     — full DreOS launcher
+├── run_agent.bat     — autonomous agent launcher (Phase 12)
+├── .env              — credentials (never on GitHub)
+└── error_log.txt
 
 ---
 
-## My Projects — Status
+## Completed Projects
 
-| Project | Status | Location |
-|---------|--------|----------|
-| Horizon Capital Fund Tracker | Complete | drebuilds/Horizon Capital Fund Tracker |
-| Pulse Research News Logger | Complete | drebuilds/Pulse research exercise |
-| Vertex Solutions Customer DB | Complete | drebuilds/SQL project |
-| NovaTech Analytics Platform | Complete | drebuilds/NovaTech Analytics |
-| Weekly Grocery Tracker | Complete | drebuilds/Dre Grocery tracker |
-| DreOS Personal Intelligence Hub | In Progress | drebuilds/DreOS |
-
----
-
-## DreOS — Current Build Status
-
-Track via Jira: My Operations Team Dre (KAN board)
-Figma file: https://www.figma.com/design/bZbfXpqt2KdzmlVmH6qXBe/DreOS-Portfolio-Design-Assets
-
-| Phase | Ticket | Status |
-|-------|--------|--------|
-| Phase 0 — GitHub, Jira, Figma Setup | KAN-4 | Done |
-| Phase 1 — Memory File + Google Sheets | KAN-5 | In Progress |
-| Phase 2 — Market Pulse Module | KAN-6 | To Do |
-| Phase 3 — Weather and News Module | KAN-7 | To Do |
-| Phase 4 — Jira Project Tracker | KAN-8 | To Do |
-| Phase 5 — Figma Design Status | KAN-9 | To Do |
-| Phase 6 — AI Commander | KAN-10 | To Do |
-| Phase 7 — Master Dashboard + PDF | KAN-11 | To Do |
-| Phase 8 — Email + Launcher | KAN-12 | To Do |
-| Phase 9 — The Agent | KAN-13 | To Do |
-| Phase 10 — Cowork Skill + Dispatch | KAN-14 | To Do |
-| Phase 11 — Portfolio Website | KAN-15 | To Do |
+| Project | Status | Key tech |
+|---------|--------|---------|
+| Horizon Capital Fund Tracker | Complete | yfinance, openpyxl, Plotly, SMTP |
+| Pulse Research News Logger | Complete | NewsAPI, openpyxl |
+| Vertex Solutions Customer DB | Complete | SQLite, SQL, Groq, Plotly |
+| NovaTech Analytics Platform | Complete | SQLite, Groq, Plotly, openpyxl |
+| Weekly Grocery Tracker | Complete | reportlab, Groq, Gmail SMTP |
+| DreOS Personal Intelligence Hub | Active | All of the above + Flask + autonomous agent |
 
 ---
 
-## DreOS — Data Sources
+## DreOS Current State
 
-| Source | What it tracks | Module |
-|--------|---------------|--------|
-| yfinance | AAPL, MSFT, GOOGL, AMZN, NVDA, PLTR, AMD, META, RIVN, TSLA | Market Pulse |
-| yfinance | VFIAX, FCNTX, TRBCX, AGTHX, SWTSX | Market Pulse |
-| Crypto API | BTC, ETH, BNB, SOL, XRP, MATIC, ARB, LINK, UNI, AAVE | Market Pulse |
-| NewsAPI | AI and finance headlines | News Module |
-| Weather API | Bedford NH daily forecast | Weather Module |
-| Google Sheets | Personal tasks, deadlines, progress | Task Board |
-| Jira | DreOS phase tickets | Project Tracker |
-| Figma | Portfolio design file activity | Design Status |
+### Modules (run in sequence via run_dreos.bat)
+- market_pulse.py — fetches 25 assets (stocks, crypto, funds)
+- history_keeper.py — stores prices in SQLite, calculates trends
+- weather_news.py — Open-Meteo weather + NewsAPI headlines
+- jira_tracker.py — reads Jira KAN board
+- figma_status.py — checks Figma file activity
+- ai_commander.py — reads all JSON, writes AI brief
+- dashboard.py — builds HTML dashboard
+- pdf_report.py — generates PDF
+- email_delivery.py — sends to 1490dre@gmail.com
+
+### Autonomous Agent (Phase 12 — complete)
+- tool_registry.py — wraps 7 modules as callable tools with dispatch_tool()
+- autonomous_agent.py — ReAct reasoning loop using Groq tool calling
+- monitor.py — proactive monitor, runs 3 checks every 30 min, alerts via terminal + Gmail
+- run_agent.bat — launches monitor + Flask in separate windows
+
+### Key agent details
+- Model: llama-3.3-70b-versatile (llama3-70b-8192 is decommissioned — never use it)
+- Modules are top-level scripts with no run() function — call via subprocess.run()
+- dispatch_tool() is the single entry point for all tool calls
+- agent_log.json — reasoning trace saved after every run
+- monitor_log.json — monitor run history (last 100 runs)
+- Alert threshold: 5% price move triggers terminal print + Gmail
+
+### Web App
+- app.py — Flask web server at localhost:5000
+- Routes: / (dashboard), /api/brief, /api/market, /history, /run
+
+### Data files (outputs/)
+- market_data.json — 25 asset prices
+- context_data.json — weather + news
+- jira_data.json — project tickets
+- figma_data.json — design status
+- history_data.json — trend analysis
+- brief_data.json — full brief data
+- morning_brief_YYYY-MM-DD.txt — AI written brief
+- agent_log.json — autonomous agent reasoning trace
+- monitor_log.json — proactive monitor run history
+
+### Database (data/)
+- price_history.db — growing daily, 90 day target
 
 ---
 
-## Tools and Accounts
+## DreOS Assets Tracked
 
-| Tool | Account | Purpose |
-|------|---------|---------|
-| GitHub | dre1490 | Code backup and portfolio hosting |
-| Groq | 1490dre@gmail.com | AI API for analysis and content |
-| Mailtrap | 1490dre@gmail.com | Fake email inbox for testing |
-| NewsAPI | 1490dre@gmail.com | News headlines |
-| Jira | 1490dre@gmail.com | Project tracking |
-| Figma | 1490dre@gmail.com | Design assets |
-| Mailtrap SMTP | sandbox.smtp.mailtrap.io port 2525 | Test email sending |
-| Gmail SMTP | smtp.gmail.com port 587 | Real email sending |
+Big 5 Stocks: AAPL, MSFT, GOOGL, AMZN, NVDA
+Potential Stocks: PLTR, AMD, META, RIVN, TSLA
+Mutual Funds: VFIAX, FCNTX, TRBCX, AGTHX, SWTSX
+Major Cryptos: BTC, ETH, BNB, SOL, XRP
+Potential Tokens: POL, ARB, LINK, UNI, AAVE
 
 ---
 
-## Libraries Installed
+## Connectors Active
 
-pip install openpyxl plotly pandas requests groq reportlab python-dotenv yfinance
+| Service | Credentials in .env | Purpose |
+|---------|-------------------|---------|
+| Groq | GROQ_API_KEY | AI analysis and brief writing |
+| NewsAPI | NEWSAPI_KEY | Headlines |
+| Gmail | GMAIL_APP_PASSWORD | Email delivery |
+| Mailtrap | MAILTRAP_USERNAME/PASSWORD | Test emails |
+| Jira | JIRA_API_TOKEN, JIRA_EMAIL, JIRA_DOMAIN | Project tracking |
+| Figma | FIGMA_API_TOKEN | Design status |
+| Google Sheets | Sheet ID: 1WHCUYT2hr2JJJofquQabE6sfXS-aQyUapmaw7wL2Fq8 | Task board |
+
+Jira domain: 1490dre.atlassian.net
+Jira project: KAN (My Operations Team Dre)
+Figma file: bZbfXpqt2KdzmlVmH6qXBe
 
 ---
 
-## Agent Preferences
+## DreOS Jira Tickets
 
-- Tone: Conversational — like a colleague giving me a rundown
-- Morning brief format: PDF email + live dashboard + Cowork summary
-- Alert style: Flag problems clearly, keep wins brief
-- Task board: Tasks with deadlines and progress tracking over time
+KAN-4  Phase 0 — GitHub, Jira, Figma Setup — Done
+KAN-5  Phase 1 — Memory + Google Sheets — Done
+KAN-6  Phase 2 — Market Pulse — Done
+KAN-7  Phase 3 — Weather + News — Done
+KAN-8  Phase 4 — Jira Tracker — Done
+KAN-9  Phase 5 — Figma Status — Done
+KAN-10 Phase 6 — AI Commander — Done
+KAN-11 Phase 7 — Dashboard + PDF — Done
+KAN-12 Phase 8 — Email + Launcher — Done
+KAN-13 Phase 9 — The Agent — Done
+KAN-14 Phase 10 — Cowork Skill + Dispatch — Done
+KAN-15 Phase 11 — Portfolio Website — Done
+KAN-16 Phase 12 — Autonomous Agent — Done
+KAN-17 Phase 13 — Portfolio Case Studies — Done
+
+---
+
+## What's Been Learned
+
+Authentication patterns: No auth (CoinGecko), API key (NewsAPI), Basic Auth (Jira), Bearer token (Figma)
+Data patterns: JSON handoff between modules, time series database, multi-agent orchestration
+Web: Flask routes, templates, API endpoints, server-side rendering
+Dev ops: GitHub, git CLI, .env, .gitignore, credential cleanup skill
+AI: Groq integration, role prompting, structured output, agent loops, ReAct pattern, tool calling
+Agent patterns: tool registry, dispatcher, ReAct loop, proactive monitoring, scheduled checks
+
+---
+
+## Roadmap — Next Steps
+
+1. Phase 14 — Cloud deployment
+   Deploy market_pulse + weather_news + app.py to Render
+   Keep Jira/Figma/Gmail LOCAL for privacy
+   Credentials via Render environment variables
+   Two trigger modes: scheduled + webhook
+
+2. Phase 15 — Monetization
+   Small business automation, freelance, consulting
+
+3. Phone access to agent
+   Option A: Flask route that triggers agent when visited in browser
+   Option B: Telegram bot — text it from phone, get DreOS data back
+   (discussed but not yet built)
 
 ---
 
 ## Portfolio Website
 
-URL: drebuilds.io
-Host: GitHub Pages (free)
-Languages: English and Spanish (toggle button)
-Style: Professional, bold, visual — corporate feel
-Sections: About, Projects, Skills, Contact
-Contact: Email link + LinkedIn + social media
-Audience: Hiring managers, clients, collaborators, developers
-Positioning: AI automation + finance tools + full stack range
+URL: dre1490.github.io/drebuilds
+File: drebuilds\index.html (Version 3 — dark + editorial hybrid)
+Custom domain target: drebuilds.io (not yet purchased)
+Host: GitHub Pages
+Style: Dark bg, Fraunces serif headlines, red accents, monospace labels
+Sections: Hero, DreOS flagship, 6 case studies, skills, contact
+Target audience: AI Engineer / AI PM hiring managers
+Last updated: June 2026 (Phase 13)
+
+---
+
+## Agent Preferences
+
+Tone: Conversational — like a colleague
+Morning brief format: PDF email + Flask dashboard + Cowork summary
+Brief sections: Good morning, Market Pulse, News, Project Update
+
+---
+
+## Skills Library
+
+analytics-automation/SKILL.md — builds full analytics projects
+credential-cleanup/SKILL.md — sanitizes before GitHub push
+DreOS/skills/dreos_skill.md — triggers DreOS via Cowork
 
 ---
 
 ## Notes for Claude
 
-- When I say CONTINUE pick up from where we left off in DreOS build
-- Always put downloadable files at the top of responses
-- Remind me of credential protocol every time a new key is created
-- Update this memory file whenever something significant changes
-- Check Jira phase status before starting any DreOS work session
-- Keep explanations simple — I learn by doing, not by reading walls of text
+- Files at top of every response
+- Remind credential protocol every new key
+- Update this file when significant changes happen
+- Keep explanations simple — learn by doing
+- When CONTINUE is typed — start with Phase 14: cloud deployment of DreOS public modules
+- Never use model llama3-70b-8192 — it is decommissioned. Always use llama-3.3-70b-versatile
+- DreOS modules have no run() function — always call via subprocess.run([sys.executable, script_path], cwd=BASE_DIR, check=True)
