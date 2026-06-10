@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-06-07 20:08",
-  "days_of_history": 1,
+  "timestamp": "2026-06-09 20:07",
+  "days_of_history": 2,
   "date_range": {
     "start": "2026-06-07",
-    "end": "2026-06-07"
+    "end": "2026-06-09"
   },
   "trends": [
     {
       "ticker": "AAPL",
       "name": "Apple",
       "asset_class": "stock",
-      "price": 307.34,
+      "price": 290.55,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -19,7 +19,7 @@
       "ticker": "MSFT",
       "name": "Microsoft",
       "asset_class": "stock",
-      "price": 416.67,
+      "price": 403.41,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -28,7 +28,7 @@
       "ticker": "GOOGL",
       "name": "Google",
       "asset_class": "stock",
-      "price": 368.53,
+      "price": 364.26,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -37,7 +37,7 @@
       "ticker": "AMZN",
       "name": "Amazon",
       "asset_class": "stock",
-      "price": 246.03,
+      "price": 244.19,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -46,7 +46,7 @@
       "ticker": "NVDA",
       "name": "Nvidia",
       "asset_class": "stock",
-      "price": 205.1,
+      "price": 208.19,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -55,7 +55,7 @@
       "ticker": "PLTR",
       "name": "Palantir",
       "asset_class": "stock",
-      "price": 135.53,
+      "price": 132.07,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -64,7 +64,7 @@
       "ticker": "AMD",
       "name": "AMD",
       "asset_class": "stock",
-      "price": 466.38,
+      "price": 475.51,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -73,7 +73,7 @@
       "ticker": "META",
       "name": "Meta",
       "asset_class": "stock",
-      "price": 593.0,
+      "price": 584.59,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -82,7 +82,7 @@
       "ticker": "RIVN",
       "name": "Rivian",
       "asset_class": "stock",
-      "price": 16.35,
+      "price": 15.73,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -91,7 +91,7 @@
       "ticker": "TSLA",
       "name": "Tesla",
       "asset_class": "stock",
-      "price": 391.0,
+      "price": 396.68,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -100,7 +100,7 @@
       "ticker": "VFIAX",
       "name": "Vanguard 500 Index",
       "asset_class": "fund",
-      "price": 682.84,
+      "price": 683.16,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -109,7 +109,7 @@
       "ticker": "FCNTX",
       "name": "Fidelity Contrafund",
       "asset_class": "fund",
-      "price": 25.72,
+      "price": 25.88,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -118,7 +118,7 @@
       "ticker": "TRBCX",
       "name": "T. Rowe Price Blue Chip",
       "asset_class": "fund",
-      "price": 212.2,
+      "price": 211.79,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -127,7 +127,7 @@
       "ticker": "AGTHX",
       "name": "American Funds Growth",
       "asset_class": "fund",
-      "price": 84.66,
+      "price": 85.34,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -136,7 +136,7 @@
       "ticker": "SWTSX",
       "name": "Schwab Total Market",
       "asset_class": "fund",
-      "price": 17.82,
+      "price": 17.85,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -145,7 +145,7 @@
       "ticker": "BTC",
       "name": "Bitcoin",
       "asset_class": "crypto",
-      "price": 63163.0,
+      "price": 61659.0,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -154,7 +154,7 @@
       "ticker": "ETH",
       "name": "Ethereum",
       "asset_class": "crypto",
-      "price": 1683.78,
+      "price": 1638.81,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -163,7 +163,7 @@
       "ticker": "BNB",
       "name": "Binancecoin",
       "asset_class": "crypto",
-      "price": 603.58,
+      "price": 592.84,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -172,7 +172,7 @@
       "ticker": "SOL",
       "name": "Solana",
       "asset_class": "crypto",
-      "price": 66.33,
+      "price": 64.92,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -181,7 +181,7 @@
       "ticker": "XRP",
       "name": "Ripple",
       "asset_class": "crypto",
-      "price": 1.15,
+      "price": 1.14,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -208,7 +208,7 @@
       "ticker": "LINK",
       "name": "Chainlink",
       "asset_class": "crypto",
-      "price": 7.9,
+      "price": 7.83,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -217,7 +217,7 @@
       "ticker": "UNI",
       "name": "Uniswap",
       "asset_class": "crypto",
-      "price": 2.57,
+      "price": 2.48,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -226,7 +226,7 @@
       "ticker": "AAVE",
       "name": "Aave",
       "asset_class": "crypto",
-      "price": 63.56,
+      "price": 61.98,
       "change_7d": null,
       "change_30d": null,
       "change_90d": null
@@ -236,7 +236,7 @@
   "top_losers_7d": [],
   "summary": {
     "total_assets": 25,
-    "days_of_history": 1,
+    "days_of_history": 2,
     "best_7d": "N/A",
     "worst_7d": "N/A"
   }

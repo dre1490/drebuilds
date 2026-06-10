@@ -2,56 +2,67 @@
 echo.
 echo ============================================================
 echo   ⚡  DreOS — PERSONAL INTELLIGENCE HUB
-echo   Morning Brief System
+echo   Multi-Agent Morning Brief System
 echo ============================================================
 echo.
 
 cd /d "%~dp0"
 
-echo [1/6] Fetching market data — 25 assets...
+echo [AGENT 1] Market Pulse — Fetching 25 live assets...
 python modules/market_pulse.py
 if %errorlevel% neq 0 (
     echo ERROR in market_pulse.py — check error_log.txt
 )
 
 echo.
-echo [2/6] Fetching weather and news...
+echo [AGENT 2] History Keeper — Storing prices and analyzing trends...
+python agent/history_keeper.py
+if %errorlevel% neq 0 (
+    echo ERROR in history_keeper.py — check error_log.txt
+)
+
+echo.
+echo [AGENT 3] Weather + News — Fetching context data...
 python modules/weather_news.py
 if %errorlevel% neq 0 (
     echo ERROR in weather_news.py — check error_log.txt
 )
 
 echo.
-echo [3/6] Checking Jira project status...
+echo [AGENT 4] Jira Tracker — Checking project status...
 python modules/jira_tracker.py
 if %errorlevel% neq 0 (
     echo ERROR in jira_tracker.py — check error_log.txt
 )
 
 echo.
-echo [4/6] Checking Figma design status...
+echo [AGENT 5] Figma Status — Checking design files...
 python modules/figma_status.py
 if %errorlevel% neq 0 (
     echo ERROR in figma_status.py — check error_log.txt
 )
 
 echo.
-echo [5/6] Building AI morning brief...
+echo [AGENT 6] AI Commander — Writing morning brief...
 python modules/ai_commander.py
 if %errorlevel% neq 0 (
     echo ERROR in ai_commander.py — check error_log.txt
 )
 
 echo.
-echo [6/6] Generating dashboard, PDF and sending email...
-python modules/dashboard.py
+echo [AGENT 7] PDF + Email — Generating and delivering report...
 python modules/pdf_report.py
 python modules/email_delivery.py
 
 echo.
 echo ============================================================
-echo   ✅  DreOS Complete — Check your Gmail and browser!
+echo   ✅  All agents complete — launching Flask dashboard...
 echo ============================================================
 echo.
-echo Press any key to close...
-pause > nul
+echo   Dashboard will open at: http://localhost:5000
+echo   Press Ctrl+C in this window to stop the server
+echo.
+
+start "" http://localhost:5000
+python app.py
+

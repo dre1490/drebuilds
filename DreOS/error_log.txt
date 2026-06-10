@@ -37,3 +37,5 @@
 [2026-06-03 00:15:56.950590] Jira error: HTTPSConnectionPool(host='1490dre.atlassian.net', port=443): Max retries exceeded with url: /rest/api/3/search/jql?jql=project+%3D+KAN+ORDER+BY+created+ASC&maxResults=50&fields=summary%2Cstatus%2Cpriority%2Ccreated%2Cupdated (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
 
 [2026-06-03 00:15:57.105305] Figma error: HTTPSConnectionPool(host='api.figma.com', port=443): Max retries exceeded with url: /v1/files/bZbfXpqt2KdzmlVmH6qXBe (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+
+[2026-06-09 19:54:46.420983] Figma error: Figma API returned 429

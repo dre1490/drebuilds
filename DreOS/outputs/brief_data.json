@@ -1,43 +1,43 @@
 {
-  "timestamp": "2026-06-07 20:11",
-  "date": "Sunday, June 07, 2026",
-  "brief": "Good morning, it's Sunday, June 07, 2026, and it's a bit overcast in Bedford, NH, with a gentle breeze, so you might want to grab a cup of coffee and stay indoors today. \n\nThe market is seeing some interesting moves, with the Big 5 stocks mostly in the red, led by NVDA's 5.18% drop, while GOOGL is the top \"gainer\" with a relatively minor loss of 0.59%. On the crypto side, we're seeing some notable gains, with ETH up 7.60% and BTC rising 3.89%. Notably, RIVN is the top loser today, down 9.62%, while LINK is a standout gainer in the token space, up 6.96%. \n\nIn the news, there are some interesting headlines that might be relevant to our market watch, such as the former Crypto Security Chief sounding the alarm on DeFi safety, which could impact investor confidence in the crypto space. Additionally, Dave Ramsey's comments on wealth-building rules might resonate with some investors, and the article on the next NVIDIA could be worth a closer look, as it highlights three stocks poised to win in the AI boom. \n\nAs for the DreOS project, we've reached 100% completion, so we're all done with the current phases, and our Figma design file, DreOS Portfolio Design Assets, is inactive for now, last updated 8 days ago. \n\nYou've got a solid foundation to tackle the day ahead, so grab that coffee, dive into the markets, and let's make the most of this Sunday.",
+  "timestamp": "2026-06-09 20:07",
+  "date": "Tuesday, June 09, 2026",
+  "brief": "Good morning, it's Tuesday, June 09, 2026, and we're starting the day with clear skies and a pleasant 79.7\u00b0F in Bedford, NH, although it's expected to dip to 53.6\u00b0F later. \n\nThe market is seeing a mixed bag today, with GOOGL being the top gainer at 0.28%, while RIVN took a significant hit of 6.98%. You'll notice that the Big 5 stocks are mostly in the red, with AAPL down 3.38% and MSFT down 1.84%, while NVDA managed to stay relatively stable with a 0.26% gain. On the crypto side, BTC and ETH are both down, at 1.96% and 2.55% respectively, which is consistent with the overall market sentiment.\n\nThe news is abuzz with AI-related headlines, particularly the potential IPO of OpenAI, which could have significant implications for the industry. You might also want to keep an eye on the developments in the AI compute trading market, as big banks are starting to take notice. Additionally, the mental health support discussion is shifting towards a more human-centered approach, which could have interesting applications in our own work.\n\nOn the project front, I'm happy to report that the DreOS build is now 100% complete, with all 12 phases finished. We're not currently working on any new features, but we can expect to dive into new projects soon. The Figma design file for our portfolio assets has been inactive for the past 10 days, but we can revisit it when needed. \n\nYou've got a solid foundation to tackle the day ahead, so let's make the most of it and see what opportunities and challenges come our way.",
   "market": {
-    "timestamp": "2026-06-07 20:11",
+    "timestamp": "2026-06-09 20:07",
     "big_5_stocks": [
       {
         "ticker": "AAPL",
         "name": "Apple",
-        "price": 307.34,
-        "change_pct": -1.05,
+        "price": 290.55,
+        "change_pct": -3.38,
         "status": "ok"
       },
       {
         "ticker": "MSFT",
         "name": "Microsoft",
-        "price": 416.67,
-        "change_pct": -2.59,
+        "price": 403.41,
+        "change_pct": -1.84,
         "status": "ok"
       },
       {
         "ticker": "GOOGL",
         "name": "Google",
-        "price": 368.53,
-        "change_pct": -0.59,
+        "price": 364.26,
+        "change_pct": 0.28,
         "status": "ok"
       },
       {
         "ticker": "AMZN",
         "name": "Amazon",
-        "price": 246.03,
-        "change_pct": -2.84,
+        "price": 244.19,
+        "change_pct": -0.33,
         "status": "ok"
       },
       {
         "ticker": "NVDA",
         "name": "Nvidia",
-        "price": 205.1,
-        "change_pct": -5.18,
+        "price": 208.19,
+        "change_pct": 0.26,
         "status": "ok"
       }
     ],
@@ -45,36 +45,36 @@
       {
         "ticker": "PLTR",
         "name": "Palantir",
-        "price": 135.53,
-        "change_pct": -3.82,
+        "price": 132.07,
+        "change_pct": -2.77,
         "status": "ok"
       },
       {
         "ticker": "AMD",
         "name": "AMD",
-        "price": 466.38,
-        "change_pct": -9.29,
+        "price": 475.51,
+        "change_pct": -2.87,
         "status": "ok"
       },
       {
         "ticker": "META",
         "name": "Meta",
-        "price": 593.0,
-        "change_pct": -4.99,
+        "price": 584.59,
+        "change_pct": -0.33,
         "status": "ok"
       },
       {
         "ticker": "RIVN",
         "name": "Rivian",
-        "price": 16.35,
-        "change_pct": -9.62,
+        "price": 15.73,
+        "change_pct": -6.98,
         "status": "ok"
       },
       {
         "ticker": "TSLA",
         "name": "Tesla",
-        "price": 391.0,
-        "change_pct": -6.05,
+        "price": 396.68,
+        "change_pct": -2.98,
         "status": "ok"
       }
     ],
@@ -82,36 +82,36 @@
       {
         "ticker": "VFIAX",
         "name": "Vanguard 500 Index",
-        "price": 682.84,
-        "change_pct": -2.63,
+        "price": 683.16,
+        "change_pct": 0.05,
         "status": "ok"
       },
       {
         "ticker": "FCNTX",
         "name": "Fidelity Contrafund",
-        "price": 25.72,
-        "change_pct": -2.98,
+        "price": 25.88,
+        "change_pct": 0.62,
         "status": "ok"
       },
       {
         "ticker": "TRBCX",
         "name": "T. Rowe Price Blue Chip",
-        "price": 212.2,
-        "change_pct": -3.33,
+        "price": 211.79,
+        "change_pct": -0.19,
         "status": "ok"
       },
       {
         "ticker": "AGTHX",
         "name": "American Funds Growth",
-        "price": 84.66,
-        "change_pct": -3.82,
+        "price": 85.34,
+        "change_pct": 0.8,
         "status": "ok"
       },
       {
         "ticker": "SWTSX",
         "name": "Schwab Total Market",
-        "price": 17.82,
-        "change_pct": -2.68,
+        "price": 17.85,
+        "change_pct": 0.17,
         "status": "ok"
       }
     ],
@@ -119,36 +119,36 @@
       {
         "ticker": "BTC",
         "name": "Bitcoin",
-        "price": 63166,
-        "change_pct": 3.89,
+        "price": 61820,
+        "change_pct": -1.96,
         "status": "ok"
       },
       {
         "ticker": "ETH",
         "name": "Ethereum",
-        "price": 1684.81,
-        "change_pct": 7.6,
+        "price": 1643.09,
+        "change_pct": -2.55,
         "status": "ok"
       },
       {
         "ticker": "BNB",
         "name": "Binancecoin",
-        "price": 603.31,
-        "change_pct": 5.07,
+        "price": 594.12,
+        "change_pct": -1.17,
         "status": "ok"
       },
       {
         "ticker": "SOL",
         "name": "Solana",
-        "price": 66.2,
-        "change_pct": 6.63,
+        "price": 65.07,
+        "change_pct": -2.36,
         "status": "ok"
       },
       {
         "ticker": "XRP",
         "name": "Ripple",
-        "price": 1.15,
-        "change_pct": 5.59,
+        "price": 1.14,
+        "change_pct": -2.56,
         "status": "ok"
       }
     ],
@@ -157,75 +157,75 @@
         "ticker": "POL",
         "name": "Polygon-Ecosystem-Token",
         "price": 0.08,
-        "change_pct": 2.32,
+        "change_pct": -2.83,
         "status": "ok"
       },
       {
         "ticker": "ARB",
         "name": "Arbitrum",
         "price": 0.08,
-        "change_pct": 3.68,
+        "change_pct": -1.86,
         "status": "ok"
       },
       {
         "ticker": "LINK",
         "name": "Chainlink",
-        "price": 7.89,
-        "change_pct": 6.96,
+        "price": 7.85,
+        "change_pct": -1.74,
         "status": "ok"
       },
       {
         "ticker": "UNI",
         "name": "Uniswap",
-        "price": 2.56,
-        "change_pct": 3.8,
+        "price": 2.48,
+        "change_pct": -0.88,
         "status": "ok"
       },
       {
         "ticker": "AAVE",
         "name": "Aave",
-        "price": 63.5,
-        "change_pct": 4.62,
+        "price": 62.2,
+        "change_pct": -1.75,
         "status": "ok"
       }
     ],
     "summary": {
       "total_assets": 25,
-      "gainers": 0,
-      "losers": 10,
-      "top_gainer": "GOOGL +-0.59%",
-      "top_loser": "RIVN -9.62%"
+      "gainers": 2,
+      "losers": 8,
+      "top_gainer": "GOOGL +0.28%",
+      "top_loser": "RIVN -6.98%"
     }
   },
   "weather": {
     "location": "Bedford, NH",
     "current": {
-      "temperature": 66.8,
-      "description": "Overcast",
-      "wind_mph": 14.3,
+      "temperature": 79.7,
+      "description": "Clear sky",
+      "wind_mph": 4.8,
       "precip_in": 0.0
     },
     "forecast": [
       {
-        "date": "2026-06-07",
-        "high": 77.2,
-        "low": 60.4,
-        "description": "Light drizzle",
-        "precip_in": 0.008
-      },
-      {
-        "date": "2026-06-08",
-        "high": 75.4,
-        "low": 53.3,
-        "description": "Overcast",
-        "precip_in": 0.0
-      },
-      {
         "date": "2026-06-09",
-        "high": 87.9,
-        "low": 54.7,
-        "description": "Overcast",
+        "high": 86.6,
+        "low": 53.6,
+        "description": "Clear sky",
         "precip_in": 0.0
+      },
+      {
+        "date": "2026-06-10",
+        "high": 90.1,
+        "low": 63.5,
+        "description": "Light drizzle",
+        "precip_in": 0.016
+      },
+      {
+        "date": "2026-06-11",
+        "high": 83.6,
+        "low": 69.4,
+        "description": "Rain showers",
+        "precip_in": 0.231
       }
     ],
     "status": "ok"
@@ -233,60 +233,66 @@
   "news": {
     "ai_headlines": [
       {
-        "title": " Endrick saves Brazil in final pre-World Cup friendly",
-        "source": "Onefootball.com",
-        "url": "https://onefootball.com/en/news/endrick-saves-brazil-again-in-final-pre-world-cup-friendly-42975629",
-        "date": "2026-06-07"
+        "title": "Big Banks Eye New AI Compute Trading Market",
+        "source": "pymnts.com",
+        "url": "https://www.pymnts.com/news/investment-tracker/2026/big-banks-eye-new-ai-compute-trading-market/",
+        "date": "2026-06-09"
       },
       {
-        "title": "Massive Catholic Crowd Professes \u2018One Nation Under God\u2019 With Annual Eucharistic Procession By White House",
-        "source": "The Daily Caller",
-        "url": "https://dailycaller.com/2026/06/06/catholic-information-center-charles-trullols-leads-washington-eucharistic-procession-white-house-perpetual-pilgrims/",
-        "date": "2026-06-07"
+        "title": "ChatGPT maker OpenAI files confidential IPO paperwork, eyes public listing option",
+        "source": "BusinessLine",
+        "url": "https://www.thehindubusinessline.com/markets/chatgpt-maker-openai-files-confidential-ipo-paperwork-eyes-public-listing-option/article71079069.ece",
+        "date": "2026-06-09"
       },
       {
-        "title": "Leveraging Artificial Intelligence to Ensure Secure Army Communications",
-        "source": "Soldiersystems.net",
-        "url": "https://soldiersystems.net/2026/06/07/leveraging-artificial-intelligence-to-ensure-secure-army-communications/",
-        "date": "2026-06-07"
+        "title": "Mental health support must be human-centered",
+        "source": "Dailyutahchronicle.com",
+        "url": "https://dailyutahchronicle.com/2026/06/08/mental-health-support-must-be-human-centered/",
+        "date": "2026-06-09"
       },
       {
-        "title": "Visual Marketing for Specialty Retailers: A Practical Guide to Adobe Firefly",
-        "source": "Vinelandchamber.org",
-        "url": "https://www.vinelandchamber.org/news/details/visual-marketing-for-specialty-retailers-a-practical-guide-to-adobe-firefly-06-05-2026",
-        "date": "2026-06-06"
+        "title": "The AI-enabled enterprise: Why we are applying software engineering principles to business operations",
+        "source": "Redhat.com",
+        "url": "https://www.redhat.com/en/blog/ai-enabled-enterprise-why-we-are-applying-software-engineering-principles-business-operations",
+        "date": "2026-06-09"
       },
       {
-        "title": "Indian tech firms Sahasra and Zoho showcase Asian ambitions at COMPUTEX 2026 in Taiwan",
-        "source": "Livemint",
-        "url": "https://www.livemint.com/companies/news/indian-tech-firms-sahasra-and-zoho-showcase-asian-ambitions-at-computex-2026-in-taiwan-11780789024213.html",
-        "date": "2026-06-06"
+        "title": "Evaluating the role of pretraining dataset size and diversity on single-cell foundation model performance",
+        "source": "Nature.com",
+        "url": "https://www.nature.com/articles/s41592-026-03120-y",
+        "date": "2026-06-09"
       }
     ],
     "finance_headlines": [
       {
-        "title": "'The fastest way to get rich quick is don't': Dave Ramsey's truth bomb for investors. His 3 wealth-building rules",
-        "source": "Yahoo Entertainment",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/fastest-way-rich-quick-dont-142500389.html",
-        "date": "2026-06-06"
+        "title": "How to buy SpaceX shares as its blockbuster IPO readies for liftoff",
+        "source": "CBS News",
+        "url": "https://www.cbsnews.com/news/spacex-ipo-how-to-buy-stock/",
+        "date": "2026-06-08"
       },
       {
-        "title": "'I Now Consider All Of DeFi Unsafe': Former Crypto Security Chief Sounds Alarm As AI Agents Become More Powerful",
-        "source": "Yahoo Entertainment",
-        "url": "https://finance.yahoo.com/markets/crypto/articles/now-consider-defi-unsafe-former-130148655.html",
-        "date": "2026-06-06"
+        "title": "The mega-IPO wave led by SpaceX and Anthropic has retirees worried about their finances. Their advisors say otherwise.",
+        "source": "Business Insider",
+        "url": "https://www.businessinsider.com/spacex-ipo-retirement-401k-portfolio-ai-elon-musk-anthropic-openai-2026-6",
+        "date": "2026-06-08"
       },
       {
-        "title": "The next NVIDIA? These 3 stocks below $50 are poised to win the next AI boom (and they\u2019re still flying under the radar)",
-        "source": "Yahoo Entertainment",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/next-nvidia-3-stocks-below-120500020.html",
-        "date": "2026-06-06"
+        "title": "Mission Produce\u00ae Announces Fiscal 2026 Second Quarter Financial Results",
+        "source": "GlobeNewswire",
+        "url": "https://www.globenewswire.com/news-release/2026/06/08/3308457/0/en/Mission-Produce-Announces-Fiscal-2026-Second-Quarter-Financial-Results.html",
+        "date": "2026-06-08"
       },
       {
-        "title": "'Too big to stop': Young American men are flocking to prediction markets to take big risks on even bigger rewards",
-        "source": "Yahoo Entertainment",
-        "url": "https://finance.yahoo.com/markets/options/articles/too-big-stop-young-american-111500724.html",
-        "date": "2026-06-06"
+        "title": "Mama's Creations Reports First Quarter Fiscal 2027 Financial Results",
+        "source": "GlobeNewswire",
+        "url": "https://www.globenewswire.com/news-release/2026/06/08/3308454/36226/en/Mama-s-Creations-Reports-First-Quarter-Fiscal-2027-Financial-Results.html",
+        "date": "2026-06-08"
+      },
+      {
+        "title": "FM Sitharaman discusses ways to boost growth with Bengal CM",
+        "source": "The Times of India",
+        "url": "https://economictimes.indiatimes.com/news/economy/policy/fm-sitharaman-discusses-ways-to-boost-growth-with-bengal-cm/articleshow/131596474.cms",
+        "date": "2026-06-08"
       }
     ],
     "status": "ok"
@@ -303,12 +309,12 @@
   "figma": {
     "total_pages": 1,
     "recently_updated": false,
-    "activity_status": "Inactive \u2014 last updated 8 days ago",
-    "days_since": 8
+    "activity_status": "Inactive \u2014 last updated 10 days ago",
+    "days_since": 10
   },
   "history": {
     "total_assets": 25,
-    "days_of_history": 1,
+    "days_of_history": 2,
     "best_7d": "N/A",
     "worst_7d": "N/A"
   }

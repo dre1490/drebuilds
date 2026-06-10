@@ -1,5 +1,5 @@
 # DreOS — Claude Memory File
-# Last updated: June 2026
+# Last updated: June 9, 2026
 # Read this file at the start of every Cowork session
 
 ---
@@ -39,6 +39,38 @@ Vault: C:\Users\eliza\OneDrive\Desktop\OneDrive\Documents\Dre AI practice file\M
 
 ---
 
+## Git Workflow — Use This Every Session
+
+Always use Git to track progress. Standard workflow:
+
+```
+cd "OneDrive\Desktop\OneDrive\Documents\Dre AI practice file\drebuilds"
+git status                         # see what changed
+git add .                          # stage all changes
+git commit -m "describe what changed"   # save snapshot
+git push                           # push to GitHub
+```
+
+Before any major change — create a branch:
+```
+git checkout -b feature/branch-name   # create and switch to branch
+git checkout main                      # go back to main
+git merge feature/branch-name         # merge branch into main
+```
+
+Run credential cleanup before every push:
+- Use Cowork: "Clean credentials in my drebuilds folder"
+- Or use credential-cleanup/SKILL.md
+
+Commit message conventions:
+- feat: new feature added
+- fix: bug fixed
+- update: existing code improved
+- style: visual/UI changes
+- docs: documentation updated
+
+---
+
 ## Folder Structure
 
 Base: C:\Users\eliza\OneDrive\Desktop\OneDrive\Documents\Dre AI practice file\
@@ -65,7 +97,7 @@ DreOS\
 ├── outputs\          — all JSON files, reports, agent_log.json, monitor_log.json
 ├── data\             — price_history.db (growing daily)
 ├── portfolio\        — index.html (also at drebuilds root)
-├── app.py            — Flask web application
+├── app.py            — Flask web application (Version 2 — fintech redesign)
 ├── run_dreos.bat     — full DreOS launcher
 ├── run_agent.bat     — autonomous agent launcher (Phase 12)
 ├── .env              — credentials (never on GitHub)
@@ -94,8 +126,8 @@ DreOS\
 - weather_news.py — Open-Meteo weather + NewsAPI headlines
 - jira_tracker.py — reads Jira KAN board
 - figma_status.py — checks Figma file activity
-- ai_commander.py — reads all JSON, writes AI brief
-- dashboard.py — builds HTML dashboard
+- ai_commander.py — reads all JSON, writes AI brief (uses history_data.json)
+- dashboard.py — builds static HTML dashboard
 - pdf_report.py — generates PDF
 - email_delivery.py — sends to 1490dre@gmail.com
 
@@ -113,16 +145,46 @@ DreOS\
 - monitor_log.json — monitor run history (last 100 runs)
 - Alert threshold: 5% price move triggers terminal print + Gmail
 
-### Web App
-- app.py — Flask web server at localhost:5000
-- Routes: / (dashboard), /api/brief, /api/market, /history, /run
+### Flask Web App (app.py) — Version 2 Fintech Redesign
+URL: localhost:5000
+
+Routes:
+- / — main dashboard
+- /chat — dual mode AI chat interface
+- /api/brief — returns morning data as JSON
+- /api/market — returns full market data as JSON
+- /api/chart/<ticker> — returns 30 day price history for line charts
+- /history — price history table with 7/30/90 day trends
+- /run — triggers market pulse refresh
+
+Dashboard features (redesigned June 2026):
+- Modern fintech UI — Inter font, gradient header, dark cards
+- Sticky header with live pulse indicator
+- KPI strip with pill buttons
+- 6 asset cards: Big 5, Potential Stocks, Crypto, Tokens, Funds, Weather
+- 📊 Chart toggle on each stock/crypto card
+- 30 day SVG line charts with hover crosshair + tooltip
+- Live price display on hover — updates header stats
+- Real data when available, simulated when building history
+- Project Switcher — tabs for all 6 projects with phase tracking
+- AI Morning Brief card
+- Live headlines — AI + Finance side by side
+- Compact weather card with 3 day forecast
+- Agent button — purple/blue gradient glow
+
+Chat interface (/chat):
+- Quick Mode ⚡ — fast answers from cached JSON (~2 seconds)
+- Deep Mode 🔍 — uses autonomous agent with live tool calls (~15-30 seconds)
+- Shows which tools were used in Deep Mode responses
+- Different suggestion buttons per mode
+- Purple theme for Deep Mode, blue for Quick Mode
 
 ### Data files (outputs/)
 - market_data.json — 25 asset prices
 - context_data.json — weather + news
 - jira_data.json — project tickets
 - figma_data.json — design status
-- history_data.json — trend analysis
+- history_data.json — trend analysis (7/30/90 day)
 - brief_data.json — full brief data
 - morning_brief_YYYY-MM-DD.txt — AI written brief
 - agent_log.json — autonomous agent reasoning trace
@@ -130,6 +192,7 @@ DreOS\
 
 ### Database (data/)
 - price_history.db — growing daily, 90 day target
+- Tables: price_history (date, ticker, name, asset_class, price, change_pct, volume), agent_runs
 
 ---
 
@@ -149,7 +212,7 @@ Potential Tokens: POL, ARB, LINK, UNI, AAVE
 |---------|-------------------|---------|
 | Groq | GROQ_API_KEY | AI analysis and brief writing |
 | NewsAPI | NEWSAPI_KEY | Headlines |
-| Gmail | GMAIL_APP_PASSWORD | Email delivery |
+| Gmail | GMAIL_APP_PASSWORD, GMAIL_USER | Email delivery |
 | Mailtrap | MAILTRAP_USERNAME/PASSWORD | Test emails |
 | Jira | JIRA_API_TOKEN, JIRA_EMAIL, JIRA_DOMAIN | Project tracking |
 | Figma | FIGMA_API_TOKEN | Design status |
@@ -182,22 +245,26 @@ KAN-17 Phase 13 — Portfolio Case Studies — Done
 
 ## What's Been Learned
 
-Authentication patterns: No auth (CoinGecko), API key (NewsAPI), Basic Auth (Jira), Bearer token (Figma)
-Data patterns: JSON handoff between modules, time series database, multi-agent orchestration
-Web: Flask routes, templates, API endpoints, server-side rendering
+Authentication: No auth (CoinGecko), API key (NewsAPI), Basic Auth (Jira), Bearer token (Figma)
+Data patterns: JSON handoff, time series database, multi-agent orchestration
+Web: Flask routes, templates, API endpoints, SVG charts, hover interactions
 Dev ops: GitHub, git CLI, .env, .gitignore, credential cleanup skill
 AI: Groq integration, role prompting, structured output, agent loops, ReAct pattern, tool calling
 Agent patterns: tool registry, dispatcher, ReAct loop, proactive monitoring, scheduled checks
+Frontend: Fintech UI design, SVG line charts, CSS animations, JavaScript hover events
 
 ---
 
 ## Roadmap — Next Steps
+
+When CONTINUE is typed, pick up here in order:
 
 1. Phase 14 — Cloud deployment
    Deploy market_pulse + weather_news + app.py to Render
    Keep Jira/Figma/Gmail LOCAL for privacy
    Credentials via Render environment variables
    Two trigger modes: scheduled + webhook
+   Status: ON HOLD — security concerns about credentials on third party servers
 
 2. Phase 15 — Monetization
    Small business automation, freelance, consulting
@@ -205,14 +272,16 @@ Agent patterns: tool registry, dispatcher, ReAct loop, proactive monitoring, sch
 3. Phone access to agent
    Option A: Flask route that triggers agent when visited in browser
    Option B: Telegram bot — text it from phone, get DreOS data back
-   (discussed but not yet built)
+
+4. Git practice
+   Dre wants to use Git more actively — branch per feature, commit after every session
 
 ---
 
 ## Portfolio Website
 
 URL: dre1490.github.io/drebuilds
-File: drebuilds\index.html (Version 3 — dark + editorial hybrid)
+File: drebuilds\index.html (Version 3 — dark editorial hybrid)
 Custom domain target: drebuilds.io (not yet purchased)
 Host: GitHub Pages
 Style: Dark bg, Fraunces serif headlines, red accents, monospace labels
@@ -244,6 +313,7 @@ DreOS/skills/dreos_skill.md — triggers DreOS via Cowork
 - Remind credential protocol every new key
 - Update this file when significant changes happen
 - Keep explanations simple — learn by doing
-- When CONTINUE is typed — start with Phase 14: cloud deployment of DreOS public modules
 - Never use model llama3-70b-8192 — it is decommissioned. Always use llama-3.3-70b-versatile
 - DreOS modules have no run() function — always call via subprocess.run([sys.executable, script_path], cwd=BASE_DIR, check=True)
+- Encourage Git commits after every meaningful session
+- When CONTINUE is typed — Phase 14 cloud deployment or Git practice first based on what Dre wants
