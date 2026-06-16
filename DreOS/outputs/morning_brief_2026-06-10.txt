@@ -1,0 +1,12 @@
+DreOS Morning Brief — Wednesday, June 10, 2026
+============================================================
+
+Good morning, it's Wednesday, June 10, 2026, and it's a bit overcast in Bedford, NH, with a temperature of 76.4°F - not a bad day to grab a cup of coffee and dive into the market.
+
+The market pulse is a bit slow today, with only one gainer and nine losers, but AAPL is standing out with a 0.17% gain, while RIVN is taking a hit with a 6.11% loss. Crypto is also seeing some ups and downs, with BTC up 0.70% and SOL down 1.33%. It's interesting to see the Big 5 stocks like MSFT, GOOGL, and AMZN taking a dip, possibly due to the overall market sentiment. 
+
+In the news, a study by TechRadar caught my eye, showing that many students are actually using AI for good, which could have implications for the ed-tech industry. Meanwhile, The Times of India is reporting that Bitcoin's worst week since the FTX crash might signal more pain ahead, which could impact the crypto market. Google's Gemini 3.5 Live Translate is also making waves, enabling realistic real-time translation, which could be a game-changer for communication.
+
+On the project front, the DreOS build is now 100% complete, with all 12 phases finished - a big milestone. The Figma design file is not applicable at this stage, but we can revisit it later. 
+
+You've got a solid foundation to tackle the day ahead, so let's make the most of it and see what opportunities and challenges come our way.

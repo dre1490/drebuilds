@@ -1,39 +1,39 @@
 {
-  "timestamp": "2026-06-09 20:43",
+  "timestamp": "2026-06-11 09:40",
   "big_5_stocks": [
     {
       "ticker": "AAPL",
       "name": "Apple",
-      "price": 290.55,
-      "change_pct": -3.38,
+      "price": 291.79,
+      "change_pct": 0.33,
       "status": "ok"
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft",
-      "price": 403.41,
-      "change_pct": -1.84,
+      "price": 389.62,
+      "change_pct": -1.74,
       "status": "ok"
     },
     {
       "ticker": "GOOGL",
       "name": "Google",
-      "price": 364.26,
-      "change_pct": 0.28,
+      "price": 350.66,
+      "change_pct": -1.12,
       "status": "ok"
     },
     {
       "ticker": "AMZN",
       "name": "Amazon",
-      "price": 244.19,
-      "change_pct": -0.33,
+      "price": 236.65,
+      "change_pct": 0.24,
       "status": "ok"
     },
     {
       "ticker": "NVDA",
       "name": "Nvidia",
-      "price": 208.19,
-      "change_pct": 0.26,
+      "price": 201.35,
+      "change_pct": 1.08,
       "status": "ok"
     }
   ],
@@ -41,36 +41,36 @@
     {
       "ticker": "PLTR",
       "name": "Palantir",
-      "price": 132.07,
-      "change_pct": -2.77,
+      "price": 128.25,
+      "change_pct": -0.43,
       "status": "ok"
     },
     {
       "ticker": "AMD",
       "name": "AMD",
-      "price": 475.51,
-      "change_pct": -2.87,
+      "price": 465.39,
+      "change_pct": 5.63,
       "status": "ok"
     },
     {
       "ticker": "META",
       "name": "Meta",
-      "price": 584.59,
-      "change_pct": -0.33,
+      "price": 562.67,
+      "change_pct": -0.96,
       "status": "ok"
     },
     {
       "ticker": "RIVN",
       "name": "Rivian",
-      "price": 15.73,
-      "change_pct": -6.98,
+      "price": 14.59,
+      "change_pct": -1.26,
       "status": "ok"
     },
     {
       "ticker": "TSLA",
       "name": "Tesla",
-      "price": 396.68,
-      "change_pct": -2.98,
+      "price": 382.21,
+      "change_pct": 0.9,
       "status": "ok"
     }
   ],
@@ -78,36 +78,36 @@
     {
       "ticker": "VFIAX",
       "name": "Vanguard 500 Index",
-      "price": 683.16,
-      "change_pct": 0.05,
+      "price": 672.1,
+      "change_pct": -1.62,
       "status": "ok"
     },
     {
       "ticker": "FCNTX",
       "name": "Fidelity Contrafund",
-      "price": 25.88,
-      "change_pct": 0.62,
+      "price": 25.41,
+      "change_pct": -1.82,
       "status": "ok"
     },
     {
       "ticker": "TRBCX",
       "name": "T. Rowe Price Blue Chip",
-      "price": 211.79,
-      "change_pct": -0.19,
+      "price": 207.07,
+      "change_pct": -2.23,
       "status": "ok"
     },
     {
       "ticker": "AGTHX",
       "name": "American Funds Growth",
-      "price": 85.34,
-      "change_pct": 0.8,
+      "price": 83.4,
+      "change_pct": -2.27,
       "status": "ok"
     },
     {
       "ticker": "SWTSX",
       "name": "Schwab Total Market",
-      "price": 17.85,
-      "change_pct": 0.17,
+      "price": 17.56,
+      "change_pct": -1.62,
       "status": "ok"
     }
   ],
@@ -115,36 +115,36 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "price": 61503,
-      "change_pct": -1.83,
+      "price": 62782,
+      "change_pct": 1.19,
       "status": "ok"
     },
     {
       "ticker": "ETH",
       "name": "Ethereum",
-      "price": 1633.1,
-      "change_pct": -2.18,
+      "price": 1648.3,
+      "change_pct": -0.55,
       "status": "ok"
     },
     {
       "ticker": "BNB",
       "name": "Binancecoin",
-      "price": 590.89,
-      "change_pct": -0.68,
+      "price": 599.28,
+      "change_pct": 0.99,
       "status": "ok"
     },
     {
       "ticker": "SOL",
       "name": "Solana",
-      "price": 64.66,
-      "change_pct": -1.51,
+      "price": 65.34,
+      "change_pct": 0.71,
       "status": "ok"
     },
     {
       "ticker": "XRP",
       "name": "Ripple",
-      "price": 1.13,
-      "change_pct": -2.36,
+      "price": 1.11,
+      "change_pct": -1.2,
       "status": "ok"
     }
   ],
@@ -152,44 +152,44 @@
     {
       "ticker": "POL",
       "name": "Polygon-Ecosystem-Token",
-      "price": 0.08,
-      "change_pct": -1.34,
+      "price": 0.07,
+      "change_pct": -3.59,
       "status": "ok"
     },
     {
       "ticker": "ARB",
       "name": "Arbitrum",
       "price": 0.08,
-      "change_pct": -0.02,
+      "change_pct": 0.61,
       "status": "ok"
     },
     {
       "ticker": "LINK",
       "name": "Chainlink",
-      "price": 7.82,
-      "change_pct": -0.33,
+      "price": 7.78,
+      "change_pct": -0.44,
       "status": "ok"
     },
     {
       "ticker": "UNI",
       "name": "Uniswap",
-      "price": 2.47,
-      "change_pct": -0.36,
+      "price": 2.5,
+      "change_pct": 0.49,
       "status": "ok"
     },
     {
       "ticker": "AAVE",
       "name": "Aave",
-      "price": 61.94,
-      "change_pct": -0.67,
+      "price": 62.87,
+      "change_pct": 0.72,
       "status": "ok"
     }
   ],
   "summary": {
     "total_assets": 25,
-    "gainers": 2,
-    "losers": 8,
-    "top_gainer": "GOOGL +0.28%",
-    "top_loser": "RIVN -6.98%"
+    "gainers": 5,
+    "losers": 5,
+    "top_gainer": "AMD +5.63%",
+    "top_loser": "MSFT -1.74%"
   }
 }

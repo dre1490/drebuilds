@@ -30,6 +30,18 @@ funds = [
 ]
 
 # -----------------------------------------
+# Column layout (updated spreadsheet)
+# C = Current Price (NAV)
+# D = Previous Price (NAV)
+# E = Date Updated
+# F = Status
+# -----------------------------------------
+COL_CURRENT  = 3
+COL_PREVIOUS = 4
+COL_DATE     = 5
+COL_STATUS   = 6
+
+# -----------------------------------------
 # STEP 1 — Fetch prices from Yahoo Finance
 # -----------------------------------------
 print("\n📡 Fetching live prices...\n")
@@ -61,9 +73,13 @@ try:
     ws = wb.active
 
     for name, ticker, price, date_str, row in results:
-        ws.cell(row=row, column=3, value=price)        # Column C — Price
-        ws.cell(row=row, column=4, value=date_str)     # Column D — Date
-        ws.cell(row=row, column=5, value="✅ Updated") # Column E — Status
+        # Shift today's current price → previous before overwriting
+        current_price = ws.cell(row=row, column=COL_CURRENT).value
+        ws.cell(row=row, column=COL_PREVIOUS, value=current_price)  # Previous Price
+
+        ws.cell(row=row, column=COL_CURRENT,  value=price)          # Current Price
+        ws.cell(row=row, column=COL_DATE,     value=date_str)        # Date Updated
+        ws.cell(row=row, column=COL_STATUS,   value="✅ Updated")    # Status
 
     wb.save(EXCEL_FILE)
     print(f"\n✅ Excel file updated successfully!")

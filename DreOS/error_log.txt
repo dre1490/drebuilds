@@ -39,3 +39,7 @@
 [2026-06-03 00:15:57.105305] Figma error: HTTPSConnectionPool(host='api.figma.com', port=443): Max retries exceeded with url: /v1/files/bZbfXpqt2KdzmlVmH6qXBe (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
 
 [2026-06-09 19:54:46.420983] Figma error: Figma API returned 429
+
+[2026-06-10 21:35:37.927632] Figma error: Figma API returned 429
+
+[2026-06-11 09:40:11.136487] Figma error: Figma API returned 429

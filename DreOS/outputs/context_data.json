@@ -1,34 +1,34 @@
 {
-  "timestamp": "2026-06-09 20:35",
+  "timestamp": "2026-06-11 09:40",
   "weather": {
     "location": "Bedford, NH",
     "current": {
-      "temperature": 77.5,
-      "description": "Clear sky",
-      "wind_mph": 4.9,
+      "temperature": 82.5,
+      "description": "Partly cloudy",
+      "wind_mph": 6.9,
       "precip_in": 0.0
     },
     "forecast": [
       {
-        "date": "2026-06-09",
-        "high": 86.6,
-        "low": 53.6,
-        "description": "Clear sky",
+        "date": "2026-06-11",
+        "high": 90.5,
+        "low": 71.2,
+        "description": "Overcast",
         "precip_in": 0.0
       },
       {
-        "date": "2026-06-10",
-        "high": 90.1,
-        "low": 63.5,
-        "description": "Light drizzle",
-        "precip_in": 0.016
+        "date": "2026-06-12",
+        "high": 91.3,
+        "low": 70.5,
+        "description": "Overcast",
+        "precip_in": 0.0
       },
       {
-        "date": "2026-06-11",
-        "high": 83.6,
-        "low": 69.4,
-        "description": "Rain showers",
-        "precip_in": 0.231
+        "date": "2026-06-13",
+        "high": 86.3,
+        "low": 64.0,
+        "description": "Drizzle",
+        "precip_in": 0.053
       }
     ],
     "status": "ok"
@@ -36,66 +36,66 @@
   "news": {
     "ai_headlines": [
       {
-        "title": "Ex-Mirae Asset India head Ashish Dave launches Rs 700-1,000-crore fund",
-        "source": "The Times of India",
-        "url": "https://economictimes.indiatimes.com/tech/funding/former-mirae-asset-head-ashish-dave-bets-big-on-indias-vc-reset/articleshow/131592129.cms",
-        "date": "2026-06-09"
+        "title": "China Opens World's First Wind-Powered Underwater Data Center",
+        "source": "Wired",
+        "url": "https://www.wired.com/story/china-opens-worlds-first-wind-powered-underwater-data-center/",
+        "date": "2026-06-10"
       },
       {
-        "title": "GCCs outpace IT services in tech hiring, driving AI & cloud talent",
-        "source": "The Times of India",
-        "url": "https://economictimes.indiatimes.com/tech/technology/gccs-outpace-it-services-in-india-tech-hiring-dominating-ai-cloud-talent/articleshow/131591257.cms",
-        "date": "2026-06-09"
-      },
-      {
-        "title": "Former Mirae Asset head Ashish Dave bets big on India's VC reset",
-        "source": "The Times of India",
-        "url": "https://economictimes.indiatimes.com/tech/startups/former-mirae-asset-head-ashish-dave-bets-big-on-indias-vc-reset/articleshow/131592279.cms",
-        "date": "2026-06-09"
-      },
-      {
-        "title": "Intel spinout Articul8 eyes $50 million for India heritage AI venture",
-        "source": "The Times of India",
-        "url": "https://economictimes.indiatimes.com/tech/funding/intel-spinout-articul8-eyes-50-million-for-india-heritage-ai-venture/articleshow/131596561.cms",
-        "date": "2026-06-09"
-      },
-      {
-        "title": "With \u00c9derson, Brazil begin preparations for Copa opener",
+        "title": "FIFA confirm officials for Brazil's Cup opener, find out",
         "source": "Onefootball.com",
-        "url": "https://onefootball.com/en/news/with-ederson-brazil-begin-preparations-for-copa-opener-42983352",
-        "date": "2026-06-09"
+        "url": "https://onefootball.com/en/news/fifa-confirm-officials-for-brazils-cup-opener-find-out-42990432",
+        "date": "2026-06-10"
+      },
+      {
+        "title": "It\u2019s not just Apple \u2013 WhatsApp has to allow competing AIs too",
+        "source": "9to5Mac",
+        "url": "https://9to5mac.com/2026/06/10/its-not-just-apple-whatsapp-has-to-allow-competing-ais-too/",
+        "date": "2026-06-10"
+      },
+      {
+        "title": " All set! Here\u2019s the Ligue 1 schedule and key dates",
+        "source": "Onefootball.com",
+        "url": "https://onefootball.com/en/news/all-set-heres-the-ligue-1-schedule-and-key-dates-42990414",
+        "date": "2026-06-10"
+      },
+      {
+        "title": "Digital health companies seek lasting edge amid GLP-1 gold rush",
+        "source": "Techtarget.com",
+        "url": "https://www.techtarget.com/virtualhealthcare/feature/Digital-health-companies-seek-lasting-edge-amid-GLP-1-gold-rush",
+        "date": "2026-06-10"
       }
     ],
     "finance_headlines": [
       {
-        "title": "How to buy SpaceX shares as its blockbuster IPO readies for liftoff",
-        "source": "CBS News",
-        "url": "https://www.cbsnews.com/news/spacex-ipo-how-to-buy-stock/",
-        "date": "2026-06-08"
+        "title": "Warren Buffett\u2019s $400 Billion Is Going Nowhere for Now: Here\u2019s Why Berkshire Hathaway Is My Top Pick for the Next 20 Years",
+        "source": "24/7 Wall St.",
+        "url": "https://247wallst.com/investing/2026/06/10/warren-buffets-400-billion-is-going-nowhere-for-now-heres-why-berkshire-hathaway-is-my-top-pick-for-the-next-20-years/",
+        "date": "2026-06-10"
       },
       {
-        "title": "The mega-IPO wave led by SpaceX and Anthropic has retirees worried about their finances. Their advisors say otherwise.",
-        "source": "Business Insider",
-        "url": "https://www.businessinsider.com/spacex-ipo-retirement-401k-portfolio-ai-elon-musk-anthropic-openai-2026-6",
-        "date": "2026-06-08"
+        "title": "SpaceX just got a superchip ahead of its June 12th IPO \u2014 but no one\u2019s talking about it. 3 red-hot stocks to watch now",
+        "source": "Yahoo Entertainment",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-just-got-superchip-ahead-123000304.html",
+        "date": "2026-06-10"
       },
       {
-        "title": "Mission Produce\u00ae Announces Fiscal 2026 Second Quarter Financial Results",
-        "source": "GlobeNewswire",
-        "url": "https://www.globenewswire.com/news-release/2026/06/08/3308457/0/en/Mission-Produce-Announces-Fiscal-2026-Second-Quarter-Financial-Results.html",
-        "date": "2026-06-08"
+        "title": "Football Finance, Part 1",
+        "source": "Spektrum.de",
+        "url": "https://scilogs.spektrum.de/hlf/football-finance-part-1/",
+        "date": "2026-06-10"
       },
       {
-        "title": "Mama's Creations Reports First Quarter Fiscal 2027 Financial Results",
-        "source": "GlobeNewswire",
-        "url": "https://www.globenewswire.com/news-release/2026/06/08/3308454/36226/en/Mama-s-Creations-Reports-First-Quarter-Fiscal-2027-Financial-Results.html",
-        "date": "2026-06-08"
+        "title": "Wall Street's Next Misinformation Crisis May Come From Black-Box AI",
+        "source": "PRNewswire",
+        "url": "https://www.prnewswire.com/news-releases/wall-streets-next-misinformation-crisis-may-come-from-black-box-ai-302795873.html",
+        "date": "2026-06-10"
       },
       {
-        "title": "FM Sitharaman discusses ways to boost growth with Bengal CM",
-        "source": "The Times of India",
-        "url": "https://economictimes.indiatimes.com/news/economy/policy/fm-sitharaman-discusses-ways-to-boost-growth-with-bengal-cm/articleshow/131596474.cms",
-        "date": "2026-06-08"
+        "title": "Gold prices today, Wednesday, June 10: Prices falling after U.S., Iran strikes and ahead of CPI report",
+        "source": "Yahoo Entertainment",
+        "url": "https://finance.yahoo.com/personal-finance/investing/article/gold-prices-today-wednesday-june-10-prices-falling-after-us-iran-strikes-and-ahead-of-cpi-report-104555976.html",
+        "date": "2026-06-10"
       }
     ],
     "status": "ok"

@@ -1,0 +1,12 @@
+DreOS Morning Brief — Thursday, June 11, 2026
+============================================================
+
+Good morning, it's Thursday, June 11, 2026, and it's looking like a pleasant partly cloudy day in Bedford, NH, with a high of 82.5°F. 
+
+The market pulse is showing some interesting movements today, with AMD taking the top spot as the biggest gainer, up 5.63%, while MSFT is the top loser, down 1.74%. In the crypto space, BTC is up 1.19%, and BNB is seeing a notable gain of 0.99%. Overall, it's a relatively mixed bag, with 5 gainers and 5 losers in the stock market, and some moderate movements in the crypto world. NVDA is also worth noting, up 1.08% today.
+
+In the news, there are a few stories that caught my attention - Warren Buffett's $400 billion portfolio is being highlighted as a top pick for the next 20 years, and SpaceX just got a superchip ahead of its June 12th IPO, which could be worth watching. Additionally, there's an interesting article about China opening the world's first wind-powered underwater data center, which could have some implications for the tech industry. 
+
+On the project front, I'm happy to report that the DreOS build is now 100% complete, with all 12 phases finished. We're not currently working on any new phases, and the next step is to review and finalize the project. The Figma design file is not applicable at this point, but we can revisit it as needed. 
+
+You've got a solid foundation to tackle the day ahead, with a clear understanding of the market and project landscape, so go out there and make the most of it!

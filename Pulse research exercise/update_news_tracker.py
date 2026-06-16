@@ -11,11 +11,20 @@ HOW TO RUN:
 import requests
 from openpyxl import load_workbook
 from datetime import date
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 # -----------------------------------------
-# YOUR API KEY
+# YOUR API KEY — loaded from .env file
 # -----------------------------------------
-API_KEY = "YOUR_NEWSAPI_KEY_HERE"
+API_KEY = os.getenv("NEWSAPI_KEY")
+
+if not API_KEY:
+    print("❌ NEWSAPI_KEY not found in .env file.")
+    print("Add this line to your .env: NEWSAPI_KEY=your_key_here\n")
+    exit()
 
 # -----------------------------------------
 # SETTINGS

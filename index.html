@@ -39,18 +39,12 @@
     a { color: var(--red); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    .wrap {
-      max-width: 1020px;
-      margin: 0 auto;
-      padding: 0 28px;
-    }
+    .wrap { max-width: 1020px; margin: 0 auto; padding: 0 28px; }
 
-    /* ── Masthead ─────────────────────────────────────────────────────────────── */
+    /* ── Header ── */
     header {
       border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: sticky; top: 0; z-index: 100;
       background: #0d0d12e0;
       backdrop-filter: blur(12px);
     }
@@ -65,63 +59,67 @@
 
     .masthead-name {
       font-family: var(--serif);
-      font-size: 18px;
-      font-weight: 400;
-      color: var(--text);
-      letter-spacing: 0.01em;
+      font-size: 18px; font-weight: 400;
+      color: var(--text); letter-spacing: 0.01em;
     }
 
-    .masthead-right {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
+    .masthead-right { display: flex; align-items: center; gap: 20px; }
 
-    .masthead-links {
-      display: flex;
-      gap: 24px;
-      list-style: none;
-    }
+    .masthead-links { display: flex; gap: 24px; list-style: none; }
 
     .masthead-links a {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: color 0.2s;
+      font-family: var(--mono); font-size: 11px;
+      color: var(--muted); letter-spacing: 0.08em;
+      text-transform: uppercase; transition: color 0.2s;
     }
 
     .masthead-links a:hover { color: var(--text); text-decoration: none; }
 
     .masthead-status {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--cyan);
-      letter-spacing: 0.08em;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      font-family: var(--mono); font-size: 11px;
+      color: var(--cyan); letter-spacing: 0.08em;
+      display: flex; align-items: center; gap: 6px;
     }
 
     .status-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
+      width: 6px; height: 6px; border-radius: 50%;
       background: var(--cyan);
       animation: pulse 2s infinite;
     }
 
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+    /* ── Language Toggle ── */
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      border: 1px solid var(--border-mid);
+      border-radius: 4px;
+      overflow: hidden;
     }
 
-    /* ── Hero ─────────────────────────────────────────────────────────────────── */
-    .hero {
-      padding: 72px 0 0;
-      border-bottom: 1px solid var(--border);
+    .lang-btn {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      padding: 5px 10px;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      transition: background 0.2s, color 0.2s;
     }
+
+    .lang-btn.active {
+      background: var(--red);
+      color: #fff;
+    }
+
+    .lang-btn:hover:not(.active) { color: var(--text); }
+
+    /* ── Hero ── */
+    .hero { padding: 72px 0 0; border-bottom: 1px solid var(--border); }
 
     .hero-inner {
       display: grid;
@@ -134,427 +132,246 @@
     .hero-main { padding-right: 48px; }
 
     .hero-kicker {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--red);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
+      font-family: var(--mono); font-size: 11px;
+      color: var(--red); letter-spacing: 0.15em;
+      text-transform: uppercase; margin-bottom: 20px;
     }
 
     .hero-hed {
       font-family: var(--serif);
       font-size: clamp(40px, 5.5vw, 64px);
-      font-weight: 300;
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      margin-bottom: 22px;
+      font-weight: 300; line-height: 1.05;
+      letter-spacing: -0.02em; margin-bottom: 22px;
       color: var(--text);
     }
 
-    .hero-hed em {
-      font-style: italic;
-      color: var(--red);
-    }
+    .hero-hed em { font-style: italic; color: var(--red); }
 
     .hero-deck {
-      font-size: 17px;
-      color: var(--muted);
-      font-weight: 300;
-      line-height: 1.65;
-      max-width: 500px;
-      margin-bottom: 32px;
+      font-size: 17px; color: var(--muted);
+      font-weight: 300; line-height: 1.65;
+      max-width: 500px; margin-bottom: 32px;
     }
 
-    .hero-ctas {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 32px;
-    }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
 
     .btn-red {
-      display: inline-block;
-      background: var(--red);
-      color: #fff;
-      padding: 10px 24px;
-      font-size: 14px;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      transition: opacity 0.2s;
+      display: inline-block; background: var(--red);
+      color: #fff; padding: 10px 24px; font-size: 14px;
+      font-weight: 500; letter-spacing: 0.02em; transition: opacity 0.2s;
     }
 
     .btn-red:hover { opacity: 0.85; text-decoration: none; color: #fff; }
 
     .btn-outline {
-      display: inline-block;
-      border: 1px solid var(--border-mid);
-      color: var(--muted);
-      padding: 10px 24px;
-      font-size: 14px;
+      display: inline-block; border: 1px solid var(--border-mid);
+      color: var(--muted); padding: 10px 24px; font-size: 14px;
       transition: border-color 0.2s, color 0.2s;
     }
 
     .btn-outline:hover { border-color: var(--muted); color: var(--text); text-decoration: none; }
 
     .hero-meta {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--hint);
-      letter-spacing: 0.06em;
+      font-family: var(--mono); font-size: 11px;
+      color: var(--hint); letter-spacing: 0.06em;
     }
 
     .hero-stats {
       border-left: 1px solid var(--border);
       padding-left: 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 0;
+      display: flex; flex-direction: column; justify-content: center;
     }
 
-    .h-stat {
-      padding: 18px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
+    .h-stat { padding: 18px 0; border-bottom: 1px solid var(--border); }
     .h-stat:last-child { border-bottom: none; }
 
     .h-stat-num {
-      font-family: var(--serif);
-      font-size: 44px;
-      font-weight: 300;
-      color: var(--text);
-      line-height: 1;
-      margin-bottom: 4px;
+      font-family: var(--serif); font-size: 44px;
+      font-weight: 300; color: var(--text); line-height: 1; margin-bottom: 4px;
     }
 
     .h-stat-label {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
+      font-family: var(--mono); font-size: 11px;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
     }
 
-    /* ── Ticker strip ─────────────────────────────────────────────────────────── */
-    .ticker {
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border);
-      overflow: hidden;
-    }
+    /* ── Ticker ── */
+    .ticker { padding: 10px 0; border-bottom: 1px solid var(--border); overflow: hidden; }
 
     .ticker-inner {
-      display: flex;
-      gap: 40px;
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--muted);
-      letter-spacing: 0.06em;
-      flex-wrap: wrap;
+      display: flex; gap: 40px;
+      font-family: var(--mono); font-size: 11px;
+      color: var(--muted); letter-spacing: 0.06em; flex-wrap: wrap;
     }
 
     .ticker-item span { color: var(--cyan); margin-left: 6px; }
 
-    /* ── Section ──────────────────────────────────────────────────────────────── */
-    .section {
-      padding: 64px 0;
-      border-bottom: 1px solid var(--border);
-    }
+    /* ── Section ── */
+    .section { padding: 64px 0; border-bottom: 1px solid var(--border); }
 
     .sec-head {
-      display: flex;
-      align-items: baseline;
-      gap: 16px;
-      margin-bottom: 44px;
-      padding-bottom: 14px;
+      display: flex; align-items: baseline; gap: 16px;
+      margin-bottom: 44px; padding-bottom: 14px;
       border-bottom: 1px solid var(--border-mid);
     }
 
     .sec-kicker {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--red);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      font-family: var(--mono); font-size: 11px;
+      color: var(--red); letter-spacing: 0.12em; text-transform: uppercase;
     }
 
-    .sec-hed {
-      font-family: var(--serif);
-      font-size: 26px;
-      font-weight: 400;
-      color: var(--text);
-    }
+    .sec-hed { font-family: var(--serif); font-size: 26px; font-weight: 400; color: var(--text); }
 
-    /* ── DreOS flagship ───────────────────────────────────────────────────────── */
-    .flagship {
-      display: grid;
-      grid-template-columns: 1fr 260px;
-      gap: 48px;
-    }
+    /* ── Flagship ── */
+    .flagship { display: grid; grid-template-columns: 1fr 260px; gap: 48px; }
 
     .flagship-badge {
-      display: inline-block;
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--red);
-      background: var(--red-dim);
-      border: 1px solid var(--red);
-      padding: 3px 10px;
-      margin-bottom: 18px;
+      display: inline-block; font-family: var(--mono);
+      font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--red); background: var(--red-dim);
+      border: 1px solid var(--red); padding: 3px 10px; margin-bottom: 18px;
     }
 
     .flagship-hed {
-      font-family: var(--serif);
-      font-size: 28px;
-      font-weight: 400;
-      line-height: 1.25;
-      margin-bottom: 14px;
-      color: var(--text);
+      font-family: var(--serif); font-size: 28px;
+      font-weight: 400; line-height: 1.25; margin-bottom: 14px; color: var(--text);
     }
 
     .flagship-deck {
-      font-size: 15px;
-      color: var(--muted);
-      font-weight: 300;
-      line-height: 1.65;
-      margin-bottom: 28px;
+      font-size: 15px; color: var(--muted);
+      font-weight: 300; line-height: 1.65; margin-bottom: 28px;
     }
 
-    .cs-block {
-      padding: 16px 0;
-      border-top: 1px solid var(--border);
-    }
+    .cs-block { padding: 16px 0; border-top: 1px solid var(--border); }
 
     .cs-label {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--cyan);
-      margin-bottom: 6px;
+      font-family: var(--mono); font-size: 10px;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--cyan); margin-bottom: 6px;
     }
 
-    .cs-body {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.65;
-    }
+    .cs-body { font-size: 14px; color: var(--muted); line-height: 1.65; }
 
-    .flagship-aside {
-      border-left: 1px solid var(--border);
-      padding-left: 32px;
-    }
+    .flagship-aside { border-left: 1px solid var(--border); padding-left: 32px; }
 
-    .aside-block {
-      margin-bottom: 28px;
-    }
+    .aside-block { margin-bottom: 28px; }
 
     .aside-label {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 12px;
+      font-family: var(--mono); font-size: 10px;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--muted); padding-bottom: 10px;
+      border-bottom: 1px solid var(--border); margin-bottom: 12px;
     }
 
-    /* ── Timeline ─────────────────────────────────────────────────────────────── */
+    /* ── Timeline ── */
     .tl-item {
-      display: grid;
-      grid-template-columns: 72px 1fr;
-      gap: 12px;
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 12px;
+      display: grid; grid-template-columns: 72px 1fr;
+      gap: 12px; padding: 10px 0;
+      border-bottom: 1px solid var(--border); font-size: 12px;
     }
 
     .tl-phase {
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--red);
-      letter-spacing: 0.08em;
-      padding-top: 2px;
+      font-family: var(--mono); font-size: 10px;
+      color: var(--red); letter-spacing: 0.08em; padding-top: 2px;
     }
 
     .tl-title { font-weight: 500; color: var(--text); margin-bottom: 2px; }
     .tl-desc { color: var(--muted); line-height: 1.5; }
 
-    /* ── Tags ─────────────────────────────────────────────────────────────────── */
+    /* ── Tags ── */
     .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
 
     .tag {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.05em;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      padding: 3px 8px;
-      background: var(--surface);
+      font-family: var(--mono); font-size: 10px;
+      letter-spacing: 0.05em; color: var(--muted);
+      border: 1px solid var(--border); padding: 3px 8px; background: var(--surface);
     }
 
-    /* ── Project grid ─────────────────────────────────────────────────────────── */
-    .proj-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--border);
-    }
+    /* ── Project Grid ── */
+    .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
 
-    .proj-card {
-      background: var(--bg);
-      padding: 28px;
-      transition: background 0.2s;
-    }
-
+    .proj-card { background: var(--bg); padding: 28px; transition: background 0.2s; }
     .proj-card:hover { background: var(--surface); }
 
     .proj-num {
-      font-family: var(--serif);
-      font-size: 40px;
-      font-weight: 300;
-      color: var(--border-mid);
-      line-height: 1;
-      margin-bottom: 16px;
+      font-family: var(--serif); font-size: 40px;
+      font-weight: 300; color: var(--border-mid); line-height: 1; margin-bottom: 16px;
     }
 
     .proj-hed {
-      font-family: var(--serif);
-      font-size: 17px;
-      font-weight: 400;
-      color: var(--text);
-      margin-bottom: 6px;
-      line-height: 1.3;
+      font-family: var(--serif); font-size: 17px;
+      font-weight: 400; color: var(--text); margin-bottom: 6px; line-height: 1.3;
     }
 
     .proj-type {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--red);
-      margin-bottom: 12px;
+      font-family: var(--mono); font-size: 10px;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--red); margin-bottom: 12px;
     }
 
-    .proj-body {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 12px;
-    }
+    .proj-body { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
 
     .proj-learned {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.06em;
-      color: var(--hint);
-      margin-bottom: 10px;
-      text-transform: uppercase;
+      font-family: var(--mono); font-size: 10px;
+      letter-spacing: 0.06em; color: var(--hint);
+      margin-bottom: 10px; text-transform: uppercase;
     }
 
-    /* ── Skills ───────────────────────────────────────────────────────────────── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
+    /* ── Skills ── */
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
 
     .skill-group-label {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text);
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border-mid);
-      margin-bottom: 14px;
+      font-family: var(--mono); font-size: 11px;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text); padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-mid); margin-bottom: 14px;
     }
 
     .skill-list { list-style: none; }
 
     .skill-list li {
-      font-size: 13px;
-      color: var(--muted);
-      padding: 5px 0;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      font-size: 13px; color: var(--muted);
+      padding: 5px 0; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 8px;
     }
 
     .skill-list li::before {
-      content: '';
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: var(--red);
-      flex-shrink: 0;
+      content: ''; width: 4px; height: 4px;
+      border-radius: 50%; background: var(--red); flex-shrink: 0;
     }
 
-    /* ── Contact ──────────────────────────────────────────────────────────────── */
-    .contact {
-      padding: 72px 0;
-    }
+    /* ── Contact ── */
+    .contact { padding: 72px 0; }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: start;
-    }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
 
     .contact-hed {
-      font-family: var(--serif);
-      font-size: 38px;
-      font-weight: 300;
-      line-height: 1.15;
-      margin-bottom: 14px;
-      color: var(--text);
+      font-family: var(--serif); font-size: 38px;
+      font-weight: 300; line-height: 1.15; margin-bottom: 14px; color: var(--text);
     }
 
     .contact-hed em { font-style: italic; color: var(--red); }
 
-    .contact-deck {
-      font-size: 15px;
-      color: var(--muted);
-      font-weight: 300;
-      margin-bottom: 20px;
-    }
+    .contact-deck { font-size: 15px; color: var(--muted); font-weight: 300; margin-bottom: 20px; }
 
     .contact-detail {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--hint);
-      letter-spacing: 0.06em;
+      font-family: var(--mono); font-size: 11px;
+      color: var(--hint); letter-spacing: 0.06em;
     }
 
     .contact-links { display: flex; flex-direction: column; gap: 10px; }
 
     .contact-link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 20px;
-      border: 1px solid var(--border);
-      color: var(--text);
-      font-size: 14px;
-      transition: border-color 0.2s, background 0.2s;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 20px; border: 1px solid var(--border);
+      color: var(--text); font-size: 14px; transition: border-color 0.2s, background 0.2s;
     }
 
-    .contact-link:hover {
-      border-color: var(--red);
-      background: var(--red-dim);
-      text-decoration: none;
-      color: var(--text);
-    }
+    .contact-link:hover { border-color: var(--red); background: var(--red-dim); text-decoration: none; color: var(--text); }
 
     .contact-link-arrow { color: var(--red); font-size: 16px; }
 
-    /* ── Responsive ───────────────────────────────────────────────────────────── */
+    /* ── Responsive ── */
     @media (max-width: 720px) {
       .hero-inner { grid-template-columns: 1fr; }
       .hero-main { padding-right: 0; margin-bottom: 32px; }
@@ -565,7 +382,7 @@
       .proj-grid { grid-template-columns: 1fr; }
       .skills-grid { grid-template-columns: 1fr 1fr; }
       .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-      .masthead-right { gap: 16px; }
+      .masthead-right { gap: 12px; }
       .masthead-status { display: none; }
     }
   </style>
@@ -579,14 +396,18 @@
         <span class="masthead-name">Andres Onoa</span>
         <div class="masthead-right">
           <ul class="masthead-links">
-            <li><a href="#dreos">DreOS</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#dreos" data-en="DreOS" data-es="DreOS">DreOS</a></li>
+            <li><a href="#projects" data-en="Projects" data-es="Proyectos">Projects</a></li>
+            <li><a href="#skills" data-en="Skills" data-es="Habilidades">Skills</a></li>
+            <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
           </ul>
+          <div class="lang-toggle">
+            <button class="lang-btn active" onclick="setLang('en')">EN</button>
+            <button class="lang-btn" onclick="setLang('es')">ES</button>
+          </div>
           <span class="masthead-status">
             <span class="status-dot"></span>
-            Open to work
+            <span data-en="Open to work" data-es="Disponible">Open to work</span>
           </span>
         </div>
       </div>
@@ -598,15 +419,13 @@
     <div class="wrap">
       <div class="hero-inner">
         <div class="hero-main">
-          <p class="hero-kicker">AI Engineer · Goffstown, NH 03045</p>
-          <h1 class="hero-hed">Building AI systems<br/>that run <em>in the real world.</em></h1>
-          <p class="hero-deck">
-            Six production-grade projects built from scratch — no bootcamp, no tutorials.
-            Autonomous agents, live data pipelines, AI-powered dashboards, and a personal
-            intelligence platform that emails me a morning brief every day.
-          </p>
+          <p class="hero-kicker" data-en="AI Engineer · Goffstown, NH 03045" data-es="Ingeniero de IA · Goffstown, NH 03045">AI Engineer · Goffstown, NH 03045</p>
+          <h1 class="hero-hed">
+            <span data-en="Building AI systems<br/>that run <em>in the real world.</em>" data-es="Construyendo sistemas de IA<br/>que funcionan <em>en el mundo real.</em>">Building AI systems<br/>that run <em>in the real world.</em></span>
+          </h1>
+          <p class="hero-deck" data-en="Six production-grade projects built from scratch — no bootcamp, no tutorials. Autonomous agents, live data pipelines, AI-powered dashboards, and a personal intelligence platform that emails me a morning brief every day." data-es="Seis proyectos de nivel productivo construidos desde cero — sin bootcamp, sin tutoriales. Agentes autónomos, pipelines de datos en vivo, dashboards con IA, y una plataforma de inteligencia personal que me envía un resumen cada mañana.">Six production-grade projects built from scratch — no bootcamp, no tutorials. Autonomous agents, live data pipelines, AI-powered dashboards, and a personal intelligence platform that emails me a morning brief every day.</p>
           <div class="hero-ctas">
-            <a href="#dreos" class="btn-red">See flagship project</a>
+            <a href="#dreos" class="btn-red" data-en="See flagship project" data-es="Ver proyecto principal">See flagship project</a>
             <a href="https://github.com/dre1490/drebuilds" target="_blank" class="btn-outline">GitHub →</a>
             <a href="https://linkedin.com/in/andres-onoa-49a73794" target="_blank" class="btn-outline">LinkedIn →</a>
           </div>
@@ -615,24 +434,23 @@
         <div class="hero-stats">
           <div class="h-stat">
             <div class="h-stat-num">6</div>
-            <div class="h-stat-label">Projects shipped</div>
+            <div class="h-stat-label" data-en="Projects shipped" data-es="Proyectos entregados">Projects shipped</div>
           </div>
           <div class="h-stat">
             <div class="h-stat-num">15</div>
-            <div class="h-stat-label">DreOS phases</div>
+            <div class="h-stat-label" data-en="DreOS phases" data-es="Fases de DreOS">DreOS phases</div>
           </div>
           <div class="h-stat">
             <div class="h-stat-num">25</div>
-            <div class="h-stat-label">Assets tracked live</div>
+            <div class="h-stat-label" data-en="Assets tracked live" data-es="Activos monitoreados">Assets tracked live</div>
           </div>
           <div class="h-stat">
             <div class="h-stat-num">7</div>
-            <div class="h-stat-label">APIs integrated</div>
+            <div class="h-stat-label" data-en="APIs integrated" data-es="APIs integradas">APIs integrated</div>
           </div>
         </div>
       </div>
 
-      <!-- ticker -->
       <div class="ticker">
         <div class="ticker-inner">
           <span>Python <span>✓</span></span>
@@ -656,35 +474,31 @@
   <div class="section" id="dreos">
     <div class="wrap">
       <div class="sec-head">
-        <span class="sec-kicker">Flagship Project</span>
+        <span class="sec-kicker" data-en="Flagship Project" data-es="Proyecto Principal">Flagship Project</span>
         <h2 class="sec-hed">DreOS — Personal Intelligence Platform</h2>
       </div>
 
       <div class="flagship">
         <div>
-          <span class="flagship-badge">Active · Phase 12 Complete</span>
-          <h3 class="flagship-hed">An autonomous AI agent that monitors my portfolio and alerts me — without being asked.</h3>
-          <p class="flagship-deck">
-            DreOS started as a weekend market tracker and grew into a 15-phase AI platform
-            with real-time data pipelines, a Flask web app, a ReAct reasoning loop,
-            and proactive monitoring running every 30 minutes.
-          </p>
+          <span class="flagship-badge" data-en="Active · Phase 12 Complete" data-es="Activo · Fase 12 Completa">Active · Phase 12 Complete</span>
+          <h3 class="flagship-hed" data-en="An autonomous AI agent that monitors my portfolio and alerts me — without being asked." data-es="Un agente de IA autónomo que monitorea mi portafolio y me alerta — sin que yo lo pida.">An autonomous AI agent that monitors my portfolio and alerts me — without being asked.</h3>
+          <p class="flagship-deck" data-en="DreOS started as a weekend market tracker and grew into a 15-phase AI platform with real-time data pipelines, a Flask web app, a ReAct reasoning loop, and proactive monitoring running every 30 minutes." data-es="DreOS comenzó como un rastreador de mercado y creció hasta convertirse en una plataforma de IA de 15 fases con pipelines de datos en tiempo real, una app Flask, un bucle de razonamiento ReAct y monitoreo proactivo.">DreOS started as a weekend market tracker and grew into a 15-phase AI platform with real-time data pipelines, a Flask web app, a ReAct reasoning loop, and proactive monitoring running every 30 minutes.</p>
 
           <div class="cs-block">
-            <p class="cs-label">The Problem</p>
-            <p class="cs-body">I wanted to understand how production AI systems actually work — not by reading about them, but by building one. I set a goal: a personal intelligence platform that monitors 25 financial assets, reads the news, manages my projects, and runs autonomously. No tutorials. Just build.</p>
+            <p class="cs-label" data-en="The Problem" data-es="El Problema">The Problem</p>
+            <p class="cs-body" data-en="I wanted to understand how production AI systems actually work — not by reading about them, but by building one. I set a goal: a personal intelligence platform that monitors 25 financial assets, reads the news, manages my projects, and runs autonomously. No tutorials. Just build." data-es="Quería entender cómo funcionan realmente los sistemas de IA en producción — no leyendo sobre ellos, sino construyendo uno. Me puse una meta: una plataforma de inteligencia personal que monitoree 25 activos financieros, lea las noticias, gestione mis proyectos y opere de forma autónoma. Sin tutoriales. Solo construir.">I wanted to understand how production AI systems actually work — not by reading about them, but by building one. I set a goal: a personal intelligence platform that monitors 25 financial assets, reads the news, manages my projects, and runs autonomously. No tutorials. Just build.</p>
           </div>
           <div class="cs-block">
-            <p class="cs-label">What I Built</p>
-            <p class="cs-body">A 15-phase platform spanning data ingestion, AI analysis, web delivery, and autonomous agents. Live prices for 25 assets, cross-referenced news headlines, Jira and Figma monitoring, AI-written morning briefs, PDF reports, and a ReAct loop where Groq's LLM autonomously decides which tools to call.</p>
+            <p class="cs-label" data-en="What I Built" data-es="Lo Que Construí">What I Built</p>
+            <p class="cs-body" data-en="A 15-phase platform spanning data ingestion, AI analysis, web delivery, and autonomous agents. Live prices for 25 assets, cross-referenced news headlines, Jira and Figma monitoring, AI-written morning briefs, PDF reports, and a ReAct loop where Groq's LLM autonomously decides which tools to call." data-es="Una plataforma de 15 fases que abarca ingesta de datos, análisis con IA, entrega web y agentes autónomos. Precios en vivo de 25 activos, titulares de noticias cruzados, monitoreo de Jira y Figma, resúmenes matutinos escritos por IA, reportes PDF y un bucle ReAct donde el LLM decide qué herramientas usar.">A 15-phase platform spanning data ingestion, AI analysis, web delivery, and autonomous agents. Live prices for 25 assets, cross-referenced news headlines, Jira and Figma monitoring, AI-written morning briefs, PDF reports, and a ReAct loop where Groq's LLM autonomously decides which tools to call.</p>
           </div>
           <div class="cs-block">
-            <p class="cs-label">How the Agent Thinks</p>
-            <p class="cs-body">Given a plain-English goal, the agent reasons about what it needs, calls the right tools, observes the results, and reasons again — without hardcoded logic. Every step is logged to agent_log.json.</p>
+            <p class="cs-label" data-en="How the Agent Thinks" data-es="Cómo Piensa el Agente">How the Agent Thinks</p>
+            <p class="cs-body" data-en="Given a plain-English goal, the agent reasons about what it needs, calls the right tools, observes the results, and reasons again — without hardcoded logic. Every step is logged to agent_log.json." data-es="Dado un objetivo en lenguaje natural, el agente razona sobre lo que necesita, llama las herramientas correctas, observa los resultados y vuelve a razonar — sin lógica predefinida. Cada paso se registra en agent_log.json.">Given a plain-English goal, the agent reasons about what it needs, calls the right tools, observes the results, and reasons again — without hardcoded logic. Every step is logged to agent_log.json.</p>
           </div>
           <div class="cs-block">
-            <p class="cs-label">Outcome</p>
-            <p class="cs-body">Fully operational, running daily. Proactive alerts when any asset moves more than 5%. AI-written briefs delivered every morning. ReAct agent chaining tools autonomously. 90-day price history growing in SQLite.</p>
+            <p class="cs-label" data-en="Outcome" data-es="Resultado">Outcome</p>
+            <p class="cs-body" data-en="Fully operational, running daily. Proactive alerts when any asset moves more than 5%. AI-written briefs delivered every morning. ReAct agent chaining tools autonomously. 90-day price history growing in SQLite." data-es="Totalmente operativo, ejecutándose diariamente. Alertas proactivas cuando algún activo se mueve más del 5%. Resúmenes escritos por IA entregados cada mañana. Agente ReAct encadenando herramientas de forma autónoma. Historial de precios de 90 días en SQLite.">Fully operational, running daily. Proactive alerts when any asset moves more than 5%. AI-written briefs delivered every morning. ReAct agent chaining tools autonomously. 90-day price history growing in SQLite.</p>
           </div>
 
           <div class="tags">
@@ -698,79 +512,79 @@
 
         <div class="flagship-aside">
           <div class="aside-block">
-            <p class="aside-label">Build Timeline — 15 Phases</p>
-            <div class="tl-item"><span class="tl-phase">Ph 0–1</span><div><p class="tl-title">Foundation</p><p class="tl-desc">GitHub, Jira, Figma, memory system</p></div></div>
-            <div class="tl-item"><span class="tl-phase">Ph 2–3</span><div><p class="tl-title">Data Ingestion</p><p class="tl-desc">25 assets live, weather, headlines</p></div></div>
-            <div class="tl-item"><span class="tl-phase">Ph 4–5</span><div><p class="tl-title">Integrations</p><p class="tl-desc">Jira REST + Figma Bearer token</p></div></div>
-            <div class="tl-item"><span class="tl-phase">Ph 6–8</span><div><p class="tl-title">Intelligence</p><p class="tl-desc">AI briefs, Flask dashboard, email</p></div></div>
-            <div class="tl-item"><span class="tl-phase">Ph 9–11</span><div><p class="tl-title">Agent + Portfolio</p><p class="tl-desc">Conversational agent, website</p></div></div>
-            <div class="tl-item"><span class="tl-phase">Ph 12</span><div><p class="tl-title">Autonomous Agent</p><p class="tl-desc">ReAct loop, tool registry, monitor</p></div></div>
+            <p class="aside-label" data-en="Build Timeline — 15 Phases" data-es="Línea de Tiempo — 15 Fases">Build Timeline — 15 Phases</p>
+            <div class="tl-item"><span class="tl-phase">Ph 0–1</span><div><p class="tl-title" data-en="Foundation" data-es="Fundación">Foundation</p><p class="tl-desc" data-en="GitHub, Jira, Figma, memory system" data-es="GitHub, Jira, Figma, sistema de memoria">GitHub, Jira, Figma, memory system</p></div></div>
+            <div class="tl-item"><span class="tl-phase">Ph 2–3</span><div><p class="tl-title" data-en="Data Ingestion" data-es="Ingesta de Datos">Data Ingestion</p><p class="tl-desc" data-en="25 assets live, weather, headlines" data-es="25 activos en vivo, clima, titulares">25 assets live, weather, headlines</p></div></div>
+            <div class="tl-item"><span class="tl-phase">Ph 4–5</span><div><p class="tl-title" data-en="Integrations" data-es="Integraciones">Integrations</p><p class="tl-desc" data-en="Jira REST + Figma Bearer token" data-es="Jira REST + token Bearer de Figma">Jira REST + Figma Bearer token</p></div></div>
+            <div class="tl-item"><span class="tl-phase">Ph 6–8</span><div><p class="tl-title" data-en="Intelligence" data-es="Inteligencia">Intelligence</p><p class="tl-desc" data-en="AI briefs, Flask dashboard, email" data-es="Resúmenes IA, dashboard Flask, email">AI briefs, Flask dashboard, email</p></div></div>
+            <div class="tl-item"><span class="tl-phase">Ph 9–11</span><div><p class="tl-title" data-en="Agent + Portfolio" data-es="Agente + Portafolio">Agent + Portfolio</p><p class="tl-desc" data-en="Conversational agent, website" data-es="Agente conversacional, sitio web">Conversational agent, website</p></div></div>
+            <div class="tl-item"><span class="tl-phase">Ph 12</span><div><p class="tl-title" data-en="Autonomous Agent" data-es="Agente Autónomo">Autonomous Agent</p><p class="tl-desc" data-en="ReAct loop, tool registry, monitor" data-es="Bucle ReAct, registro de herramientas, monitor">ReAct loop, tool registry, monitor</p></div></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- OTHER PROJECTS -->
+  <!-- PROJECTS -->
   <div class="section" id="projects">
     <div class="wrap">
       <div class="sec-head">
-        <span class="sec-kicker">Case Studies</span>
-        <h2 class="sec-hed">Five more systems. Each one taught something new.</h2>
+        <span class="sec-kicker" data-en="Case Studies" data-es="Casos de Estudio">Case Studies</span>
+        <h2 class="sec-hed" data-en="Five more systems. Each one taught something new." data-es="Cinco sistemas más. Cada uno enseñó algo nuevo.">Five more systems. Each one taught something new.</h2>
       </div>
 
       <div class="proj-grid">
         <div class="proj-card">
           <div class="proj-num">01</div>
-          <p class="proj-type">Automation · Finance</p>
+          <p class="proj-type" data-en="Automation · Finance" data-es="Automatización · Finanzas">Automation · Finance</p>
           <h3 class="proj-hed">Horizon Capital Fund Tracker</h3>
-          <p class="proj-body">Portfolio analytics pipeline pulling live prices, writing formatted Excel reports with Plotly charts, and emailing them automatically.</p>
-          <p class="proj-learned">Learned: end-to-end pipeline design · openpyxl · SMTP</p>
+          <p class="proj-body" data-en="Portfolio analytics pipeline pulling live prices, writing formatted Excel reports with Plotly charts, and emailing them automatically." data-es="Pipeline de análisis de portafolio que obtiene precios en vivo, genera reportes Excel con gráficas Plotly y los envía por email automáticamente.">Portfolio analytics pipeline pulling live prices, writing formatted Excel reports with Plotly charts, and emailing them automatically.</p>
+          <p class="proj-learned" data-en="Learned: end-to-end pipeline · openpyxl · SMTP" data-es="Aprendí: pipeline completo · openpyxl · SMTP">Learned: end-to-end pipeline · openpyxl · SMTP</p>
           <div class="tags"><span class="tag">yfinance</span><span class="tag">openpyxl</span><span class="tag">Plotly</span><span class="tag">SMTP</span></div>
         </div>
 
         <div class="proj-card">
           <div class="proj-num">02</div>
-          <p class="proj-type">Automation · Research</p>
+          <p class="proj-type" data-en="Automation · Research" data-es="Automatización · Investigación">Automation · Research</p>
           <h3 class="proj-hed">Pulse Research News Logger</h3>
-          <p class="proj-body">NewsAPI integration that fetches headlines by keyword, deduplicates results, and logs them to a structured Excel file with timestamps.</p>
-          <p class="proj-learned">Learned: REST API auth · JSON parsing · data logging</p>
+          <p class="proj-body" data-en="NewsAPI integration that fetches headlines by keyword, deduplicates results, and logs them to a structured Excel file with timestamps." data-es="Integración con NewsAPI que obtiene titulares por palabra clave, elimina duplicados y los registra en un archivo Excel estructurado con marcas de tiempo.">NewsAPI integration that fetches headlines by keyword, deduplicates results, and logs them to a structured Excel file with timestamps.</p>
+          <p class="proj-learned" data-en="Learned: REST API auth · JSON parsing · data logging" data-es="Aprendí: autenticación REST · parsing JSON · registro de datos">Learned: REST API auth · JSON parsing · data logging</p>
           <div class="tags"><span class="tag">NewsAPI</span><span class="tag">openpyxl</span><span class="tag">REST APIs</span></div>
         </div>
 
         <div class="proj-card">
           <div class="proj-num">03</div>
-          <p class="proj-type">AI · Data · SQL</p>
+          <p class="proj-type" data-en="AI · Data · SQL" data-es="IA · Datos · SQL">AI · Data · SQL</p>
           <h3 class="proj-hed">Vertex Solutions Customer DB</h3>
-          <p class="proj-body">SQLite customer database with a Groq-powered natural language interface. Ask in plain English, get SQL back, see results in Plotly charts.</p>
-          <p class="proj-learned">Learned: schema design · text-to-SQL · structured output</p>
+          <p class="proj-body" data-en="SQLite customer database with a Groq-powered natural language interface. Ask in plain English, get SQL back, see results in Plotly charts." data-es="Base de datos de clientes en SQLite con interfaz de lenguaje natural impulsada por Groq. Pregunta en español, obtén SQL de vuelta, ve resultados en gráficas Plotly.">SQLite customer database with a Groq-powered natural language interface. Ask in plain English, get SQL back, see results in Plotly charts.</p>
+          <p class="proj-learned" data-en="Learned: schema design · text-to-SQL · structured output" data-es="Aprendí: diseño de esquema · texto-a-SQL · salida estructurada">Learned: schema design · text-to-SQL · structured output</p>
           <div class="tags"><span class="tag">SQLite</span><span class="tag">Groq</span><span class="tag">Text-to-SQL</span><span class="tag">Plotly</span></div>
         </div>
 
         <div class="proj-card">
           <div class="proj-num">04</div>
-          <p class="proj-type">Analytics · AI · Reporting</p>
+          <p class="proj-type" data-en="Analytics · AI · Reporting" data-es="Analítica · IA · Reportes">Analytics · AI · Reporting</p>
           <h3 class="proj-hed">NovaTech Analytics Platform</h3>
-          <p class="proj-body">Full analytics pipeline for a simulated SaaS company — SQLite warehouse, Groq AI insights, Plotly visualizations, automated Excel reports.</p>
-          <p class="proj-learned">Learned: multi-table DB design · AI narrative reporting</p>
+          <p class="proj-body" data-en="Full analytics pipeline for a simulated SaaS company — SQLite warehouse, Groq AI insights, Plotly visualizations, automated Excel reports." data-es="Pipeline de analítica completo para una empresa SaaS simulada — almacén SQLite, insights de IA con Groq, visualizaciones Plotly, reportes Excel automatizados.">Full analytics pipeline for a simulated SaaS company — SQLite warehouse, Groq AI insights, Plotly visualizations, automated Excel reports.</p>
+          <p class="proj-learned" data-en="Learned: multi-table DB · AI narrative reporting" data-es="Aprendí: BD multi-tabla · reportes narrativos con IA">Learned: multi-table DB · AI narrative reporting</p>
           <div class="tags"><span class="tag">SQLite</span><span class="tag">Groq</span><span class="tag">openpyxl</span><span class="tag">Plotly</span></div>
         </div>
 
         <div class="proj-card">
           <div class="proj-num">05</div>
-          <p class="proj-type">Automation · Personal Tools</p>
+          <p class="proj-type" data-en="Automation · Personal Tools" data-es="Automatización · Herramientas Personales">Automation · Personal Tools</p>
           <h3 class="proj-hed">Weekly Grocery Tracker</h3>
-          <p class="proj-body">Logs grocery spend, uses Groq to write a budget analysis, generates a PDF with ReportLab, and emails it to my inbox every week.</p>
-          <p class="proj-learned">Learned: ReportLab PDF · AI + automated delivery</p>
+          <p class="proj-body" data-en="Logs grocery spend, uses Groq to write a budget analysis, generates a PDF with ReportLab, and emails it to my inbox every week." data-es="Registra gastos del supermercado, usa Groq para escribir un análisis de presupuesto, genera un PDF con ReportLab y lo envía al correo cada semana.">Logs grocery spend, uses Groq to write a budget analysis, generates a PDF with ReportLab, and emails it to my inbox every week.</p>
+          <p class="proj-learned" data-en="Learned: ReportLab PDF · AI + automated delivery" data-es="Aprendí: PDF con ReportLab · IA + entrega automatizada">Learned: ReportLab PDF · AI + automated delivery</p>
           <div class="tags"><span class="tag">ReportLab</span><span class="tag">Groq</span><span class="tag">Gmail SMTP</span></div>
         </div>
 
         <div class="proj-card" style="border-left: 2px solid var(--red);">
           <div class="proj-num" style="color: var(--red); opacity: 0.3;">→</div>
-          <p class="proj-type">In Progress · Phase 13</p>
-          <h3 class="proj-hed">Cloud Deployment</h3>
-          <p class="proj-body">Deploying DreOS public modules to Render with scheduled jobs, webhook triggers, and production environment management.</p>
-          <p class="proj-learned">Learning: cloud infra · CI/CD · Render deployment</p>
+          <p class="proj-type" data-en="In Progress · Phase 14" data-es="En Progreso · Fase 14">In Progress · Phase 14</p>
+          <h3 class="proj-hed" data-en="Cloud Deployment" data-es="Despliegue en la Nube">Cloud Deployment</h3>
+          <p class="proj-body" data-en="Deploying DreOS public modules to Render with scheduled jobs, webhook triggers, and production environment management." data-es="Desplegando los módulos públicos de DreOS en Render con trabajos programados, triggers webhook y gestión de entorno de producción.">Deploying DreOS public modules to Render with scheduled jobs, webhook triggers, and production environment management.</p>
+          <p class="proj-learned" data-en="Learning: cloud infra · CI/CD · Render" data-es="Aprendiendo: infraestructura cloud · CI/CD · Render">Learning: cloud infra · CI/CD · Render</p>
           <div class="tags"><span class="tag">Render</span><span class="tag">CI/CD</span><span class="tag">Cloud</span></div>
         </div>
       </div>
@@ -781,42 +595,42 @@
   <div class="section" id="skills">
     <div class="wrap">
       <div class="sec-head">
-        <span class="sec-kicker">Technical Skills</span>
-        <h2 class="sec-hed">Built through projects, not courses.</h2>
+        <span class="sec-kicker" data-en="Technical Skills" data-es="Habilidades Técnicas">Technical Skills</span>
+        <h2 class="sec-hed" data-en="Built through projects, not courses." data-es="Construidas a través de proyectos, no cursos.">Built through projects, not courses.</h2>
       </div>
 
       <div class="skills-grid">
         <div>
-          <p class="skill-group-label">AI & Agents</p>
+          <p class="skill-group-label" data-en="AI & Agents" data-es="IA y Agentes">AI & Agents</p>
           <ul class="skill-list">
-            <li>LLM integration (Groq)</li>
-            <li>Tool calling</li>
-            <li>ReAct pattern</li>
-            <li>Prompt engineering</li>
-            <li>Autonomous agents</li>
-            <li>Multi-agent systems</li>
+            <li data-en="LLM integration (Groq)" data-es="Integración LLM (Groq)">LLM integration (Groq)</li>
+            <li data-en="Tool calling" data-es="Llamada de herramientas">Tool calling</li>
+            <li data-en="ReAct pattern" data-es="Patrón ReAct">ReAct pattern</li>
+            <li data-en="Prompt engineering" data-es="Ingeniería de prompts">Prompt engineering</li>
+            <li data-en="Autonomous agents" data-es="Agentes autónomos">Autonomous agents</li>
+            <li data-en="Multi-agent systems" data-es="Sistemas multi-agente">Multi-agent systems</li>
           </ul>
         </div>
         <div>
-          <p class="skill-group-label">Data & Backend</p>
+          <p class="skill-group-label" data-en="Data & Backend" data-es="Datos y Backend">Data & Backend</p>
           <ul class="skill-list">
             <li>Python</li>
             <li>SQLite / SQL</li>
-            <li>REST APIs</li>
-            <li>JSON pipelines</li>
-            <li>Flask web apps</li>
-            <li>Scheduled automation</li>
+            <li data-en="REST APIs" data-es="APIs REST">REST APIs</li>
+            <li data-en="JSON pipelines" data-es="Pipelines JSON">JSON pipelines</li>
+            <li data-en="Flask web apps" data-es="Aplicaciones web Flask">Flask web apps</li>
+            <li data-en="Scheduled automation" data-es="Automatización programada">Scheduled automation</li>
           </ul>
         </div>
         <div>
-          <p class="skill-group-label">Delivery & Dev Ops</p>
+          <p class="skill-group-label" data-en="Delivery & Dev Ops" data-es="Entrega y Dev Ops">Delivery & Dev Ops</p>
           <ul class="skill-list">
-            <li>ReportLab PDF</li>
-            <li>openpyxl Excel</li>
-            <li>Plotly charts</li>
-            <li>Email automation</li>
+            <li data-en="ReportLab PDF" data-es="PDF con ReportLab">ReportLab PDF</li>
+            <li data-en="openpyxl Excel" data-es="Excel con openpyxl">openpyxl Excel</li>
+            <li data-en="Plotly charts" data-es="Gráficas con Plotly">Plotly charts</li>
+            <li data-en="Email automation" data-es="Automatización de email">Email automation</li>
             <li>GitHub / Pages</li>
-            <li>Jira project mgmt</li>
+            <li data-en="Jira project mgmt" data-es="Gestión de proyectos Jira">Jira project mgmt</li>
           </ul>
         </div>
       </div>
@@ -828,9 +642,11 @@
     <div class="wrap">
       <div class="contact-grid">
         <div>
-          <h2 class="contact-hed">Let's talk about<br/>what I can <em>build for you.</em></h2>
-          <p class="contact-deck">Open to AI engineer and AI PM roles.<br/>Based in Goffstown, NH — open to remote.</p>
-          <p class="contact-detail">Available immediately &nbsp;·&nbsp; NH 03045</p>
+          <h2 class="contact-hed">
+            <span data-en="Let's talk about<br/>what I can <em>build for you.</em>" data-es="Hablemos sobre<br/>lo que puedo <em>construir para ti.</em>">Let's talk about<br/>what I can <em>build for you.</em></span>
+          </h2>
+          <p class="contact-deck" data-en="Open to AI engineer and AI PM roles. Based in Goffstown, NH — open to remote." data-es="Abierto a roles de Ingeniero de IA y PM de IA. Ubicado en Goffstown, NH — disponible para trabajo remoto.">Open to AI engineer and AI PM roles. Based in Goffstown, NH — open to remote.</p>
+          <p class="contact-detail" data-en="Available immediately · NH 03045" data-es="Disponible de inmediato · NH 03045">Available immediately · NH 03045</p>
         </div>
         <div class="contact-links">
           <a href="mailto:1490dre@gmail.com" class="contact-link">
@@ -846,13 +662,36 @@
             <span class="contact-link-arrow">→</span>
           </a>
           <a href="https://dre1490.github.io/drebuilds" target="_blank" class="contact-link">
-            <span>Live portfolio</span>
+            <span data-en="Live portfolio" data-es="Portafolio en vivo">Live portfolio</span>
             <span class="contact-link-arrow">→</span>
           </a>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- LANGUAGE TOGGLE SCRIPT -->
+  <script>
+    function setLang(lang) {
+      // Update button states
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+
+      // Update all elements with data-en / data-es
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const text = el.getAttribute(`data-${lang}`);
+        if (text) el.innerHTML = text;
+      });
+
+      // Update html lang attribute
+      document.documentElement.lang = lang;
+
+      // Update page title
+      document.title = lang === 'es'
+        ? 'Andres Onoa — Ingeniero de IA'
+        : 'Andres Onoa — AI Engineer';
+    }
+  </script>
 
 </body>
 </html>
