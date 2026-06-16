@@ -12,6 +12,24 @@
   .header h1 { color: white; font-size: 24px; letter-spacing: 2px; }
   .header .date { color: #aac4e0; font-size: 14px; }
 
+  /* ── Language Toggle ── */
+  .lang-toggle {
+    display: flex; align-items: center; gap: 0;
+    border: 1px solid #2E75B6; border-radius: 4px;
+    overflow: hidden; margin-left: 16px;
+  }
+
+  .lang-btn {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 11px; letter-spacing: 0.08em;
+    padding: 5px 12px; cursor: pointer;
+    border: none; background: transparent;
+    color: #aac4e0; transition: background 0.2s, color 0.2s;
+  }
+
+  .lang-btn.active { background: #2E75B6; color: white; }
+  .lang-btn:hover:not(.active) { color: white; }
+
   .kpi-bar { background: #1a2535; padding: 12px 30px; display: flex; gap: 20px; border-bottom: 1px solid #2a3a4a; flex-wrap: wrap; }
   .kpi { background: #1F3864; padding: 8px 16px; border-radius: 6px; text-align: center; min-width: 140px; }
   .kpi-label { font-size: 10px; color: #aac4e0; text-transform: uppercase; letter-spacing: 1px; }
@@ -57,350 +75,420 @@
 </head>
 <body>
 
+<!-- HEADER -->
 <div class="header">
   <div>
-    <h1>⚡ DreOS MORNING DASHBOARD</h1>
-    <div class="date">Personal Intelligence Hub — Sunday, June 07, 2026</div>
+    <h1>⚡ <span data-en="DreOS MORNING DASHBOARD" data-es="PANEL DE CONTROL DreOS">DreOS MORNING DASHBOARD</span></h1>
+    <div class="date">
+      <span data-en="Personal Intelligence Hub" data-es="Centro de Inteligencia Personal">Personal Intelligence Hub</span> — Thursday, June 11, 2026
+    </div>
   </div>
-  <div style="text-align:right; color:#aac4e0; font-size:13px;">
-    🌡️ 66.8°F &nbsp;|&nbsp;
-    Overcast &nbsp;|&nbsp;
-    💨 14.3 mph
+  <div style="display:flex; align-items:center;">
+    <div style="text-align:right; color:#aac4e0; font-size:13px;">
+      🌡️ 82.5°F &nbsp;|&nbsp;
+      Partly cloudy &nbsp;|&nbsp;
+      💨 6.9 mph
+    </div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
   </div>
 </div>
 
+<!-- KPI BAR -->
 <div class="kpi-bar">
   <div class="kpi">
-    <div class="kpi-label">Top Gainer</div>
-    <div class="kpi-value green">GOOGL +-0.59%</div>
+    <div class="kpi-label" data-en="Top Gainer" data-es="Mayor Ganancia">Top Gainer</div>
+    <div class="kpi-value green">AMD +5.63%</div>
   </div>
   <div class="kpi">
-    <div class="kpi-label">Top Loser</div>
-    <div class="kpi-value red">RIVN -9.62%</div>
+    <div class="kpi-label" data-en="Top Loser" data-es="Mayor Pérdida">Top Loser</div>
+    <div class="kpi-value red">MSFT -1.74%</div>
   </div>
   <div class="kpi">
-    <div class="kpi-label">Gainers / Losers</div>
-    <div class="kpi-value orange">0 ▲ / 10 ▼</div>
+    <div class="kpi-label" data-en="Gainers / Losers" data-es="Alzas / Bajas">Gainers / Losers</div>
+    <div class="kpi-value orange">5 ▲ / 5 ▼</div>
   </div>
   <div class="kpi">
-    <div class="kpi-label">DreOS Progress</div>
-    <div class="kpi-value orange">100.0% Complete</div>
+    <div class="kpi-label" data-en="DreOS Progress" data-es="Progreso DreOS">DreOS Progress</div>
+    <div class="kpi-value orange">100.0% <span data-en="Complete" data-es="Completo">Complete</span></div>
   </div>
   <div class="kpi">
-    <div class="kpi-label">Figma Status</div>
-    <div class="kpi-value green">Inactive — last upda</div>
+    <div class="kpi-label" data-en="Figma Status" data-es="Estado Figma">Figma Status</div>
+    <div class="kpi-value green">N/A</div>
   </div>
 </div>
 
+<!-- MAIN GRID -->
 <div class="grid">
   <!-- Big 5 Stocks -->
   <div class="card">
-    <div class="card-title">📊 Big 5 Stocks</div>
+    <div class="card-title">📊 <span data-en="Big 5 Stocks" data-es="Las 5 Grandes">Big 5 Stocks</span></div>
     <table>
-      <tr><th>Ticker</th><th>Name</th><th>Price</th><th>Change</th></tr>
+      <tr>
+        <th data-en="Ticker" data-es="Símbolo">Ticker</th>
+        <th data-en="Name" data-es="Nombre">Name</th>
+        <th data-en="Price" data-es="Precio">Price</th>
+        <th data-en="Change" data-es="Cambio">Change</th>
+      </tr>
       
         <tr>
             <td><strong>AAPL</strong></td>
             <td>Apple</td>
-            <td>$307.34</td>
-            <td style="color:#C00000">▼ 1.05%</td>
+            <td>$291.79</td>
+            <td style="color:#70AD47">▲ 0.33%</td>
         </tr>
         <tr>
             <td><strong>MSFT</strong></td>
             <td>Microsoft</td>
-            <td>$416.67</td>
-            <td style="color:#C00000">▼ 2.59%</td>
+            <td>$389.62</td>
+            <td style="color:#C00000">▼ 1.74%</td>
         </tr>
         <tr>
             <td><strong>GOOGL</strong></td>
             <td>Google</td>
-            <td>$368.53</td>
-            <td style="color:#C00000">▼ 0.59%</td>
+            <td>$350.66</td>
+            <td style="color:#C00000">▼ 1.12%</td>
         </tr>
         <tr>
             <td><strong>AMZN</strong></td>
             <td>Amazon</td>
-            <td>$246.03</td>
-            <td style="color:#C00000">▼ 2.84%</td>
+            <td>$236.65</td>
+            <td style="color:#70AD47">▲ 0.24%</td>
         </tr>
         <tr>
             <td><strong>NVDA</strong></td>
             <td>Nvidia</td>
-            <td>$205.10</td>
-            <td style="color:#C00000">▼ 5.18%</td>
+            <td>$201.35</td>
+            <td style="color:#70AD47">▲ 1.08%</td>
         </tr>
     </table>
   </div>
 
   <!-- Potential Stocks -->
   <div class="card">
-    <div class="card-title">🚀 Potential Stocks</div>
+    <div class="card-title">🚀 <span data-en="Potential Stocks" data-es="Acciones Potenciales">Potential Stocks</span></div>
     <table>
-      <tr><th>Ticker</th><th>Name</th><th>Price</th><th>Change</th></tr>
+      <tr>
+        <th data-en="Ticker" data-es="Símbolo">Ticker</th>
+        <th data-en="Name" data-es="Nombre">Name</th>
+        <th data-en="Price" data-es="Precio">Price</th>
+        <th data-en="Change" data-es="Cambio">Change</th>
+      </tr>
       
         <tr>
             <td><strong>PLTR</strong></td>
             <td>Palantir</td>
-            <td>$135.53</td>
-            <td style="color:#C00000">▼ 3.82%</td>
+            <td>$128.25</td>
+            <td style="color:#C00000">▼ 0.43%</td>
         </tr>
         <tr>
             <td><strong>AMD</strong></td>
             <td>AMD</td>
-            <td>$466.38</td>
-            <td style="color:#C00000">▼ 9.29%</td>
+            <td>$465.39</td>
+            <td style="color:#70AD47">▲ 5.63%</td>
         </tr>
         <tr>
             <td><strong>META</strong></td>
             <td>Meta</td>
-            <td>$593.00</td>
-            <td style="color:#C00000">▼ 4.99%</td>
+            <td>$562.67</td>
+            <td style="color:#C00000">▼ 0.96%</td>
         </tr>
         <tr>
             <td><strong>RIVN</strong></td>
             <td>Rivian</td>
-            <td>$16.35</td>
-            <td style="color:#C00000">▼ 9.62%</td>
+            <td>$14.59</td>
+            <td style="color:#C00000">▼ 1.26%</td>
         </tr>
         <tr>
             <td><strong>TSLA</strong></td>
             <td>Tesla</td>
-            <td>$391.00</td>
-            <td style="color:#C00000">▼ 6.05%</td>
+            <td>$382.21</td>
+            <td style="color:#70AD47">▲ 0.90%</td>
         </tr>
     </table>
   </div>
 
   <!-- Crypto -->
   <div class="card">
-    <div class="card-title">🪙 Major Cryptos</div>
+    <div class="card-title">🪙 <span data-en="Major Cryptos" data-es="Criptos Principales">Major Cryptos</span></div>
     <table>
-      <tr><th>Token</th><th>Name</th><th>Price</th><th>24h</th></tr>
+      <tr>
+        <th data-en="Token" data-es="Token">Token</th>
+        <th data-en="Name" data-es="Nombre">Name</th>
+        <th data-en="Price" data-es="Precio">Price</th>
+        <th data-en="24h" data-es="24h">24h</th>
+      </tr>
       
         <tr>
             <td><strong>BTC</strong></td>
             <td>Bitcoin</td>
-            <td>$63,166.00</td>
-            <td style="color:#70AD47">▲ 3.89%</td>
+            <td>$62,782.00</td>
+            <td style="color:#70AD47">▲ 1.19%</td>
         </tr>
         <tr>
             <td><strong>ETH</strong></td>
             <td>Ethereum</td>
-            <td>$1,684.81</td>
-            <td style="color:#70AD47">▲ 7.60%</td>
+            <td>$1,648.30</td>
+            <td style="color:#C00000">▼ 0.55%</td>
         </tr>
         <tr>
             <td><strong>BNB</strong></td>
             <td>Binancecoin</td>
-            <td>$603.31</td>
-            <td style="color:#70AD47">▲ 5.07%</td>
+            <td>$599.28</td>
+            <td style="color:#70AD47">▲ 0.99%</td>
         </tr>
         <tr>
             <td><strong>SOL</strong></td>
             <td>Solana</td>
-            <td>$66.20</td>
-            <td style="color:#70AD47">▲ 6.63%</td>
+            <td>$65.34</td>
+            <td style="color:#70AD47">▲ 0.71%</td>
         </tr>
         <tr>
             <td><strong>XRP</strong></td>
             <td>Ripple</td>
-            <td>$1.15</td>
-            <td style="color:#70AD47">▲ 5.59%</td>
+            <td>$1.11</td>
+            <td style="color:#C00000">▼ 1.20%</td>
         </tr>
     </table>
   </div>
 
   <!-- Potential Tokens -->
   <div class="card">
-    <div class="card-title">⚡ Potential Tokens</div>
+    <div class="card-title">⚡ <span data-en="Potential Tokens" data-es="Tokens Potenciales">Potential Tokens</span></div>
     <table>
-      <tr><th>Token</th><th>Name</th><th>Price</th><th>24h</th></tr>
+      <tr>
+        <th data-en="Token" data-es="Token">Token</th>
+        <th data-en="Name" data-es="Nombre">Name</th>
+        <th data-en="Price" data-es="Precio">Price</th>
+        <th data-en="24h" data-es="24h">24h</th>
+      </tr>
       
         <tr>
             <td><strong>POL</strong></td>
             <td>Polygon-Ecosystem-Token</td>
-            <td>$0.08</td>
-            <td style="color:#70AD47">▲ 2.32%</td>
+            <td>$0.07</td>
+            <td style="color:#C00000">▼ 3.59%</td>
         </tr>
         <tr>
             <td><strong>ARB</strong></td>
             <td>Arbitrum</td>
             <td>$0.08</td>
-            <td style="color:#70AD47">▲ 3.68%</td>
+            <td style="color:#70AD47">▲ 0.61%</td>
         </tr>
         <tr>
             <td><strong>LINK</strong></td>
             <td>Chainlink</td>
-            <td>$7.89</td>
-            <td style="color:#70AD47">▲ 6.96%</td>
+            <td>$7.78</td>
+            <td style="color:#C00000">▼ 0.44%</td>
         </tr>
         <tr>
             <td><strong>UNI</strong></td>
             <td>Uniswap</td>
-            <td>$2.56</td>
-            <td style="color:#70AD47">▲ 3.80%</td>
+            <td>$2.50</td>
+            <td style="color:#70AD47">▲ 0.49%</td>
         </tr>
         <tr>
             <td><strong>AAVE</strong></td>
             <td>Aave</td>
-            <td>$63.50</td>
-            <td style="color:#70AD47">▲ 4.62%</td>
+            <td>$62.87</td>
+            <td style="color:#70AD47">▲ 0.72%</td>
         </tr>
     </table>
   </div>
 
   <!-- Mutual Funds -->
   <div class="card">
-    <div class="card-title">📈 Mutual Funds</div>
+    <div class="card-title">📈 <span data-en="Mutual Funds" data-es="Fondos Mutuos">Mutual Funds</span></div>
     <table>
-      <tr><th>Ticker</th><th>Fund</th><th>NAV</th></tr>
+      <tr>
+        <th data-en="Ticker" data-es="Símbolo">Ticker</th>
+        <th data-en="Fund" data-es="Fondo">Fund</th>
+        <th data-en="NAV" data-es="VAN">NAV</th>
+      </tr>
       
         <tr>
             <td><strong>VFIAX</strong></td>
             <td>Vanguard 500 Index</td>
-            <td>$682.84</td>
-            <td style="color:#C00000">▼ 2.63%</td>
+            <td>$672.10</td>
+            <td style="color:#C00000">▼ 1.62%</td>
         </tr>
         <tr>
             <td><strong>FCNTX</strong></td>
             <td>Fidelity Contrafund</td>
-            <td>$25.72</td>
-            <td style="color:#C00000">▼ 2.98%</td>
+            <td>$25.41</td>
+            <td style="color:#C00000">▼ 1.82%</td>
         </tr>
         <tr>
             <td><strong>TRBCX</strong></td>
             <td>T. Rowe Price Blue Chip</td>
-            <td>$212.20</td>
-            <td style="color:#C00000">▼ 3.33%</td>
+            <td>$207.07</td>
+            <td style="color:#C00000">▼ 2.23%</td>
         </tr>
         <tr>
             <td><strong>AGTHX</strong></td>
             <td>American Funds Growth</td>
-            <td>$84.66</td>
-            <td style="color:#C00000">▼ 3.82%</td>
+            <td>$83.40</td>
+            <td style="color:#C00000">▼ 2.27%</td>
         </tr>
         <tr>
             <td><strong>SWTSX</strong></td>
             <td>Schwab Total Market</td>
-            <td>$17.82</td>
-            <td style="color:#C00000">▼ 2.68%</td>
+            <td>$17.56</td>
+            <td style="color:#C00000">▼ 1.62%</td>
         </tr>
     </table>
   </div>
 
   <!-- Weather -->
   <div class="card">
-    <div class="card-title">🌤️ Weather — Bedford NH</div>
+    <div class="card-title">🌤️ <span data-en="Weather — Goffstown NH" data-es="Clima — Goffstown NH">Weather — Goffstown NH</span></div>
     <div class="weather-current">
       <div>
-        <div class="weather-temp">66.8°F</div>
-        <div class="weather-desc">Overcast</div>
+        <div class="weather-temp">82.5°F</div>
+        <div class="weather-desc">Partly cloudy</div>
       </div>
       <div style="text-align:right; font-size:12px; color:#aac4e0;">
-        💨 14.3 mph<br>
+        💨 6.9 mph<br>
         🌧️ 0.0 in
       </div>
     </div>
     <div class="forecast-row">
       
     <div class="forecast-day">
-        <div class="forecast-date">2026-06-07</div>
-        <div class="forecast-desc">Light drizzle</div>
-        <div class="forecast-temps">60.4° — 77.2°F</div>
+        <div class="forecast-date">2026-06-11</div>
+        <div class="forecast-desc">Overcast</div>
+        <div class="forecast-temps">71.2° — 90.5°F</div>
     </div>
     <div class="forecast-day">
-        <div class="forecast-date">2026-06-08</div>
+        <div class="forecast-date">2026-06-12</div>
         <div class="forecast-desc">Overcast</div>
-        <div class="forecast-temps">53.3° — 75.4°F</div>
+        <div class="forecast-temps">70.5° — 91.3°F</div>
     </div>
     <div class="forecast-day">
-        <div class="forecast-date">2026-06-09</div>
-        <div class="forecast-desc">Overcast</div>
-        <div class="forecast-temps">54.7° — 87.9°F</div>
+        <div class="forecast-date">2026-06-13</div>
+        <div class="forecast-desc">Drizzle</div>
+        <div class="forecast-temps">64.0° — 86.3°F</div>
     </div>
     </div>
   </div>
 </div>
 
+<!-- WIDE GRID -->
 <div class="grid-wide">
   <!-- News -->
   <div class="card">
-    <div class="card-title">📰 AI & Finance Headlines</div>
+    <div class="card-title">📰 <span data-en="AI & Finance Headlines" data-es="Titulares de IA y Finanzas">AI & Finance Headlines</span></div>
     <div style="margin-bottom:12px;">
-      <div style="font-size:11px; color:#2E75B6; margin-bottom:6px;">🤖 AI NEWS</div>
+      <div style="font-size:11px; color:#2E75B6; margin-bottom:6px;">
+        🤖 <span data-en="AI NEWS" data-es="NOTICIAS DE IA">AI NEWS</span>
+      </div>
       
         <div class="news-item">
+            <span class="news-source">🤖 Wired</span>
+            <a href="https://www.wired.com/story/china-opens-worlds-first-wind-powered-underwater-data-center/" target="_blank" class="news-title">China Opens World's First Wind-Powered Underwater Data Center</a>
+        </div>
+        <div class="news-item">
             <span class="news-source">🤖 Onefootball.com</span>
-            <a href="https://onefootball.com/en/news/endrick-saves-brazil-again-in-final-pre-world-cup-friendly-42975629" target="_blank" class="news-title"> Endrick saves Brazil in final pre-World Cup friendly</a>
+            <a href="https://onefootball.com/en/news/fifa-confirm-officials-for-brazils-cup-opener-find-out-42990432" target="_blank" class="news-title">FIFA confirm officials for Brazil's Cup opener, find out</a>
         </div>
         <div class="news-item">
-            <span class="news-source">🤖 The Daily Caller</span>
-            <a href="https://dailycaller.com/2026/06/06/catholic-information-center-charles-trullols-leads-washington-eucharistic-procession-white-house-perpetual-pilgrims/" target="_blank" class="news-title">Massive Catholic Crowd Professes ‘One Nation Under God’ With Annual Eucharistic Procession By White House</a>
+            <span class="news-source">🤖 9to5Mac</span>
+            <a href="https://9to5mac.com/2026/06/10/its-not-just-apple-whatsapp-has-to-allow-competing-ais-too/" target="_blank" class="news-title">It’s not just Apple – WhatsApp has to allow competing AIs too</a>
         </div>
         <div class="news-item">
-            <span class="news-source">🤖 Soldiersystems.net</span>
-            <a href="https://soldiersystems.net/2026/06/07/leveraging-artificial-intelligence-to-ensure-secure-army-communications/" target="_blank" class="news-title">Leveraging Artificial Intelligence to Ensure Secure Army Communications</a>
+            <span class="news-source">🤖 Onefootball.com</span>
+            <a href="https://onefootball.com/en/news/all-set-heres-the-ligue-1-schedule-and-key-dates-42990414" target="_blank" class="news-title"> All set! Here’s the Ligue 1 schedule and key dates</a>
         </div>
         <div class="news-item">
-            <span class="news-source">🤖 Vinelandchamber.org</span>
-            <a href="https://www.vinelandchamber.org/news/details/visual-marketing-for-specialty-retailers-a-practical-guide-to-adobe-firefly-06-05-2026" target="_blank" class="news-title">Visual Marketing for Specialty Retailers: A Practical Guide to Adobe Firefly</a>
-        </div>
-        <div class="news-item">
-            <span class="news-source">🤖 Livemint</span>
-            <a href="https://www.livemint.com/companies/news/indian-tech-firms-sahasra-and-zoho-showcase-asian-ambitions-at-computex-2026-in-taiwan-11780789024213.html" target="_blank" class="news-title">Indian tech firms Sahasra and Zoho showcase Asian ambitions at COMPUTEX 2026 in Taiwan</a>
+            <span class="news-source">🤖 Techtarget.com</span>
+            <a href="https://www.techtarget.com/virtualhealthcare/feature/Digital-health-companies-seek-lasting-edge-amid-GLP-1-gold-rush" target="_blank" class="news-title">Digital health companies seek lasting edge amid GLP-1 gold rush</a>
         </div>
     </div>
     <div>
-      <div style="font-size:11px; color:#2E75B6; margin-bottom:6px;">💰 FINANCE NEWS</div>
+      <div style="font-size:11px; color:#2E75B6; margin-bottom:6px;">
+        💰 <span data-en="FINANCE NEWS" data-es="NOTICIAS FINANCIERAS">FINANCE NEWS</span>
+      </div>
       
         <div class="news-item">
-            <span class="news-source">💰 Yahoo Entertainment</span>
-            <a href="https://finance.yahoo.com/markets/stocks/articles/fastest-way-rich-quick-dont-142500389.html" target="_blank" class="news-title">'The fastest way to get rich quick is don't': Dave Ramsey's truth bomb for investors. His 3 wealth-building rules</a>
+            <span class="news-source">💰 24/7 Wall St.</span>
+            <a href="https://247wallst.com/investing/2026/06/10/warren-buffets-400-billion-is-going-nowhere-for-now-heres-why-berkshire-hathaway-is-my-top-pick-for-the-next-20-years/" target="_blank" class="news-title">Warren Buffett’s $400 Billion Is Going Nowhere for Now: Here’s Why Berkshire Hathaway Is My Top Pick for the Next 20 Years</a>
         </div>
         <div class="news-item">
             <span class="news-source">💰 Yahoo Entertainment</span>
-            <a href="https://finance.yahoo.com/markets/crypto/articles/now-consider-defi-unsafe-former-130148655.html" target="_blank" class="news-title">'I Now Consider All Of DeFi Unsafe': Former Crypto Security Chief Sounds Alarm As AI Agents Become More Powerful</a>
+            <a href="https://finance.yahoo.com/markets/stocks/articles/spacex-just-got-superchip-ahead-123000304.html" target="_blank" class="news-title">SpaceX just got a superchip ahead of its June 12th IPO — but no one’s talking about it. 3 red-hot stocks to watch now</a>
+        </div>
+        <div class="news-item">
+            <span class="news-source">💰 Spektrum.de</span>
+            <a href="https://scilogs.spektrum.de/hlf/football-finance-part-1/" target="_blank" class="news-title">Football Finance, Part 1</a>
+        </div>
+        <div class="news-item">
+            <span class="news-source">💰 PRNewswire</span>
+            <a href="https://www.prnewswire.com/news-releases/wall-streets-next-misinformation-crisis-may-come-from-black-box-ai-302795873.html" target="_blank" class="news-title">Wall Street's Next Misinformation Crisis May Come From Black-Box AI</a>
         </div>
         <div class="news-item">
             <span class="news-source">💰 Yahoo Entertainment</span>
-            <a href="https://finance.yahoo.com/markets/stocks/articles/next-nvidia-3-stocks-below-120500020.html" target="_blank" class="news-title">The next NVIDIA? These 3 stocks below $50 are poised to win the next AI boom (and they’re still flying under the radar)</a>
-        </div>
-        <div class="news-item">
-            <span class="news-source">💰 Yahoo Entertainment</span>
-            <a href="https://finance.yahoo.com/markets/options/articles/too-big-stop-young-american-111500724.html" target="_blank" class="news-title">'Too big to stop': Young American men are flocking to prediction markets to take big risks on even bigger rewards</a>
+            <a href="https://finance.yahoo.com/personal-finance/investing/article/gold-prices-today-wednesday-june-10-prices-falling-after-us-iran-strikes-and-ahead-of-cpi-report-104555976.html" target="_blank" class="news-title">Gold prices today, Wednesday, June 10: Prices falling after U.S., Iran strikes and ahead of CPI report</a>
         </div>
     </div>
   </div>
 
   <!-- Project Status + Brief -->
   <div class="card">
-    <div class="card-title">🎯 DreOS Project Status</div>
+    <div class="card-title">🎯 <span data-en="DreOS Project Status" data-es="Estado del Proyecto DreOS">DreOS Project Status</span></div>
     <div class="progress-label">
-      <span>Phase Progress</span>
-      <span>12/12 phases complete</span>
+      <span data-en="Phase Progress" data-es="Progreso de Fases">Phase Progress</span>
+      <span>12/12 <span data-en="phases complete" data-es="fases completas">phases complete</span></span>
     </div>
     <div class="progress-bar-bg">
       <div class="progress-bar-fill"></div>
     </div>
     <div style="font-size:12px; margin-top:8px;">
-      <div style="color:#aac4e0;">🔄 Current: <span style="color:white;">None in progress</span></div>
-      <div style="color:#aac4e0; margin-top:4px;">⏭️ Next: <span style="color:white;">All done!</span></div>
-    </div>
-    <div style="margin-top:12px; padding-top:12px; border-top:1px solid #2a3a4a;">
-      <div class="card-title">🎨 Figma Design File</div>
-      <div class="figma-status">
-        <div class="status-dot inactive"></div>
-        <span style="font-size:12px;">Inactive — last updated 8 days ago</span>
+      <div style="color:#aac4e0;">
+        🔄 <span data-en="Current" data-es="Actual">Current</span>:
+        <span style="color:white;">None in progress</span>
+      </div>
+      <div style="color:#aac4e0; margin-top:4px;">
+        ⏭️ <span data-en="Next" data-es="Siguiente">Next</span>:
+        <span style="color:white;">All done!</span>
       </div>
     </div>
     <div style="margin-top:12px; padding-top:12px; border-top:1px solid #2a3a4a;">
-      <div class="card-title">🤖 AI Morning Brief</div>
-      <div class="brief-text">Good morning, it's Sunday, June 07, 2026, and it's a bit overcast in Bedford, NH, with a gentle breeze, so you might want to grab a cup of coffee and stay indoors today. 
+      <div class="card-title">🎨 <span data-en="Figma Design File" data-es="Archivo de Diseño Figma">Figma Design File</span></div>
+      <div class="figma-status">
+        <div class="status-dot inactive"></div>
+        <span style="font-size:12px;">N/A</span>
+      </div>
+    </div>
+    <div style="margin-top:12px; padding-top:12px; border-top:1px solid #2a3a4a;">
+      <div class="card-title">🤖 <span data-en="AI Morning Brief" data-es="Resumen Matutino de IA">AI Morning Brief</span></div>
+      <div class="brief-text">Good morning, it's Thursday, June 11, 2026, and it's looking like a pleasant partly cloudy day in Bedford, NH, with a high of 82.5°F. 
 
-The market is seeing some interesting moves, with the Big 5 stocks mostly in the red, led by NVDA's 5.18% drop, while GOOGL is the top "gainer" with a relatively minor loss of 0.59%. On the crypto side, we're seeing some notable gains, with ETH up 7.60% and BTC rising 3.89%. Notably, RIVN is the top loser today, down 9.62%, wh...</div>
+The market pulse is showing some interesting movements today, with AMD taking the top spot as the biggest gainer, up 5.63%, while MSFT is the top loser, down 1.74%. In the crypto space, BTC is up 1.19%, and BNB is seeing a notable gain of 0.99%. Overall, it's a relatively mixed bag, with 5 gainers and 5 losers in the stock market, and some moderate movements in ...</div>
     </div>
   </div>
 </div>
+
+<!-- LANGUAGE TOGGLE SCRIPT -->
+<script>
+  function setLang(lang) {
+    // Update button states
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelector('.lang-btn[onclick="setLang(\'' + lang + '\')"]').classList.add('active');
+
+    // Update all elements with data-en / data-es
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const text = el.getAttribute('data-' + lang);
+      if (text) el.innerHTML = text;
+    });
+
+    // Update page title
+    document.title = lang === 'es'
+      ? 'DreOS Panel de Control'
+      : 'DreOS Morning Dashboard';
+  }
+</script>
 
 </body>
 </html>
